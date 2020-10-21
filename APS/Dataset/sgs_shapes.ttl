@@ -1,0 +1,736 @@
+# Seagoing services shapes
+
+@prefix : <https://www.sdir.no/SDIR_Simulator/shapes/sgs#> .
+@prefix sdir: <https://www.sdir.no/SDIR_Simulator#> .
+@prefix cert: <https://www.sdir.no/SDIR_Simulator/shapes/certificate#> .
+@prefix course: <https://www.sdir.no/SDIR_Simulator/shapes/course#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+
+:NS_500_L_3_360_M_V_DO 
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days in any deck officer on vessel with gross tonnage at least 500 in trade area (general) at least 3."@en ,
+                   "Fartstiden skal være minst 360 dager i en dekkoffiserstilling på fartøy med bruttotonnasje minst 500 i fartsområde (generell) minst 3."@no ;
+    sh:targetClass sdir:SGS_500_L_3_360_M_V_DO ;
+    sh:property :PS_Vessel_500_GT, :PS_TradeArea_minInc_3, :PS_Duration_360, :PS_Position_DO .
+
+:NS_500_L_3_720_M_V_DO 
+    a sh:NodeShape ;
+    sh:description "Duration of at least 720 days in any deck officer on vessel with gross tonnage at least 500 in trade area (general) at least 3."@en ,
+                   "Fartstiden skal være minst 720 dager i en dekkoffiserstilling på fartøy med bruttotonnasje minst 500 i fartsområde (generell) minst 3."@no ;
+    sh:targetClass sdir:SGS_500_L_3_720_M_V_DO ;
+    sh:property :PS_Vessel_500_GT, :PS_TradeArea_minInc_3, :PS_Duration_720, :PS_Position_DO .
+
+:NS_500_L_3_360_M_V_CO 
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as chief officer on vessel with gross tonnage at least 500 in trade area (general) at least 3."@en ,
+                   "Fartstiden skal være minst 360 dager som overstyrmann på fartøy med bruttotonnasje minst 500 i fartsområde (generell) minst 3."@no ;
+    sh:targetClass sdir:SGS_500_L_3_360_M_V_CO ;
+    sh:property :PS_Vessel_500_GT, :PS_TradeArea_minInc_3, :PS_Duration_360, :PS_Position_CO .
+
+:NS_500_L_3_1080_M_V_DO 
+    a sh:NodeShape ;
+    sh:description "Duration of at least 1080 days in any deck officer on vessel with gross tonnage at least 500 in trade area (general) at least 3."@en ,
+                   "Fartstiden skal være minst 1080 dager i en dekkoffiserstilling på fartøy med bruttotonnasje minst 500 i fartsområde (generell) minst 3."@no ;
+    sh:targetClass sdir:SGS_500_L_3_1080_M_V_DO ;
+    sh:property :PS_Vessel_500_GT, :PS_TradeArea_minInc_3, :PS_Duration_1080, :PS_Position_CO .
+
+:NS_500_L_1_360_M_V_DO 
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days in any deck officer on vessel with gross tonnage at least 500 in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 360 dager i en dekkoffiserstilling på fartøy med bruttotonnasje minst 500 i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_500_L_1_360_M_V_DO ;
+    sh:property :PS_Vessel_500_GT, :PS_TradeArea_minInc_1, :PS_Duration_360, :PS_Position_DO .
+
+:NS_500_L_1_720_M_V_DO 
+    a sh:NodeShape ;
+    sh:description "Duration of at least 720 days in any deck officer on vessel with gross tonnage at least 500 in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 720 dager i en dekkoffiserstilling på fartøy med bruttotonnasje minst 500 i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_500_L_1_720_M_V_DO ;
+    sh:property :PS_Vessel_500_GT, :PS_TradeArea_minInc_1, :PS_Duration_720, :PS_Position_DO .
+
+:NS_500_L_1_360_M_V_CO 
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as chief officer on vessel with gross tonnage at least 500 in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 360 dager som overstyrmann på fartøy med bruttotonnasje minst 500 i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_500_L_1_360_M_V_CO ;
+    sh:property :PS_Vessel_500_GT, :PS_TradeArea_minInc_1, :PS_Duration_360, :PS_Position_CO .
+
+:NS_500_L_1_1080_M_V_DO 
+    a sh:NodeShape ;
+    sh:description "Duration of at least 1080 days in any deck officer on vessel with gross tonnage at least 500 in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 1080 dager i en dekkoffiserstilling på fartøy med bruttotonnasje minst 500 i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_500_L_1_1080_M_V_DO ;
+    sh:property :PS_Vessel_500_GT, :PS_TradeArea_minInc_1, :PS_Duration_1080, :PS_Position_CO .
+
+:NS_500_L_3_180_M_V_CO 
+    a sh:NodeShape ;
+    sh:description "Duration of at least 180 days as chief officer on vessel with gross tonnage at least 500 in trade area (general) at least 3."@en ,
+                   "Fartstiden skal være minst 180 dager som overstyrmann på fartøy med bruttotonnasje minst 500 i fartsområde (generell) minst 3."@no ;
+    sh:targetClass sdir:SGS_500_L_3_180_M_V_CO ;
+    sh:property :PS_Vessel_500_GT, :PS_TradeArea_minInc_3, :PS_Duration_180, :PS_Position_CO .
+
+:NS_G_15_1_360_M_V_DO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days in any deck officer on vessel with length overall at least 15 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 360 dager i en dekkoffiserstilling på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_15_1_360_M_V_DO ;
+    sh:property :PS_VesselLength_15, :PS_TradeArea_minInc_1, :PS_Duration_360, :PS_Position_DO .
+
+:NS_G_15_1_720_M_V_DO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 720 days in any deck officer on vessel with length overall at least 15 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 720 dager i en dekkoffiserstilling på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_15_1_720_M_V_DO ;
+    sh:property :PS_VesselLength_15, :PS_TradeArea_minInc_1, :PS_Duration_720, :PS_Position_DO .
+
+:NS_G_10_1_360_M_F_DO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days in any deck officer on fishing vessel with length overall at least 10.67 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 360 dager i en dekkoffiserstilling på fiskefartøy med største lengde minst 10,67 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_10_1_360_M_F_DO ;
+    sh:property :PS_VesselLength_10, :PS_TradeArea_minInc_1, :PS_Duration_360, :PS_VesselType_F, :PS_Position_DO .
+
+:NS_G_L_T_360_M_P_DO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as any deck officer on passenger vessel."@en ,
+                   "Fartstiden skal være minst 360 dager i en dekkoffiserstilling på passasjerskip."@no ;
+    sh:targetClass sdir:SGS_G_L_T_360_M_P_DO ;
+    sh:property :PS_VesselLength_10, :PS_Duration_360, :PS_VesselType_P, :PS_Position_DO .
+
+:NS_G_15_1_90_M_V_DO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 90 days as any deck officer on vessel with length overall at least 15 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 90 dager i en dekkoffiserstilling på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_15_1_90_M_V_DO ;
+    sh:property :PS_VesselLength_15, :PS_Duration_90, :PS_TradeArea_minInc_1, :PS_Position_DO .
+
+:NS_G_10_1_90_M_F_DO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 90 days in any deck officer on fishing vessel with length overall at least 10.67 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 90 dager i en dekkoffiserstilling på fiskefartøy med største lengde minst 10,67 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_10_1_90_M_F_DO ;
+    sh:property :PS_VesselLength_10, :PS_TradeArea_minInc_1, :PS_Duration_90, :PS_VesselType_F, :PS_Position_DO .
+
+:NS_G_15_1_90_M_V_SN
+    a sh:NodeShape ;
+    sh:description "Duration of at least 90 days in a supernumerary capacity on a vessel with length overall at least 15 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 90 dager uten gyldig kompetansebevis på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_15_1_90_M_V_SN ;
+    sh:property :PS_VesselLength_15, :PS_TradeArea_minInc_1, :PS_Duration_90, :PS_Position_SN, :PS_DaysSinceCompletion_180 .
+
+:NS_G_10_1_90_M_V_SN
+    a sh:NodeShape ;
+    sh:description "Duration of at least 90 days in a supernumerary capacity on a vessel with length overall at least 10.67 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 90 dager uten gyldig kompetansebevis på fartøy med største lengde minst 10,67 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_10_1_90_M_V_SN ;
+    sh:property :PS_VesselLength_10, :PS_TradeArea_minInc_1, :PS_Duration_90, :PS_Position_SN, :PS_DaysSinceCompletion_180 .
+
+:NS_G_15_3_1080_M_V_DO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 1080 days as any deck officer on vessel with length overall at least 15 meter in trade area (general) at least 3."@en ,
+                   "Fartstiden skal være minst 1080 dager i en dekkoffiserstilling på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 3."@no ;
+    sh:targetClass sdir:SGS_G_15_3_1080_M_V_DO ;
+    sh:property :PS_VesselLength_15, :PS_Duration_1080, :PS_TradeArea_minInc_3, :PS_Position_DO .
+
+:NS_G_15_3_360_M_V_CA
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as cadet deck on vessel with length overall at least 15 meter in trade area (general) at least 3."@en ,
+                   "Fartstiden skal være minst 360 dager som dekkskadett på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 3."@no ;
+    sh:targetClass sdir:SGS_G_15_3_360_M_V_CA ;
+    sh:property :PS_VesselLength_15, :PS_Duration_360, :PS_TradeArea_minInc_3, :PS_Position_CA .
+
+:NS_G_15_3_180_M_V_CA
+    a sh:NodeShape ;
+    sh:description "Duration of at least 180 days as cadet deck on vessel with length overall at least 15 meter in trade area (general) at least 3."@en ,
+                   "Fartstiden skal være minst 180 dager som dekkskadett på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 3."@no ;
+    sh:targetClass sdir:SGS_G_15_3_180_M_V_CA ;
+    sh:property :PS_VesselLength_15, :PS_Duration_180, :PS_TradeArea_minInc_3, :PS_Position_CA .
+
+:NS_G_15_1_1080_M_V_DC
+    a sh:NodeShape ;
+    sh:description "Duration of at least 1080 days as service on deck on vessel with length overall at least 15 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 1080 dager som brovakttjeneste på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_15_1_1080_M_V_DC ;
+    sh:property :PS_VesselLength_15, :PS_Duration_1080, :PS_TradeArea_minInc_1, :PS_Position_DC .
+
+:NS_G_15_3_1080_M_V_DC
+    a sh:NodeShape ;
+    sh:description "Duration of at least 1080 days as service on deck on vessel with length overall at least 15 meter in trade area (general) at least 3."@en ,
+                   "Fartstiden skal være minst 1080 dager som brovakttjeneste på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 3."@no ;
+    sh:targetClass sdir:SGS_G_15_3_1080_M_V_DC ;
+    sh:property :PS_VesselLength_15, :PS_Duration_1080, :PS_TradeArea_minInc_3, :PS_Position_DC .
+
+:NS_G_15_1_360_M_V_CA
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as cadet deck on vessel with length overall at least 15 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 360 dager som dekkskadett på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_15_1_360_M_V_CA ;
+    sh:property :PS_VesselLength_15, :PS_Duration_360, :PS_TradeArea_minInc_1, :PS_Position_CA .
+
+:NS_G_15_1_180_M_V_CA
+    a sh:NodeShape ;
+    sh:description "Duration of at least 180 days as cadet deck on vessel with length overall at least 15 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 180 dager som dekkskadett på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_15_1_180_M_V_CA ;
+    sh:property :PS_VesselLength_15, :PS_Duration_180, :PS_TradeArea_minInc_1, :PS_Position_CA .
+
+:NS_500_L_1_360_M_F_DO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as any deck officer position on fishing vessel with gross tonnage at least 500 in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 360 dager i en dekkoffiserstilling på fiskefartøy med bruttotonnasje minst 500 i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_500_L_1_360_M_F_DO ;
+    sh:property :PS_Vessel_500_GT, :PS_Duration_360, :PS_TradeArea_minInc_1, :PS_VesselType_F, :PS_Position_DO .
+
+:NS_500_L_1_720_M_F_DO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 720 days as any deck officer position on fishing vessel with gross tonnage at least 500 in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 720 dager i en dekkoffiserstilling på fiskefartøy med bruttotonnasje minst 500 i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_500_L_1_720_M_F_DO ;
+    sh:property :PS_Vessel_500_GT, :PS_Duration_720, :PS_TradeArea_minInc_1, :PS_VesselType_F, :PS_Position_DO .
+
+:NS_G_15_3_540_M_V_DC
+    a sh:NodeShape ;
+    sh:description "Duration of at least 540 days in deck service on vessel with length overall at least 15 meter in trade area (general) at least 3."@en ,
+                   "Fartstiden skal være minst 540 dager i dekktjeneste på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 3."@no ;
+    sh:targetClass sdir:SGS_G_15_3_540_M_V_DC ;
+    sh:property :PS_VesselLength_15, :PS_Duration_540, :PS_TradeArea_minInc_3, :PS_Position_DC .
+
+:NS_G_15_3_720_M_V_DC
+    a sh:NodeShape ;
+    sh:description "Duration of at least 720 days in deck service on vessel with length overall at least 15 meter in trade area (general) at least 3."@en ,
+                   "Fartstiden skal være minst 720 dager i dekktjeneste på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 3."@no ;
+    sh:targetClass sdir:SGS_G_15_3_720_M_V_DC ;
+    sh:property :PS_VesselLength_15, :PS_Duration_720, :PS_TradeArea_minInc_3, :PS_Position_DC .
+
+:NS_G_15_1_180_M_F_DO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 180 days as any deck officer position on fishing vessel with length overall at least 15 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 180 dager i en dekkoffiserstilling på fiskefartøy med største lengde minst 15 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_15_1_180_M_F_DO ;
+    sh:property :PS_VesselLength_15, :PS_Duration_180, :PS_TradeArea_minInc_1, :PS_VesselType_F, :PS_Position_DO .
+
+:NS_G_10_1_360_M_F_DO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as any deck officer position on fishing vessel with length overall at least 10.67 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 360 dager i en dekkoffiserstilling på fiskefartøy med største lengde minst 10,67 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_10_1_360_M_F_DO ;
+    sh:property :PS_VesselLength_10, :PS_Duration_360, :PS_TradeArea_minInc_1, :PS_VesselType_F, :PS_Position_DO .
+
+:NS_G_10_1_720_M_F_DO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 720 days as any deck officer position on fishing vessel with length overall at least 10.67 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 720 dager i en dekkoffiserstilling på fiskefartøy med største lengde minst 10,67 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_10_1_720_M_F_DO ;
+    sh:property :PS_VesselLength_10, :PS_Duration_720, :PS_TradeArea_minInc_1, :PS_VesselType_F, :PS_Position_DO .
+
+:NS_G_10_1_360_M_F_FI
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as seaservice fisherman on fishing vessel with length overall at least 10.67 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 360 dager som fisker på fiskefartøy med største lengde minst 10,67 meter i fartsområde (generell) minst 1 i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_10_1_360_M_F_FI ;
+    sh:property :PS_VesselLength_10, :PS_Duration_360, :PS_TradeArea_minInc_1, :PS_VesselType_F, :PS_Position_FI .
+
+:NS_G_15_1_180_M_F_FI
+    a sh:NodeShape ;
+    sh:description "Duration of at least 180 days as seaservice fisherman on fishing vessel with length overall at least 15 meter in trade area (general) at least 1."@en ,
+                   "Fartstiden skal være minst 180 dager som fisker på fiskefartøy med største lengde minst 15 meter i fartsområde (generell) minst 1 i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_15_1_180_M_F_FI ;
+    sh:property :PS_VesselLength_15, :PS_Duration_180, :PS_TradeArea_minInc_1, :PS_VesselType_F, :PS_Position_FI .
+
+:NS_G_L_T_1080_750_V_MO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 1080 days as machine officer on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 1080 dager som maskinist på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_1080_750_V_MO ;
+    sh:property :PS_Duration_1080, :PS_EnginePower_750, :PS_Position_MO .
+
+:NS_G_L_T_360_750_V_SE
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as second engineer on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 360 dager som førstemaskinist på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_360_750_V_SE ;
+    sh:property :PS_Duration_360, :PS_EnginePower_750, :PS_Position_SE .
+
+:NS_G_L_T_360_750_V_EN
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as engineer on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 360 dager som maskinist på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_360_750_V_EN ;
+    sh:property :PS_Duration_360, :PS_EnginePower_750, :PS_Position_EN .
+
+:NS_G_L_T_720_750_V_EN
+    a sh:NodeShape ;
+    sh:description "Duration of at least 720 days as engineer on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 720 dager som maskinist på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_720_750_V_EN ;
+    sh:property :PS_Duration_720, :PS_EnginePower_750, :PS_Position_EN .
+
+:NS_G_L_T_90_750_V_SN
+    a sh:NodeShape ;
+    sh:description "Duration of at least 90 days without valid certificate of competancy vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 90 dager uten kompetansesertifikat på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_90_750_V_SN ;
+    sh:property :PS_Duration_90, :PS_EnginePower_750, :PS_Position_SN .
+
+:NS_G_L_T_90_150_V_SN
+    a sh:NodeShape ;
+    sh:description "Duration of at least 90 days without valid certificate of competancy vessel with engine power at least 150 kW."@en ,
+                   "Fartstiden skal være minst 90 dager uten kompetansesertifikat på fartøy med fremdriftskraft minst 150 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_90_150_V_SN ;
+    sh:property :PS_Duration_90, :PS_EnginePower_150, :PS_Position_SN .
+
+:NS_G_L_T_90_750_V_MO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 90 days with valid certificate of competancy vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 90 dager med gyldig kompetansesertifikat på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_90_750_V_MO ;
+    sh:property :PS_Duration_90, :PS_EnginePower_750, :PS_Position_MO .
+
+:NS_G_L_T_1080_750_V_MC
+    a sh:NodeShape ;
+    sh:description "Duration of at least 1080 days as subordinate machine crew on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 1080 dager som underordnet maskinist på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_1080_750_V_MC ;
+    sh:property :PS_Duration_1080, :PS_EnginePower_750, :PS_Position_MC .
+
+:NS_G_L_T_1080_750_V_MCE
+    a sh:NodeShape ;
+    sh:description "Duration of at least 1080 days as electro technical rating on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 1080 dager som underordnet elektriker på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_1080_750_V_MCE ;
+    sh:property :PS_Duration_1080, :PS_EnginePower_750, :PS_Position_MCE .
+
+:NS_G_L_T_360_750_V_CAE
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as cadet machine on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 360 dager som maskinkadett på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_360_750_V_CAE ;
+    sh:property :PS_Duration_360, :PS_EnginePower_750, :PS_Position_CAE .
+
+:NS_G_L_T_180_750_V_CAE
+    a sh:NodeShape ;
+    sh:description "Duration of at least 180 days as cadet machine on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 180 dager som maskinkadett på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_180_750_V_CAE ;
+    sh:property :PS_Duration_180, :PS_EnginePower_750, :PS_Position_CAE .
+
+:NS_G_L_T_360_750_V_SEA
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days in engine department on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 360 dager i maskinavdelingen på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_360_750_V_SEA ;
+    sh:property :PS_Duration_360, :PS_EnginePower_750, :PS_Position_SEA .
+
+:NS_G_L_T_360_300_P_MO
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as machine officer on passenger vessels with engine power at least 300 kW."@en ,
+                   "Fartstiden skal være minst 360 dager som maskin offiser på passasjerfartøy med fremdriftskraft minst 300 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_360_300_P_MO ;
+    sh:property :PS_Duration_360, :PS_EnginePower_300, :PS_VesselType_P, :PS_Position_MO .
+
+:NS_300_L_3_540_M_V_DC
+    a sh:NodeShape ;
+    sh:description "Duration of at least 540 days service time on deck on vessels with gross tonnage at least 300 in trade area (general) at least 3."@en ,
+                   "Fartstiden skal være minst 540 dager på dekk på fartøy med bruttotonnasje minst 300 i fartsområde (generell) minst 3."@no ;
+    sh:targetClass sdir:SGS_300_L_3_540_M_V_DC ;
+    sh:property :PS_Duration_540, :PS_Vessel_300_GT, :PS_TradeArea_minInc_3, :PS_Position_DC .
+
+:NS_G_L_T_360_750_V_MC
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as subordinate machine enginner on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 360 dager som underordnet maskininst på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_360_750_V_MC ;
+    sh:property :PS_Duration_360, :PS_EnginePower_750, :PS_Position_MC .
+
+:NS_G_L_T_360_750_V_SEA
+    a sh:NodeShape ;
+    sh:description "Duration of at least 360 days as ships electrican apperentice on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 360 dager som lærling skipseletriker på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_360_750_V_SEA ;
+    sh:property :PS_Duration_360, :PS_EnginePower_750, :PS_Position_SEA .
+
+:NS_G_L_T_180_750_V_MCE
+    a sh:NodeShape ;
+    sh:description "Duration of at least 180 days as ships electrican apperentice on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 180 dager som lærling skipseletriker på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_180_750_V_MCE ;
+    sh:property :PS_Duration_180, :PS_EnginePower_750, :PS_Position_MCE .
+
+:NS_G_L_T_90_750_V_MC
+    a sh:NodeShape ;
+    sh:description "Duration of at least 90 days as ships electrican apperentice on vessel with engine power at least 750 kW."@en ,
+                   "Fartstiden skal være minst 90 dager som lærling skipseletriker på fartøy med fremdriftskraft minst 750 kW."@no ;
+    sh:targetClass sdir:SGS_G_L_T_90_750_V_MC ;
+    sh:property :PS_Duration_90, :PS_EnginePower_750, :PS_Position_MC .
+
+:NS_G_L_1_90_M_V_O
+    a sh:NodeShape ;
+    sh:description "90 days renewal IGF."@en ,
+                   "90 dager fartstid fornyelse LFF."@no ;
+    sh:targetClass sdir:SGS_G_L_1_90_M_V_O ;
+    sh:property :PS_Duration_90, :PS_TradeArea_minInc_1 .
+
+:NS_G_L_1_30_M_V_O
+    a sh:NodeShape ;
+    sh:description "30 days renewal IGF."@en ,
+                   "30 dager fartstid fornyelse LFF."@no ;
+    sh:targetClass sdir:SGS_G_L_1_30_M_V_O ;
+    sh:property :PS_Duration_30, :PS_TradeArea_minInc_1 .
+
+:NS_G_L_5_60_M_V_DO 
+    a sh:NodeShape ;
+    sh:description "Duration of at least 60 days in polare waters renewal basic."@en ,
+                   "Fartstid skal være minst 60 dager i polare farvann fornyelse grunnleggende."@no ;
+    sh:targetClass sdir:SGS_G_L_5_60_M_V_DO ;
+    sh:property :PS_Duration_60, :PS_TradeArea_minInc_5 .
+
+:NS_G_L_T_90_M_G_O
+    a sh:NodeShape ;
+    sh:description "Duration of at least 90 days at gas tanker."@en ,
+                   "Fartstid skal være minst 90 dager på gasstanker."@no ;
+    sh:targetClass sdir:SGS_G_L_T_90_M_G_O ;
+    sh:property :PS_Duration_90, :PS_VesselType_G .
+
+:NS_G_L_T_90_M_C_O
+    a sh:NodeShape ;
+    sh:description "Duration of at least 90 days at chemical tanker."@en ,
+                   "Fartstid skal være minst 90 dager på kjemisk tanker."@no ;
+    sh:targetClass sdir:SGS_G_L_T_90_M_C_O ;
+    sh:property :PS_Duration_90, :PS_VesselType_C .
+
+:NS_G_L_T_90_M_O_O
+    a sh:NodeShape ;
+    sh:description "Duration of at least 90 days at oil tanker."@en ,
+                   "Fartstid skal være minst 90 dager på oljetanker."@no ;
+    sh:targetClass sdir:SGS_G_L_T_90_M_O_O ;
+    sh:property :PS_Duration_90, :PS_VesselType_O .
+
+:NS_G_L_T_90_M_OK_O
+    a sh:NodeShape ;
+    sh:description "Duration of at least 90 days at oil- or chemical tanker."@en ,
+                   "Fartstid skal være minst 90 dager på olje- eller kjemitanker."@no ;
+    sh:targetClass sdir:SGS_G_L_T_90_M_OK_O ;
+    sh:property :PS_Duration_90, :PS_VesselType_OK .
+
+:NS_50_L_1_180_M_V_DC
+    a sh:NodeShape ;
+    sh:description "Duration of at least 180 days as cadet deck on a vessel with gross tonnage at least 50 GT in trade area (general) at least 1."@en ,
+                   "Fartstid skal være misnt 180 dager som dekkskadett på fartøy med bruttotonnasje minst 50 BT i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_50_L_1_180_M_V_DC ;
+    sh:property :PS_Vessel_50_GT, :PS_TradeArea_minInc_1, :PS_Duration_180, :PS_Position_DC .
+
+:NS_50_L_1_60_M_V_DC
+    a sh:NodeShape ;
+    sh:description "Duration of at least 60 days as a part of navigational watch on a vessel with gross tonnage at least 50 GT in trade area (general) at least 1."@en ,
+                   "Fartstid skal være misnt 60 dager i brovakttjeneste på fartøy med bruttotonnasje minst 50 BT i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_50_L_1_60_M_V_DC ;
+    sh:property :PS_Vessel_50_GT, :PS_TradeArea_minInc_1, :PS_Duration_60, :PS_Position_DC .
+
+:NS_G_15_1_180_M_V_O
+    a sh:NodeShape ;
+    sh:description "Duration of at least 180 days on a vessel with length overall at least 15 meter in trade area (general) at least 1."@en ,
+                   "Fartstid skal være minst 180 dager på fartøy med største lengde minst 15 meter i fartsområde (generell) minst 1."@no ;
+    sh:targetClass sdir:SGS_G_15_1_180_M_V_O ;
+    sh:property :PS_VesselLength_15, :PS_TradeArea_minInc_1, :PS_Duration_180 .
+
+:PS_VesselLength_15 
+  a sh:PropertyShape ;
+  sh:description "Requires vessel length overall at least 15 meters."@en ;
+  sh:description "Krever fartøys største lengde minst 15 meter."@no ;
+  sh:path sdir:vesselLengthOverall ;
+  sh:minInclusive 15 ;
+  sh:datatype unit:M .
+
+:PS_Vessel_500_GT 
+    a sh:PropertyShape ;
+    sh:description "Vessel's gross tonnage must be minimum inclusive 500 GT."@en ;
+    sh:description "Fartøyets bruttotonnasje skal være minst 500 BT."@no ;
+    sh:path sdir:grossTonnage ;
+    sh:minInclusive 500 ;
+    sh:datatype unit:GT ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_Vessel_300_GT 
+    a sh:PropertyShape ;
+    sh:description "Vessel's gross tonnage must be minimum inclusive 300 GT."@en ;
+    sh:description "Fartøyets bruttotonnasje skal være minst 300 BT."@no ;
+    sh:path sdir:grossTonnage ;
+    sh:minInclusive 300 ;
+    sh:datatype unit:GT ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_Vessel_50_GT 
+    a sh:PropertyShape ;
+    sh:description "Vessel's gross tonnage must be minimum inclusive 50 GT."@en ;
+    sh:description "Fartøyets bruttotonnasje skal være minst 50 BT."@no ;
+    sh:path sdir:grossTonnage ;
+    sh:minInclusive 50 ;
+    sh:datatype unit:GT ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_TradeArea_minInc_5
+    a sh:PropertyShape ;
+    sh:description "Requires trade area rank (general) minimum inclusive 5."@en ;
+    sh:description "Krever fartsområde (generell) minst 5."@no ;
+    sh:path sdir:tradeAreaRank_general ;
+    sh:minInclusive 5 ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_TradeArea_minInc_3
+    a sh:PropertyShape ;
+    sh:description "Requires trade area rank (general) minimum inclusive 3."@en ;
+    sh:description "Krever fartsområde (generell) minst 3."@no ;
+    sh:path sdir:tradeAreaRank_general ;
+    sh:minInclusive 3 ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_TradeArea_minInc_1
+    a sh:PropertyShape ;
+    sh:description "Requires trade area rank (general) minimum inclusive 1."@en ;
+    sh:description "Krever fartsområde (generell) minst 1."@no ;
+    sh:path sdir:tradeAreaRank_general ;
+    sh:minInclusive 1 ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_Duration_1080
+    a sh:PropertyShape ;
+    sh:description "Requires duration minimum inclusive 1080 days."@en ;
+    sh:description "Krever fartstid på minst 1080 dager."@no ;
+    sh:path sdir:duration ;
+    sh:minInclusive 1080 ;
+    sh:datatype unit:DAY .
+
+:PS_Duration_720
+    a sh:PropertyShape ;
+    sh:description "Requires duration minimum inclusive 720 days."@en ;
+    sh:description "Krever fartstid på minst 720 dager."@no ;
+    sh:path sdir:duration ;
+    sh:minInclusive 720 ;
+    sh:datatype unit:DAY .
+
+:PS_Duration_360
+    a sh:PropertyShape ;
+    sh:description "Requires duration minimum inclusive 360 days."@en ;
+    sh:description "Krever fartstid på minst 360 dager."@no ;
+    sh:path sdir:duration ;
+    sh:minInclusive 360 ;
+    sh:datatype unit:DAY .
+
+:PS_Duration_180
+    a sh:PropertyShape ;
+    sh:description "Requires duration minimum inclusive 180 days."@en ;
+    sh:description "Krever fartstid på minst 180 dager."@no ;
+    sh:path sdir:duration ;
+    sh:minInclusive 180 ;
+    sh:datatype unit:DAY .
+
+:PS_Duration_90
+    a sh:PropertyShape ;
+    sh:description "Requires duration minimum inclusive 90 days."@en ;
+    sh:description "Krever fartstid på minst 90 dager."@no ;
+    sh:path sdir:duration ;
+    sh:minInclusive 90 ;
+    sh:datatype unit:DAY .
+
+:PS_Duration_60
+    a sh:PropertyShape ;
+    sh:description "Requires duration minimum inclusive 60 days."@en ;
+    sh:description "Krever fartstid på minst 60 dager."@no ;
+    sh:path sdir:duration ;
+    sh:minInclusive 60 ;
+    sh:datatype unit:DAY .
+
+:PS_Duration_30
+    a sh:PropertyShape ;
+    sh:description "Requires duration minimum inclusive 30 days."@en ;
+    sh:description "Krever fartstid på minst 30 dager."@no ;
+    sh:path sdir:duration ;
+    sh:minInclusive 30 ;
+    sh:datatype unit:DAY .
+
+:PS_DaysSinceCompletion_180
+    a sh:PropertyShape ;
+    sh:description "Days since completetion"@en ;
+    sh:description "Antall dager siden fullføring"@no ;
+    sh:path sdir:daysSinceCompletion ;
+    sh:maxExclusive 180 ;
+    sh:datatype unit:DAY .
+
+:PS_EnginePower_750
+    a sh:PropertyShape ;
+    sh:description "Engine power of at least 750 kW."@en ;
+    sh:description "Fremdriftskraft på minst 750 kW."@no ;
+    sh:path sdir:enginePower ;
+    sh:minInclusive 750 ;
+    sh:datatype unit:KiloW .
+    
+:PS_EnginePower_150
+    a sh:PropertyShape ;
+    sh:description "Engine power of at least 150 kW."@en ;
+    sh:description "Fremdriftskraft på minst 150 kW."@no ;
+    sh:path sdir:enginePower ;
+    sh:minInclusive 150 ;
+    sh:datatype unit:KiloW .
+
+:PS_EnginePower_300
+    a sh:PropertyShape ;
+    sh:description "Engine power of at least 300 kW."@en ;
+    sh:description "Fremdriftskraft på minst 300 kW."@no ;
+    sh:path sdir:enginePower ;
+    sh:minInclusive 300 ;
+    sh:datatype unit:KiloW .
+
+# Vessel type shall change from pattern to hasValue
+:PS_VesselType_F
+    a sh:PropertyShape ;
+    sh:description "Vessel type of fishing vessel."@en ;
+    sh:description "Fartøytype er fiskefartøy."@no ;
+    sh:path sdir:shipType ;
+    sh:pattern "^FishingVessel$" .
+
+:PS_VesselType_P
+    a sh:PropertyShape ;
+    sh:description "Vessel type of passenger vessel."@en ;
+    sh:description "Fartøytype er passasjerskip."@no ;
+    sh:path sdir:shipType ;
+    sh:pattern "^PassengerVessel$" .
+
+:PS_VesselType_G
+    a sh:PropertyShape ;
+    sh:description "Vessel type of gas tanker."@en ;
+    sh:description "Fartøytype er gasstanker."@no ;
+    sh:path sdir:shipType ;
+    sh:pattern "^GasTanker$" .
+
+:PS_VesselType_C
+    a sh:PropertyShape ;
+    sh:description "Vessel type of chemical tanker."@en ;
+    sh:description "Fartøytype er kjemisk tanker."@no ;
+    sh:path sdir:shipType ;
+    sh:pattern "^ChemicalTanker$" .
+
+:PS_VesselType_O
+    a sh:PropertyShape ;
+    sh:description "Vessel type of oil tanker."@en ;
+    sh:description "Fartøytype er oljetanker."@no ;
+    sh:path sdir:shipType ;
+    sh:pattern "^OilTanker$" .
+
+:PS_VesselType_OK
+    a sh:PropertyShape ;
+    sh:description "Vessel type of oil- or chemical tanker."@en ;
+    sh:description "Fartøytype er olje- eller kjemitanker."@no ;
+    sh:path sdir:shipType ;
+    sh:pattern "^OilChemicalTanker$" .
+
+:PS_Position_DO 
+    a sh:PropertyShape ;
+    sh:description "Deck officer position"@en ;
+    sh:description "Dekkoffiserstilling"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:DeckOfficerPositions .
+
+:PS_Position_CO 
+    a sh:PropertyShape ;
+    sh:description "Chief officer position"@en ;
+    sh:description "Overstyrmann"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:ChiefOfficer .
+
+:PS_Position_SN
+    a sh:PropertyShape ;
+    sh:description "Supernumerary capacity"@en ;
+    sh:description "Uten gyldig kompetansebevis"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:Supernumerary .
+
+:PS_Position_CA
+    a sh:PropertyShape ;
+    sh:description "Cadet deck position"@en ;
+    sh:description "Dekkskadettstilling"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:Cadet_deck .
+
+:PS_Position_DC
+    a sh:PropertyShape ;
+    sh:description "Service on deck"@en ;
+    sh:description "Brovakttjeneste"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:DeckCrewPositions .
+
+:PS_Position_FI
+    a sh:PropertyShape ;
+    sh:description "Fisherman"@en ;
+    sh:description "Fisker"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:Fisherman .
+
+:PS_Position_MO
+    a sh:PropertyShape ;
+    sh:description "Machine offiser occupation"@en ;
+    sh:description "Maskinist"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:MachineOfficerOccupation .
+
+:PS_Position_SE
+    a sh:PropertyShape ;
+    sh:description "Second engineer"@en ;
+    sh:description "Førstemaskinist"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:SecondEngineer .
+
+:PS_Position_EN
+    a sh:PropertyShape ;
+    sh:description "Engineer"@en ;
+    sh:description "Maskinist"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:Engineer .
+
+:PS_Position_MC
+    a sh:PropertyShape ;
+    sh:description "Subordinate machine crew"@en ;
+    sh:description "Underordnet maskinist"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:MachineCrewOccupation .
+
+:PS_Position_MCE
+    a sh:PropertyShape ;
+    sh:description "Electro technical rating"@en ;
+    sh:description "Underordnet elektriker"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:ElectroTechnicalRating .
+
+:PS_Position_CAE
+    a sh:PropertyShape ;
+    sh:description "Cadet machine"@en ;
+    sh:description "Maskinkadett"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:Cadet_engine .
+
+:PS_Position_SEA
+    a sh:PropertyShape ;
+    sh:description "Engine department apperentice"@en ;
+    sh:description "Lærling i maskinavdeling"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:ShipElectricalApperentice .
+
+:PS_Position_MACH
+    a sh:PropertyShape ;
+    sh:description "Master"@en ;
+    sh:description "Master"@no ;
+    sh:path sdir:inPosition ;
+    sh:hasValue sdir:Master .

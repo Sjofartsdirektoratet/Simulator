@@ -1,0 +1,21 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <https://www.sdir.no/SDIR_Simulator#>
+PREFIX course: <https://www.sdir.no/SDIR_Simulator/shapes/course#>
+PREFIX cert: <https://www.sdir.no/SDIR_Simulator/shapes/certificate#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX req: <http://www.sidr.no/SDIR_Simulator/requirements#>
+
+SELECT DISTINCT ?ageDescription
+WHERE {
+   ?nodeShape sh:targetClass ?certClass .
+   FILTER(REGEX(STR(?certClass), "D3B0"))
+   
+   ?nodeShape ?p ?propertyShape .
+  
+   # Age requirement
+   ?propertyShape sh:path :age ;
+     sh:minInclusive ?age ;
+     sh:description ?ageDescription .
+   FILTER (LANG(?ageDescription) = 'no')
+}

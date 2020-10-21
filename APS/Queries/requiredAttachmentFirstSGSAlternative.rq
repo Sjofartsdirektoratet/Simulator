@@ -1,0 +1,23 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <https://www.sdir.no/SDIR_Simulator#>
+PREFIX course: <https://www.sdir.no/SDIR_Simulator/shapes/course#>
+PREFIX cert: <https://www.sdir.no/SDIR_Simulator/shapes/certificate#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX req: <http://www.sidr.no/SDIR_Simulator/requirements#>
+
+SELECT DISTINCT ?attachment ?attachmentLabel
+WHERE {
+    ?nodeShape sh:targetClass ?certClass .
+    FILTER(REGEX(STR(?certClass), "D3B0"))
+    
+    # Attachment requirement for first seagoing service alternative
+    ?nodeShape sh:or/rdf:rest{0}/rdf:first ?orListItem .
+
+    ?orListItem sh:and/rdf:rest*/rdf:first ?andListItem .
+    ?andListItem sh:path :requiresAttachment ;
+        sh:hasValue ?attachment .
+
+    ?attachment rdfs:label ?attachmentLabel .
+    FILTER (LANG(?attachmentLabel) = 'no') 
+}

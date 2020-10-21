@@ -1,0 +1,163 @@
+# Certificates
+
+@prefix : <https://www.sdir.no/SDIR_Simulator/shapes/certificate#> .
+@prefix sdir: <https://www.sdir.no/SDIR_Simulator#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix unit: <http://qudt.org/vocab/unit#> .
+
+:PS_D3A0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D3A0 .
+
+:PS_D3B0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D3B0 .
+
+:PS_D3D0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D3D0 .
+
+:PS_D2A0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D2A0 .
+
+:PS_D2B0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D2B0 .
+
+:PS_D4B0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D4B0 .
+
+:PS_D4F0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D4F0 .
+
+:PS_ROC
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:ROC .
+
+:PS_GOC
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:GOC .
+
+:PS_D2BG
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D2BG .
+
+:PS_D3BG0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D3BG0 .
+
+:PS_D4D0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D4D0 .
+
+:PS_D4A0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D4A0 .
+
+:PS_M4M0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:M4M0 .
+
+:PS_VM3AM0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:VM3AM0 .
+
+:PS_M2AM0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:M2AM0 .
+
+:PS_SEOF0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:SEOF0 .
+
+:PS_SEOFP0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:SEOFP0 .
+
+:PS_FSAB1
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:FSAB1 .
+
+:PS_D10
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D10 .
+
+:PS_D2BG0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D2BG0 .
+
+:PS_THG0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:THG0 .
+
+:PS_TLG0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:TLG0 .
+
+:PS_D1
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D1 .
+
+:PS_D2
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:D2 .
+
+:PS_M1
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:M1 .
+
+:PS_M2
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:M2 .
+
+:PS_ETO
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:ETO .
+
+:PS_FSAA0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:FSAA0 .
+
+:PS_HealthCertificate
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:HealthCertificate .
+
+:PS_GMDSSRadioCertificate
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCertificate ;
+    sh:hasValue sdir:GMDSSRadioCertificate .

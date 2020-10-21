@@ -1,0 +1,25 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <https://www.sdir.no/SDIR_Simulator#>
+PREFIX course: <https://www.sdir.no/SDIR_Simulator/shapes/course#>
+PREFIX cert: <https://www.sdir.no/SDIR_Simulator/shapes/certificate#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX req: <http://www.sidr.no/SDIR_Simulator/requirements#>
+
+SELECT DISTINCT ?certificate ?certificateLabel
+WHERE {
+    ?nodeShape sh:targetClass ?certClass .
+    FILTER(REGEX(STR(?certClass), "D2A0"))
+
+    # One of the following certificates is needed for first seagoing service alternative
+    ?nodeShape sh:or/rdf:rest{0}/rdf:first ?orListItem .
+
+    ?orListItem sh:and/rdf:rest{0}/rdf:first ?andListItem .
+    ?andListItem sh:or/rdf:rest*/rdf:first ?certificateShape .
+
+    ?certificateShape sh:hasValue ?certificate .
+    OPTIONAL {
+        ?certificate rdfs:label ?certificateLabel .
+        FILTER (LANG(?certificateLabel) = 'no') 
+    }
+}

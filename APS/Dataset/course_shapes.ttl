@@ -1,0 +1,116 @@
+# Courses
+
+@prefix : <https://www.sdir.no/SDIR_Simulator/shapes/course#> .
+@prefix sdir: <https://www.sdir.no/SDIR_Simulator#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix unit: <http://qudt.org/vocab/unit#> .
+
+:PS_VSKR
+    a sh:PropertyShape ;
+    sh:description "VSKR course package."@en ;
+    sh:description "Videregående sikkerhetskurs oppdatering, STCW tabell A-VI/2-1, A-VI/3, A-VI/4-1"@no ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:VSKR .
+
+:PS_VSK
+    a sh:PropertyShape ;
+    sh:description "VSK course package."@en ;
+    sh:description "Videregående sikkerhetskurs,  STCW regel VI/2, VI/3, VI/4; STCW  tabell A-VI/2-1, A-VI/3, A-VI/4-1"@no ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:VSK .
+
+:PS_OGD
+    a sh:PropertyShape ;
+    sh:description "OGD course package."@en ;
+    sh:description "Oppgraderingskurs for dekksoffiserer (66 t.)"@no ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:OGD .
+
+:PS_GSKR
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:GSKR .
+
+:PS_GSK
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:GSK .
+
+:PS_SP
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:SP .
+
+:PS_SB
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:SB .
+
+:PS_OGM
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:OGM .
+
+:PS_SOF
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:SOF .
+
+:PS_SOF0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:SOF0 .
+
+:PS_LBR
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:LBR .
+
+:PS_LB
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:LB .
+
+:PS_HMOB
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:HMOB .
+
+:PS_HMOBR
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:HMOBR .
+
+:PS_ASS
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:ASS .
+
+:PS_ASS0
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:ASS0 .
+
+:PS_MBH
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:MBH .
+
+:PS_MBHR
+    a sh:PropertyShape ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:MBHR .
+
+:PS_MedicalCourse
+    a sh:PropertyShape ;
+    sh:description "Medical course"@en ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:MedicalCourse .
+
+:PS_AdvancedSafetyCourseDeckOfficerLimited
+    a sh:PropertyShape ;
+    sh:description "Advanced safety course deck officer limited"@en ;
+    sh:path sdir:requiresCourse ;
+    sh:hasValue sdir:AdvancedSafetyCourseDeckOfficerLimited .

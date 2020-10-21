@@ -1,0 +1,23 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <https://www.sdir.no/SDIR_Simulator#>
+PREFIX course: <https://www.sdir.no/SDIR_Simulator/shapes/course#>
+PREFIX cert: <https://www.sdir.no/SDIR_Simulator/shapes/certificate#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX req: <http://www.sidr.no/SDIR_Simulator/requirements#>
+
+SELECT DISTINCT ?course ?courseLabel
+WHERE {
+  ?nodeShape sh:targetClass ?certClass .
+  FILTER(REGEX(STR(?certClass), "D2A0"))
+  
+  # Optional courses (at least one of the following)
+  ?nodeShape sh:or/rdf:rest*/rdf:first ?courseItem 
+  FILTER(STRSTARTS(STR(?courseItem), "https://www.sdir.no/SDIR_Simulator/shapes/course#"))
+  
+  ?courseItem sh:hasValue ?course .
+  OPTIONAL { 
+    ?course rdfs:label ?courseLabel .
+    FILTER (LANG(?courseLabel) = 'no') 
+  }
+}

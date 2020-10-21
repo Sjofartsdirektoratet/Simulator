@@ -1,0 +1,114 @@
+# Returns a graph containing all requirements connected to D1
+# DISCLAIMER: This query has too long response time and is pretty messy. 
+# Will be rewritten into seperate queries for each requirement.
+# However, this messy thing is kept as a reference.
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX : <https://www.sdir.no/SDIR_Simulator#>
+PREFIX course: <https://www.sdir.no/SDIR_Simulator/shapes/course#>
+PREFIX cert: <https://www.sdir.no/SDIR_Simulator/shapes/certificate#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX req: <http://www.sidr.no/SDIR_Simulator/requirements#>
+
+CONSTRUCT { 
+    req:D1Req rdfs:comment "Krav knyttet til D1."@no ;
+        req:course ?courseDes ;
+        req:age ?ageDes ;
+        req:education ?eduDes ;
+        req:oneOfTheFollowingCourse ?optCourse ;
+        req:allOfTheFollowingCert ?reqCert ;
+        req:oneOfTheFollowingSGS req:SGS1, req:SGS2 .
+
+    req:SGS1 req:seagoingService ?sgsDes1 ;
+        req:oneOfTheFollowing ?sgsOptCert1 .
+
+    req:SGS2 req:seagoingService ?sgsDes2 ;
+	    req:oneOfTheFollowing ?optCourse2 .
+}
+WHERE {
+  
+  # Required courses (common courses for all alternatives)
+  ?s1 sh:property ?o .
+  ?o sh:path :requiresCourse ;
+     sh:hasValue ?c .
+  ?c rdfs:label ?courseDes .
+  FILTER (LANG(?courseDes) = 'no')
+  
+  # Age requirement
+  ?s2 sh:path :age ;
+     sh:minInclusive ?age ;
+     sh:description ?ageDes .
+  FILTER (LANG(?ageDes) = 'no')
+  
+  # Required education
+  ?s3 sh:path :requiresEducation ;
+      sh:hasValue ?education .
+  ?education rdfs:comment ?eduDes .
+  
+  # Optional courses (at least one of the following)
+  ?s4 sh:or/rdf:rest*/rdf:first ?courseItem 
+  FILTER(STRSTARTS(STR(?courseItem), "https://www.sdir.no/SDIR_Simulator/shapes/course#"))
+  
+  ?courseItem sh:hasValue ?optCourse .
+  OPTIONAL { 
+    ?optCourse rdfs:label ?optCourseDes .
+    FILTER (LANG(?optCourseDes) = 'no') 
+  }
+  
+  # Required certificates
+  ?s1 sh:and/rdf:rest*/rdf:first ?item 
+  FILTER(STRSTARTS(STR(?item), "https://www.sdir.no/SDIR_Simulator/shapes/certificate#"))
+  
+  ?item sh:hasValue ?reqCert .
+  OPTIONAL {
+    ?reqCert rdfs:label ?reqCertDes .
+    FILTER (LANG(?reqCertDes) = 'no') 
+  }
+  
+  # First alternative of seagoing service
+  ?s6 sh:or/rdf:rest{0}/rdf:first ?a .
+  
+  ?a sh:and/rdf:rest*/rdf:first ?b .
+  ?b sh:path :hasSeagoingServiceRequirement ;
+     sh:hasValue ?sgs1 ;
+     sh:order 1 . # alternatives are arranged by order
+  
+  ?nsSgs1 sh:targetClass ?sgs1 ;
+         sh:description ?sgsDes1 .
+  FILTER (LANG(?sgsDes1) = 'no') 
+ 
+  # One of the following courses connected to SGS1
+  ?s7 sh:or/rdf:rest{0}/rdf:first ?ac .
+  
+  ?ac sh:and/rdf:rest{0}/rdf:first ?bc .
+  ?bc sh:or/rdf:rest*/rdf:first ?optCert1 .
+  
+  ?optCert1 sh:hasValue ?sgsOptCert1 .
+  OPTIONAL {
+    ?sgsOptCert1 rdfs:label ?sgsOptCertDes1 .
+  	FILTER (LANG(?sgsOptCertDes1) = 'no') 
+  }
+  
+  # Second alternative of SGS
+  ?s8 sh:or/rdf:rest{1}/rdf:first ?a2 .
+  
+  ?a2 sh:and/rdf:rest*/rdf:first ?b2 .
+  ?b2 sh:path :hasSeagoingServiceRequirement ;
+     sh:hasValue ?sgs2 ;
+     sh:order 2 . # alternatives are arranged by order
+  
+  ?nsSgs2 sh:targetClass ?sgs2 ;
+          sh:description ?sgsDes2 .
+  FILTER (LANG(?sgsDes2) = 'no') 
+  
+  # One of the following courses connected to SGS2
+  ?s9 sh:or/rdf:rest{1}/rdf:first ?ac2 .
+  
+  ?ac2 sh:and/rdf:rest*/rdf:first ?bc2 .
+  ?bc2 sh:or/rdf:rest*/rdf:first ?x .
+  
+  ?x sh:hasValue ?optCourse2 .
+  ?optCourse2 rdfs:label ?optCourse2Des .
+  FILTER (LANG(?optCourse2Des) = 'no')
+}

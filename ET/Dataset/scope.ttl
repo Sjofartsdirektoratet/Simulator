@@ -1,0 +1,177 @@
+# Scope
+
+@prefix : <https://www.sdir.no/SDIR_Simulator/shapes/scope#> .
+@prefix sdir: <https://www.sdir.no/SDIR_Simulator#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+
+### Scopes on vessel type
+
+:PS_FishingVessel 
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde fiskefartøy"@no, 
+                   "Scope of fishing vessels"@en ;
+    sh:path sdir:vesselType ;
+    sh:hasValue sdir:FishingVessel .
+
+### Scopes on length overall (LOA)
+
+:PS_maxLOA_15 
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde største lengde 15 meter."@no, 
+                   "Scope of length overall 15 meter."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:minExclusive 15 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_minLOA_6
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde minste lengde 6 meter."@no,
+                   "Scope of minimum length 6 meter."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:maxInclusive 6 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_minLOA_10
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde minste lengde 10,67 meter."@no,
+                   "Scope of minimum length 10.67 meter."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:maxInclusive 10.67 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_maxLOA_10
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde største lengde 10,67 meter."@no,
+                   "Scope of length overall 10.67 meter."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:minExclusive 10.67 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+### Scopes on built date
+
+:PS_BuiltDate_b19920101
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår før 1. januar 1992."@no, 
+                   "Scope of built date before Janury 1st 1992."@en ;
+    sh:path sdir:builtDate ;
+    sh:minExclusive "1992-01-01T00:00:00" ;
+    sh:datatype xsd:dateTime .
+
+:PS_BuiltDate_a19920101
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår etter 1. januar 1992."@no, 
+                   "Scope of built date after Janury 1st 1992."@en ;
+    sh:path sdir:builtDate ;
+    sh:maxInclusive "1992-01-01T00:00:00" ;
+    sh:datatype xsd:dateTime .
+
+:PS_BuiltDate_a19970701
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår etter 1. juli 1997."@no, 
+                   "Scope of built date after July 1st 1997."@en ;
+    sh:path sdir:builtDate ;
+    sh:maxInclusive "1997-07-01T00:00:00" ;
+    sh:datatype xsd:dateTime .
+
+:PS_BuiltDate_a20070301
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår etter 1. mars 2007."@no, 
+                   "Scope of built date before March 1st 2007."@en ;
+    sh:path sdir:builtDate ;
+    sh:maxInclusive "2007-03-01T23:59:59" ;
+    sh:datatype xsd:dateTime .
+    
+:PS_BuiltDate_b20140601
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår før 1. juni 2014."@no, 
+                   "Scope of built date before June 1st 2014."@en ;
+    sh:path sdir:builtDate ;
+    sh:minExclusive "2014-06-01T00:00:00" ;
+    sh:datatype xsd:dateTime .
+    
+:PS_BuiltDate_b19880102
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår før 2. januar 1988."@no, 
+                   "Scope of built date before January 2nd 1988."@en ;
+    sh:path sdir:builtDate ;
+    sh:minExclusive "1988-01-02T00:00:00" ;
+    sh:datatype xsd:dateTime .
+
+:PS_BuiltDate_a19880102
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår etter 2. januar 1988."@no, 
+                   "Scope of built date after January 2nd 1988."@en ;
+    sh:path sdir:builtDate ;
+    sh:maxInclusive "1988-01-02T00:00:00" ;
+    sh:datatype xsd:dateTime .
+
+:PS_BuiltDate_b20020101
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår før 1. januar 2002."@no, 
+                   "Scope of built date before January 1st 2002."@en ;
+    sh:path sdir:builtDate ;
+    sh:minExclusive "2002-01-01T00:00:00" ;
+    sh:datatype xsd:dateTime .
+
+:PS_BuiltDate_a20020101
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår etter 1. januar 2002."@no, 
+                   "Scope of built date after January 1st 2002."@en ;
+    sh:path sdir:builtDate ;
+    sh:maxInclusive "2002-01-01T00:00:00" ;
+    sh:datatype xsd:dateTime .
+
+:PS_BuiltDate_b20141231
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår før 31. desember 2014."@no, 
+                   "Scope of built date before December 31st 2014."@en ;
+    sh:path sdir:builtDate ;
+    sh:minExclusive "2014-12-31T23:59:59" ;
+    sh:datatype xsd:dateTime .
+
+### Scopes on trade area
+
+:PS_TradeArea_BankfishingI
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde fartsområde Bankfiske I."@no, 
+                   "Scope of trade area Bankfishing I."@en ;
+    sh:path sdir:tradeArea ;
+    sh:hasValue sdir:BankfishingI .
+
+:PS_TradeArea_BankfishingII
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde fartsområde Bankfiske II."@no, 
+                   "Scope of trade area Bankfishing II."@en ;
+    sh:path sdir:tradeArea ;
+    sh:hasValue sdir:BankfishingII .
+
+### Scopes on duration
+
+:PS_Duration_60MO
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde varighet 60 måneder."@no ,
+                   "Scope of duration of 60 months."@en ;
+    sh:path sdir:duration ;
+    sh:maxInclusive 60 ;
+    sh:datatype unit:MO .
+
+:PS_Duration_30MO
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde varighet 30 måneder."@no ,
+                   "Scope of duration of 30 months."@en ;
+    sh:path sdir:duration ;
+    sh:maxInclusive 30 ;
+    sh:datatype unit:MO .

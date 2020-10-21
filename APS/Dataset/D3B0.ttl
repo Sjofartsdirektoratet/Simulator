@@ -1,0 +1,116 @@
+# D3 deck officer class 3
+
+@prefix : <https://www.sdir.no/SDIR_Simulator/shapes#> .
+@prefix sdir: <https://www.sdir.no/SDIR_Simulator#> .
+@prefix cert: <https://www.sdir.no/SDIR_Simulator/shapes/certificate#> .
+@prefix course: <https://www.sdir.no/SDIR_Simulator/shapes/course#> .
+@prefix sgs: <https://www.sdir.no/SDIR_Simulator/shapes/sgs#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+
+:NS_D3B0
+    a sh:NodeShape ;
+    sh:targetClass sdir:D3B0 ;
+    sh:description "Shape describing requirements for D3B0 certificate."@en ;
+    sh:description "Shape som beskriver krav knyttet til sertifikatet D3B0."@no ;
+    sh:property :PS_Age_minIncl_18, course:PS_MedicalCourse ;
+    sh:or (:PS_VD2_Education :PS_VD3_Education) ;
+    sh:or (course:VSKR course:VSK course:OGD) ;
+    sh:and (cert:PS_GMDSSRadioCertificate cert:PS_HealthCertificate) ;
+    sh:or (
+        [ sh:and (
+            [ sh:path sdir:requiresAttachment ;
+              sh:hasValue sdir:ABD3 ; ]
+
+            [ sh:path sdir:hasSeagoingServiceRequirement ;
+              sh:hasValue sdir:SGS_G_15_3_1080_M_V_DC ; 
+              sh:order 1 ; ]
+        )]
+
+        [ sh:and (
+            [ sh:path sdir:requiresCompetancy ;
+              sh:hasValue sdir:KADE ; ]
+
+            [ sh:path sdir:hasSeagoingServiceRequirement ;
+              sh:hasValue sdir:SGS_G_15_3_180_M_V_CA ; 
+              sh:order 2 ; ]
+        )]
+
+        [ sh:and (
+            [ sh:path sdir:requiresCompetancy ;
+              sh:hasValue sdir:KADE ; ]
+
+            [ sh:path sdir:hasSeagoingServiceRequirement ;
+              sh:hasValue sdir:SGS_G_15_3_360_M_V_CA ; 
+              sh:order 3 ; ] 
+        )]
+    ) ;
+    sh:property [
+        sh:path sdir:hasSeagoingServiceRequirement ;
+        sh:in (sdir:SGS_G_15_3_1080_M_V_DC sdir:SGS_G_15_3_180_M_V_CA sdir:SGS_G_15_3_360_M_V_CA) ;
+    ] .
+
+:NS_SGS_15_3_1080_DC
+  a sh:NodeShape ;
+  sh:description "Duration of at least 1080 days on a vessel with length overall at least 15 meters as a deck crew position in trade area (general) at least 3."@en,
+                 "Fartstiden skal være minst 1080 dager på et fartøy med største lengde minst 15 meter i en dekktjenestestilling i fartsområde (generell) minst 3."@no ;
+  sh:targetClass sdir:SGS_15_3_1080_DC ;
+  sh:property 
+      sgs:PS_VesselLength_15, 
+      sgs:PS_TradeArea_minInc_3, 
+      sgs:PS_Duration_1080, 
+      sgs:PS_Position_DC .
+
+:NS_SGS_15_3_180_CA 
+  a sh:NodeShape ;
+  sh:description "Duration of at least 180 days on a vessel with length overall at least 15 meters as a cadet deck in trade area (general) at least 3."@en, 
+                 "Fartstiden skal være minst 180 dager på et fartøy med støtste lengde minst 15 meter som dekkskadett i fartsområde (generell) minst 3."@no ;
+  sh:targetClass sdir:SGS_15_3_180_CA ;
+  sh:property 
+      sgs:PS_VesselLength_15, 
+      sgs:PS_TradeArea_minInc_3, 
+      sgs:PS_Duration_180, 
+      sgs:PS_Position_CA .
+
+:NS_SGS_15_3_360_CA 
+  a sh:NodeShape ;
+  sh:description "Duration of at least 360 days on a vessel with length overall at least 15 meters as a cadet deck in trade area (general) at least 3."@en, 
+                 "Fartstiden skal være minst 360 dager på et fartøy med støtste lengde minst 15 meter som dekkskadett i fartsområde (generell) minst 3."@no ;
+  sh:targetClass sdir:SGS_15_3_360_CA ;
+  sh:property 
+      sgs:PS_VesselLength_15, 
+      sgs:PS_TradeArea_minInc_3, 
+      sgs:PS_Duration_360, 
+      sgs:PS_Position_CA .
+
+:PS_Age_minIncl_18
+    a sh:PropertyShape ;
+    sh:description "Value of age must be at least 18."@en ;
+    sh:description "Verdien av age må være minst 18."@no ;
+    sh:path sdir:age ;
+    sh:minInclusive 18 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype unit:YR .
+
+:PS_VD2_Education
+    a sh:PropertyShape ;
+    sh:description "Requires VD2 education."@en ;
+    sh:description "Krever VD2-utdanning."@no ;
+    sh:path sdir:requiresEducation ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue sdir:VD2 .
+
+:PS_VD3_Education
+    a sh:PropertyShape ;
+    sh:description "Requires VD3 education."@en ;
+    sh:description "Krever VD3-utdanning."@no ;
+    sh:path sdir:requiresEducation ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue sdir:VD3 .

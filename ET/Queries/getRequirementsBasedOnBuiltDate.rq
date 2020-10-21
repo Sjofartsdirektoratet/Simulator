@@ -1,0 +1,36 @@
+PREFIX : <https://www.sdir.no/SDIR_Simulator#> 
+PREFIX scope: <https://www.sdir.no/SDIR_Simulator/shapes/scope#> 
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+# Return information about a requirement based on specific vessel built date. 
+# Alternative regulation references are only counted, see own query for information retrieval.
+# See comments in query for changing magic strings/numbers to variables in some API-call or similar.
+
+SELECT ?paragraph ?label ?regulationReference ?theme (COUNT(?altRef) as ?numOfAdditionalInfoLinks)
+WHERE {
+  ?paragraph sh:property ?scope .
+  
+  # First, check for scope requirement.
+  ?scope sh:path :builtDate ;
+               ?date ?dateValue .
+  
+  FILTER (?dateValue <= "1998-05-02T00:00:00") # Insert built date of vessel in question
+  
+  # Get label in given language
+  ?paragraph rdfs:label ?label .
+  FILTER(LANG(?label) = 'no') # Insert language tag for label ('no' or 'en')
+  
+  # Regulation reference URL
+  ?paragraph :regulationReference ?regulationReference .
+  
+  # If present, count number of alternative regulation reference(s)
+  OPTIONAL { ?paragraph :altReference ?altRef . }
+  
+  # Get tag in given language
+  ?paragraph :theme ?theme .
+  FILTER(LANG(?theme) = 'no') # Insert language tag for label ('no' or 'en') 
+}
+GROUP BY ?paragraph ?label ?regulationReference ?theme

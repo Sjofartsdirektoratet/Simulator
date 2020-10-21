@@ -1,0 +1,2732 @@
+@prefix : <urn:webprotege:ontology:b64ee3ab-8d78-496e-b55b-7f7754aecd67#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sdir: <https://www.sdir.no/SDIR_Simulator#> .
+@prefix unit: <http://qudt.org/vocab/unit#> .
+@base <urn:webprotege:ontology:b64ee3ab-8d78-496e-b55b-7f7754aecd67> .
+
+<urn:webprotege:ontology:b64ee3ab-8d78-496e-b55b-7f7754aecd67> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://qudt.org/vocab/unit#DEG
+unit:DEG rdf:type rdfs:Datatype ;
+         rdfs:label "DEG"@en .
+
+
+###  http://qudt.org/vocab/unit#DEG_C
+unit:DEG_C rdf:type rdfs:Datatype ;
+           rdfs:label "DEG_C"@en .
+
+
+###  http://qudt.org/vocab/unit#KN
+unit:KN rdf:type rdfs:Datatype ;
+        rdfs:label "KN"@en .
+
+
+###  http://qudt.org/vocab/unit#KiloGM
+unit:KiloGM rdf:type rdfs:Datatype ;
+            rdfs:label "KiloGM"@en .
+
+
+###  http://qudt.org/vocab/unit#KiloHZ
+unit:KiloHZ rdf:type rdfs:Datatype ;
+            rdfs:label "KiloHZ"@en .
+
+
+###  http://qudt.org/vocab/unit#L
+unit:L rdf:type rdfs:Datatype .
+
+
+###  http://qudt.org/vocab/unit#M
+unit:M rdf:type rdfs:Datatype ;
+       rdfs:label "M"@en .
+
+
+###  http://qudt.org/vocab/unit#MIN
+unit:MIN rdf:type rdfs:Datatype ;
+         rdfs:label "MIN"@en .
+
+
+###  http://qudt.org/vocab/unit#MO
+unit:MO rdf:type rdfs:Datatype ;
+        rdfs:label "MO"@en .
+
+
+###  http://qudt.org/vocab/unit#MilliM
+unit:MilliM rdf:type rdfs:Datatype ;
+            rdfs:label "MilliM"@en .
+
+
+###  http://qudt.org/vocab/unit#PERCENT
+unit:PERCENT rdf:type rdfs:Datatype ;
+             rdfs:label "PERCENT"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://www.sdir.no/SDIR_Simulator#attach
+sdir:attach rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain sdir:Construction ;
+            rdfs:label "attach"@en ,
+                       "feste"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#buildingMaterial
+sdir:buildingMaterial rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:domain sdir:Tank ;
+                      rdfs:range sdir:ConstructionMaterial ;
+                      rdfs:label "building material"@en ,
+                                 "byggemateriale"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#chargeSource
+sdir:chargeSource rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain sdir:PowerSource ;
+                  rdfs:range sdir:PowerSource ;
+                  rdfs:label "charge source"@en ,
+                             "ladekilde"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#illuminationArrangement
+sdir:illuminationArrangement rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             rdfs:domain sdir:Compass ;
+                             rdfs:range sdir:IlluminationArrangement ;
+                             rdfs:label "illumination arrangement"@en ,
+                                        "lysarrangement"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#kept
+sdir:kept rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf owl:topObjectProperty ;
+          rdfs:domain sdir:Equipment ;
+          rdfs:range sdir:Placement ;
+          rdfs:label "kept"@en ,
+                     "oppbevaring"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#oilSupply
+sdir:oilSupply rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:label "oil supply"@en ,
+                          "oljetilførsel"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#placement
+sdir:placement rdf:type owl:ObjectProperty ;
+               rdfs:domain sdir:Cargo ,
+                           sdir:Equipment ,
+                           sdir:Information ;
+               rdfs:range sdir:Placement ;
+               rdfs:label "placement"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#powerSupply
+sdir:powerSupply rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf owl:topObjectProperty ;
+                 rdfs:domain sdir:Stove ;
+                 rdfs:label "krafttilførsel"@no ,
+                            "power supply"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#scope
+sdir:scope rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain sdir:Ship ;
+           rdfs:range sdir:Scope ;
+           rdfs:label "scope"@en ,
+                      "virkeområde"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#subregion
+sdir:subregion rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain sdir:Country ;
+               rdfs:range sdir:Subregion ;
+               rdfs:comment "Country is a part of subregion."@en ,
+                            "Nasjon er en del av subregion."@no ;
+               rdfs:label "subregion"@en ,
+                          "subregion"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#supplyOfFuel
+sdir:supplyOfFuel rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:range sdir:Fuel ;
+                  rdfs:label "brenselforsyning"@no ,
+                             "supply of fuel"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://www.sdir.no/SDIR_Simulator#angleOfHeel
+sdir:angleOfHeel rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:range unit:DEG ;
+                 rdfs:label "angle of heel"@en ,
+                            "krengningsvinkel"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#angleOfList
+sdir:angleOfList rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain sdir:Ship ;
+                 rdfs:range unit:DEG ;
+                 rdfs:label "angle of list"@en ,
+                            "slagside"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#angleOfRudder
+sdir:angleOfRudder rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain sdir:Steering ;
+                   rdfs:range unit:DEG ;
+                   rdfs:label "angle of rudder"@en ,
+                              "rorets vinkel"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#blindSector
+sdir:blindSector rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf sdir:sector ;
+                 rdfs:label "blind sector"@en ,
+                            "blindsektor"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#bowHeight
+sdir:bowHeight rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain sdir:Ship ;
+               rdfs:range unit:MilliM ;
+               rdfs:label "baughøyde"@no ,
+                          "bow height"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#builtDate
+sdir:builtDate rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain sdir:Ship ;
+               rdfs:range xsd:dateTime ;
+               rdfs:label "built date"@en ,
+                          "byggedato"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#capacity
+sdir:capacity rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:range xsd:int ;
+              rdfs:label "capacity"@en ,
+                         "kapasitet"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#clearSector
+sdir:clearSector rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf sdir:sector ;
+                 rdfs:label "clear sector"@en ,
+                            "klar sikt"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#closeable
+sdir:closeable rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:range xsd:boolean ;
+               rdfs:label "closeable"@en ,
+                          "lukkbar"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#closedVessel
+sdir:closedVessel rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain sdir:Ship ;
+                  rdfs:range xsd:boolean ;
+                  rdfs:label "closed vessel"@en ,
+                             "lukket fartøy"^^xsd:string .
+
+
+###  https://www.sdir.no/SDIR_Simulator#closedWeathertight
+sdir:closedWeathertight rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain sdir:ExternalOpenings ;
+                        rdfs:range xsd:boolean ;
+                        rdfs:label "closed weathertight"@en ,
+                                   "lukkes værtett"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#controlInterval
+sdir:controlInterval rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:range unit:MO ;
+                     rdfs:label "control interval"@en ,
+                                "kontrollintervall"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#dateOfManufacture
+sdir:dateOfManufacture rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain sdir:DistressSignalEquipment ;
+                       rdfs:range xsd:dateTime ;
+                       rdfs:label "date of manufacture"@en ,
+                                  "produksjonsdato"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#derivation
+sdir:derivation rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain sdir:Compass ;
+                rdfs:range unit:DEG ;
+                rdfs:label "derivation"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#diameter
+sdir:diameter rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:range unit:MilliM ;
+              rdfs:label "diameter"@en ,
+                         "diameter"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#flashPoint
+sdir:flashPoint rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain sdir:Fuel ;
+                rdfs:range unit:DEG_C ;
+                rdfs:label "flammepunkt"@no ,
+                           "flash point"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#frostProof
+sdir:frostProof rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain sdir:FireExtinguisher ;
+                rdfs:range xsd:boolean ;
+                rdfs:label "frost proof"@en ,
+                           "frostsikker"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#gazHazardousSpace
+sdir:gazHazardousSpace rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain sdir:Placement ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "gassfarlig rom"^^xsd:string ,
+                                  "gaz-hazardous space"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#headroom
+sdir:headroom rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain sdir:Construction ;
+              rdfs:range unit:M ;
+              rdfs:label "headroom"@en ,
+                         "takhøyde"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#height
+sdir:height rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain sdir:Construction ;
+            rdfs:range unit:M ;
+            rdfs:label "height"@en ,
+                       "høyde"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#inflateable
+sdir:inflateable rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain sdir:Liferaft ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:label "inflateable"@en ,
+                            "oppblåsbar"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#issued
+sdir:issued rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain sdir:RadioEquipment ;
+            rdfs:range xsd:dateTime ;
+            rdfs:label "issued"@en ,
+                       "utstedt"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#language
+sdir:language rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain sdir:Information ;
+              rdfs:range xsd:string ;
+              rdfs:label "language"@en ,
+                         "språk"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#letterHeight
+sdir:letterHeight rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain sdir:Sign ;
+                  rdfs:range unit:MilliM ;
+                  rdfs:label "bokstavhøyde"@no ,
+                             "letter height"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#litreVolume
+sdir:litreVolume rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:range unit:L ;
+                 rdfs:label "liter volum"^^xsd:string ,
+                            "litre volume"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#load
+sdir:load rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:range unit:KiloGM ;
+          rdfs:label "belastning"@no ,
+                     "load"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#magneticMoment
+sdir:magneticMoment rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain sdir:MagneticCompass ;
+                    rdfs:range unit:PERCENT ;
+                    rdfs:label "magnetic moment"@en ,
+                               "magnetisk moment"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#maxLength
+sdir:maxLength rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain sdir:Ship ;
+               rdfs:range unit:M ;
+               rdfs:label "maximum length"@en ,
+                          "største lengde"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#maxTemperature
+sdir:maxTemperature rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:range unit:DEG_C ;
+                    rdfs:label "maksimum temperatur"@no ,
+                               "maximum temperature"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#metacentricHeight
+sdir:metacentricHeight rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain sdir:Ship ;
+                       rdfs:range unit:MilliM ;
+                       rdfs:label "metacentric height"@en ,
+                                  "metasenterhøyde"@no ;
+                       <http://www.w3.org/2004/02/skos/core#altLabel> "GM"@en ,
+                                                                      "GM"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#minLength
+sdir:minLength rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain sdir:Ship ;
+               rdfs:range unit:M ;
+               rdfs:label "minimum length"@en ,
+                          "minste lengde"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#operationalCapacity
+sdir:operationalCapacity rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:label "driftskapasitet"@no ,
+                                    "operational capacity"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#procured
+sdir:procured rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:range xsd:dateTime ;
+              rdfs:label "anskaffet"@no ,
+                         "procured"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#propulsionPower
+sdir:propulsionPower rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:label "propellkraft"@no ,
+                                "propulsion power"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#radioFrequency
+sdir:radioFrequency rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain sdir:Radio ;
+                    rdfs:range unit:KiloHZ ;
+                    rdfs:label "radio frequency"@en ,
+                               "radiofrekvens"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#rightningLever
+sdir:rightningLever rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain sdir:Ship ;
+                    rdfs:range unit:MilliM ;
+                    rdfs:label "rettende arm"@no ,
+                               "rightning lever"@en ;
+                    <http://www.w3.org/2004/02/skos/core#altLabel> "GZ"@en ,
+                                                                   "GZ"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#seawaterTemperature
+sdir:seawaterTemperature rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:range unit:DEG_C ;
+                         rdfs:label "seawater temperature"@en ,
+                                    "sjøvannstemperatur"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#sector
+sdir:sector rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:range unit:DEG ;
+            rdfs:label "sector"@en ,
+                       "sikt"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#selfClosing
+sdir:selfClosing rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain sdir:Valve ;
+                 rdfs:range xsd:boolean ;
+                 rdfs:label "self closing"@en ,
+                            "selvlukkende"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#serviceSpeed
+sdir:serviceSpeed rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain sdir:Ship ;
+                  rdfs:range unit:KN ;
+                  rdfs:label "marsjfart"@no ,
+                             "service speed"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#spraytight
+sdir:spraytight rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain sdir:Door ;
+                rdfs:range xsd:boolean ;
+                rdfs:label "spraytight"@en ,
+                           "spruttett"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#thickness
+sdir:thickness rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:range unit:MilliM ;
+               rdfs:label "thickness"@en ,
+                          "tykkelse"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#timeInterval
+sdir:timeInterval rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:range unit:MIN ;
+                  rdfs:label "tidsintervall"@no ,
+                             "time interval"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#trim
+sdir:trim rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain sdir:Ship ;
+          rdfs:range unit:DEG ;
+          rdfs:label "trim"@en ,
+                     "trim"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#usedByDate
+sdir:usedByDate rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain sdir:DistressSignalEquipment ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "holdbarhetsdato"@no ,
+                           "used-by date"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#voltage
+sdir:voltage rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain sdir:ElectricPower ;
+             rdfs:label "spenning"@no ,
+                        "voltage"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://www.sdir.no/SDIR_Simulator#AccomodationArea
+sdir:AccomodationArea rdf:type owl:Class ;
+                      rdfs:subClassOf sdir:Placement ;
+                      rdfs:label "Accomodation area"@en ,
+                                 "Oppholdsrom"@no ;
+                      <http://www.w3.org/2004/02/skos/core#altLabel> "Living area"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#AccumulatorBattery
+sdir:AccumulatorBattery rdf:type owl:Class ;
+                        rdfs:subClassOf sdir:PowerSource ;
+                        rdfs:label "Accumulator battery"@en ,
+                                   "Akkumulatorbatteri"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#AdhersiveNote
+sdir:AdhersiveNote rdf:type owl:Class ;
+                   rdfs:subClassOf sdir:Poster ;
+                   rdfs:label "Adhersive note"@en ,
+                              "Klebeplakat"^^xsd:string .
+
+
+###  https://www.sdir.no/SDIR_Simulator#AdjustmentAndSteeringDevices
+sdir:AdjustmentAndSteeringDevices rdf:type owl:Class ;
+                                  rdfs:subClassOf sdir:Steering ;
+                                  rdfs:label "Adjustment and steering devices"@en ,
+                                             "Kursjustering- og styreanordninger"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#AiringPipe
+sdir:AiringPipe rdf:type owl:Class ;
+                rdfs:subClassOf sdir:ExternalOpenings ,
+                                sdir:Pipe ;
+                rdfs:label "Airing pipe"@en ,
+                           "Avluftningsrør"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Alleyway
+sdir:Alleyway rdf:type owl:Class ;
+              rdfs:subClassOf sdir:Placement ;
+              rdfs:label "Alleyway"@en ,
+                         "Gang"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Aluminium
+sdir:Aluminium rdf:type owl:Class ;
+               rdfs:subClassOf sdir:NonCombustibleMaterial ;
+               rdfs:label "Aluminium"@en ,
+                          "Aluminium"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Antenna
+sdir:Antenna rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Equipment ;
+             rdfs:label "Antenna"@en ,
+                        "Antenne"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#AntiSkidSurface
+sdir:AntiSkidSurface rdf:type owl:Class ;
+                     rdfs:subClassOf sdir:SafetyMeasures ;
+                     rdfs:label "Anti-skid surface"@en ,
+                                "Sklisikring"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ApprovedCompany
+sdir:ApprovedCompany rdf:type owl:Class ;
+                     rdfs:subClassOf sdir:Company ;
+                     rdfs:label "Approved company"@en ,
+                                "Godkjent foretak"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#AudibleAndVisualAlarm
+sdir:AudibleAndVisualAlarm rdf:type owl:Class ;
+                           rdfs:subClassOf sdir:DistressSignalEquipment ;
+                           rdfs:label "Audible and visual alarm"@en ,
+                                      "Lyd- og lysalarm"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#AutomaticPilotSystem
+sdir:AutomaticPilotSystem rdf:type owl:Class ;
+                          rdfs:subClassOf sdir:Steering ;
+                          rdfs:label "Automatic pilot system"@en ,
+                                     "Selvstyreanlegg"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#AuxiliaryVessel
+sdir:AuxiliaryVessel rdf:type owl:Class ;
+                     rdfs:subClassOf sdir:Ship ;
+                     rdfs:label "Auxiliary vessel"@en ,
+                                "Hjelpefartøy"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#BankFishing
+sdir:BankFishing rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:TradeArea ;
+                 rdfs:label "Bank fishing"@en ,
+                            "Bankfiske"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Barriers
+sdir:Barriers rdf:type owl:Class ;
+              rdfs:subClassOf sdir:SafetyMeasures ;
+              rdfs:comment "A barrier or barricade is a physical structure which blocks or impedes something."@en ;
+              rdfs:label "Avsperringer"@no ,
+                         "Barriers"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#BatteryRoom
+sdir:BatteryRoom rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Placement ;
+                 rdfs:label "Batterirom"@no ,
+                            "Battery room"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Beam
+sdir:Beam rdf:type owl:Class ;
+          rdfs:subClassOf sdir:Construction ;
+          rdfs:label "Beam"@en ,
+                     "Bjelke"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Bilge
+sdir:Bilge rdf:type owl:Class ;
+           rdfs:subClassOf sdir:Construction ;
+           rdfs:label "Bilge"@en ,
+                      "Lensesystem"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#BilgeFlap
+sdir:BilgeFlap rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Construction ;
+               rdfs:label "Bilge flap"@en ,
+                          "Lenseklaff"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#BilgePipe
+sdir:BilgePipe rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Pipe ;
+               rdfs:label "Bilge pipe"@en ,
+                          "Lenselegning"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Binocular
+sdir:Binocular rdf:type owl:Class ;
+               rdfs:subClassOf sdir:NavigationEquipment ;
+               rdfs:label "Binocular"@en ,
+                          "Kikkert"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Bow
+sdir:Bow rdf:type owl:Class ;
+         rdfs:subClassOf sdir:Construction ,
+                         sdir:Placement ;
+         rdfs:comment "Baug, forparten på fartøyer til sjøs, spisst formet for å bryte vannet med minst mulig motstand."@no ,
+                      "The bow is the forward part of the hull of a ship or boat, the point that is usually most forward when the vessel is underway."@en ;
+         rdfs:label "Baug"@no ,
+                    "Bow"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#BreathingProtection
+sdir:BreathingProtection rdf:type owl:Class ;
+                         rdfs:subClassOf sdir:Equipment ;
+                         rdfs:label "Breathing protection"@en ,
+                                    "Åndedrettsbeskyttelse"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#BridgeNavigationalWatchAlarmSystem
+sdir:BridgeNavigationalWatchAlarmSystem rdf:type owl:Class ;
+                                        rdfs:subClassOf sdir:Equipment ;
+                                        rdfs:label "Bridge navigational watch alarm system"@en ,
+                                                   "Brovaktalarm"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Bulkhead
+sdir:Bulkhead rdf:type owl:Class ;
+              rdfs:subClassOf sdir:Construction ;
+              rdfs:comment "A bulkhead is an upright wall within the hull of a ship or within the fuselage of an aeroplane."@en ,
+                           "Enhver vertikal skillevegg i skip, tverrskips eller langskips, også små rom under for- og akterdekk i båter."@no ;
+              rdfs:label "Bulkhead"@en ,
+                         "Skott"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Bulwark
+sdir:Bulwark rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Construction ;
+             rdfs:label "Bulwark"@en ,
+                        "Skansekledning"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Caffine
+sdir:Caffine rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Fuel ;
+             rdfs:label "Caffine"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#CallSign
+sdir:CallSign rdf:type owl:Class ;
+              rdfs:subClassOf sdir:Identification ;
+              rdfs:label "Call sign"@en ,
+                         "Kjenningssignal"@no ,
+                         "Kjenningssignal for radioinstallasjoner."@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Cargo
+sdir:Cargo rdf:type owl:Class ;
+           rdfs:label "Cargo"@en ,
+                      "Last"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#CargoHandlingAppliances
+sdir:CargoHandlingAppliances rdf:type owl:Class ;
+                             rdfs:subClassOf sdir:Equipment ;
+                             rdfs:label "Cargo handling appliances"@en ,
+                                        "Laste- og losseinnretninger"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#CargoSpaces
+sdir:CargoSpaces rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Placement ;
+                 rdfs:label "Cargo spaces"@en ,
+                            "Lasterom"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Casing
+sdir:Casing rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Construction ;
+            rdfs:comment "Covering of any piece of machinery, such as boiler casing, engine casing, turbine casing, valve casing. Lagging on pipes is also considered a form of casing."^^xsd:string ;
+            rdfs:label "Casing"@en ,
+                       "Casing"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#CentreLine
+sdir:CentreLine rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Placement ;
+                rdfs:label "Centre line"@en ,
+                           "Senterlinje"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Certificate
+sdir:Certificate rdf:type owl:Class ;
+                 rdfs:label "Certificate"@en ,
+                            "Sertifikat"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#CertificateOfInstallationForGasfiredInstallations
+sdir:CertificateOfInstallationForGasfiredInstallations rdf:type owl:Class ;
+                                                       rdfs:subClassOf sdir:Information ;
+                                                       rdfs:label "Certificate of installation for gasfired installations"@en ,
+                                                                  "Installasjonsbevis for gassfyrte anlegg"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Chart
+sdir:Chart rdf:type owl:Class ;
+           rdfs:subClassOf sdir:Information ;
+           rdfs:label "Chart"@en ,
+                      "Kart"@no ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "Map"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Chimney
+sdir:Chimney rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Construction ;
+             rdfs:label "Chimney"@en ,
+                        "Skorstein"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Clock
+sdir:Clock rdf:type owl:Class ;
+           rdfs:subClassOf sdir:Equipment ,
+                           sdir:NavigationEquipment ;
+           rdfs:label "Clock"@en ,
+                      "Skipsur"@no ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "Ship's clock"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ClosingValve
+sdir:ClosingValve rdf:type owl:Class ;
+                  rdfs:subClassOf sdir:Valve ;
+                  rdfs:label "Avstengingsventil"@no ,
+                             "Closing valve"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#CollectionTank
+sdir:CollectionTank rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Tank ;
+                    rdfs:label "Collection tank"@en ,
+                               "Oppsamlingsbeholder"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#CombustibleMaterial
+sdir:CombustibleMaterial rdf:type owl:Class ;
+                         rdfs:subClassOf sdir:ConstructionMaterial ;
+                         rdfs:label "Brennbart materiale"@no ,
+                                    "Combustible material"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Company
+sdir:Company rdf:type owl:Class ;
+             rdfs:comment "A company, abbreviated as co., is a legal entity representing an association of people, whether natural, legal or a mixture of both, with a specific objective."@en ,
+                          "Selskap er i Norge i juridisk forstand en kommersiell organisasjon som i Selskapsloven defineres som «økonomisk virksomhet som utøves for to eller flere deltakeres felles regning og risiko»."@no ;
+             rdfs:label "Company"@en ,
+                        "Foretak"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Compass
+sdir:Compass rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Instrument ,
+                             sdir:NavigationEquipment ;
+             rdfs:label "Compass"@en ,
+                        "Kompass"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ConfirmationOfConstruction
+sdir:ConfirmationOfConstruction rdf:type owl:Class ;
+                                rdfs:subClassOf sdir:Information ;
+                                rdfs:label "Byggebekreftelse"@no ,
+                                           "Confirmation of construction"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Construction
+sdir:Construction rdf:type owl:Class ;
+                  rdfs:subClassOf owl:Thing ;
+                  rdfs:comment "Konstruksjonsmessige enheter om bord på et skip."@no ,
+                               "Structures aboard a ship."@en ;
+                  rdfs:label "Construction"@en ,
+                             "Konstruksjon"@no ;
+                  <http://www.w3.org/2004/02/skos/core#altLabel> "Structure"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ConstructionMaterial
+sdir:ConstructionMaterial rdf:type owl:Class ;
+                          rdfs:subClassOf sdir:Material ;
+                          rdfs:label "Byggemateriale"@no ,
+                                     "Construction material"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Copper
+sdir:Copper rdf:type owl:Class ;
+            rdfs:subClassOf sdir:NonCombustibleMaterial ;
+            rdfs:label "Copper"@en ,
+                       "Kobber"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Corridor
+sdir:Corridor rdf:type owl:Class ;
+              rdfs:subClassOf sdir:Placement ;
+              rdfs:label "Corridor"@en ,
+                         "Korridor"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Country
+sdir:Country rdf:type owl:Class ;
+             rdfs:subClassOf sdir:GeographicalLocation ;
+             rdfs:label "Country"@en ,
+                        "Nasjon"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Deck
+sdir:Deck rdf:type owl:Class ;
+          rdfs:subClassOf sdir:Construction ,
+                          sdir:Placement ;
+          rdfs:comment "A deck is a permanent covering over a compartment or a hull of a ship. On a boat or ship, the primary or upper deck is the horizontal structure that forms the \"roof\" of the hull, strengthening it and serving as the primary working surface."@en ,
+                       "Dekk er en permanent avdekning over et skrog eller rom på et sjøfartøy. Større fartøy kan ha et eller flere gjennomgående dekk. Hoveddekket, som er det øvre dekket, er som regel mer kraftig dimensjonert for å gi fartøyet en rigid basis."@no ;
+          rdfs:label "Deck"@en ,
+                     "Dekk"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Deckhouse
+sdir:Deckhouse rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Placement ;
+               rdfs:label "Deckhouse"@en ,
+                          "Dekkhus"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DeclarationOfConformityFromManufacturerOfLiferaft
+sdir:DeclarationOfConformityFromManufacturerOfLiferaft rdf:type owl:Class ;
+                                                       rdfs:subClassOf sdir:Information ;
+                                                       rdfs:label "Declaration of conformity from manufacturer of liferaft"@en ,
+                                                                  "Samsvarserklæring fra produsent av redningsflåte"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DeclarationOfSurveys
+sdir:DeclarationOfSurveys rdf:type owl:Class ;
+                          rdfs:subClassOf sdir:Information ;
+                          rdfs:label "Declaration of surveys"@en ,
+                                     "Tilsynsynserklæring"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Denmark
+sdir:Denmark rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Country ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty sdir:subregion ;
+                               owl:someValuesFrom sdir:Scandinavia
+                             ] ;
+             rdfs:label "Danmark"@no ,
+                        "Denmark"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DepthMeasuringEquipment
+sdir:DepthMeasuringEquipment rdf:type owl:Class ;
+                             rdfs:subClassOf sdir:Equipment ;
+                             rdfs:label "Depth measuring equipment"@en ,
+                                        "Dybdemåler"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DescriptionOfFireExtinguishingSystem
+sdir:DescriptionOfFireExtinguishingSystem rdf:type owl:Class ;
+                                          rdfs:subClassOf sdir:Information ;
+                                          rdfs:label "Beskrivelse av brannslukningsanlegg"@no ,
+                                                     "Description of fire-extinguishing system"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DistanceMeasuringDevice
+sdir:DistanceMeasuringDevice rdf:type owl:Class ;
+                             rdfs:subClassOf sdir:Equipment ;
+                             rdfs:label "Distance measuring device"@en ,
+                                        "Distansemåler"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DistressSignal
+sdir:DistressSignal rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:DistressSignalEquipment ;
+                    rdfs:label "Distress signal"@en ,
+                               "Nødsignal"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DistressSignalEquipment
+sdir:DistressSignalEquipment rdf:type owl:Class ;
+                             rdfs:subClassOf sdir:SignalingEquipment ;
+                             rdfs:label "Distress signal equipment"@en ,
+                                        "Nødsignalutstyr"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DocumentationOfPressureTestingTightnessTesting
+sdir:DocumentationOfPressureTestingTightnessTesting rdf:type owl:Class ;
+                                                    rdfs:subClassOf sdir:Information ;
+                                                    rdfs:label "Documentation of pressure-testing/tightness-testing"@en ,
+                                                               "Dokumentasjon for trykkprøving/tetthetsprøving"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Door
+sdir:Door rdf:type owl:Class ;
+          rdfs:subClassOf sdir:MeansOfClosure ;
+          rdfs:label "Door"@en ,
+                     "Dør"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DrainPipe
+sdir:DrainPipe rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Pipe ;
+               rdfs:label "Avløpsrør"@no ,
+                          "Drain pipe"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DrainSpigot
+sdir:DrainSpigot rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Pipe ;
+                 rdfs:label "Avløpsstuss"@no ,
+                            "Drain spigot"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DraughtMarks
+sdir:DraughtMarks rdf:type owl:Class ;
+                  rdfs:subClassOf sdir:Information ;
+                  rdfs:label "Draught marks"@en ,
+                             "Nedlastingsmerker"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Drill
+sdir:Drill rdf:type owl:Class ;
+           rdfs:label "Drill"@en ,
+                      "Øvelse"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DripRegulation
+sdir:DripRegulation rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Equipment ;
+                    rdfs:label "Drip regulation"@en ,
+                               "Dryppregulering"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#DripTray
+sdir:DripTray rdf:type owl:Class ;
+              rdfs:subClassOf sdir:Equipment ;
+              rdfs:label "Drip tray"@en ,
+                         "Spillbrett"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ElectricPower
+sdir:ElectricPower rdf:type owl:Class ;
+                   rdfs:subClassOf sdir:PowerSource ;
+                   rdfs:label "Electric power"@en ,
+                              "Strøm"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ElectricalCompany
+sdir:ElectricalCompany rdf:type owl:Class ;
+                       rdfs:subClassOf sdir:Company ;
+                       rdfs:label "Electrical company"@en ,
+                                  "Elektroforetak"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#EmergencyPower
+sdir:EmergencyPower rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:PowerSource ;
+                    rdfs:label "Emergency power"@en ,
+                               "Nødkraft"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#EngineRoom
+sdir:EngineRoom rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Placement ;
+                rdfs:label "Engine room"@en ,
+                           "Maskinrom"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Equipment
+sdir:Equipment rdf:type owl:Class ;
+               rdfs:label "Equipment"@en ,
+                          "Utstyr"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ExhaustManifold
+sdir:ExhaustManifold rdf:type owl:Class ;
+                     rdfs:subClassOf sdir:Pipe ;
+                     rdfs:label "Eksosmanifold"@no ,
+                                "Exhaust manifold"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ExhaustPipe
+sdir:ExhaustPipe rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Pipe ;
+                 rdfs:label "Eksosrør"@no ,
+                            "Exhaust pipe"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ExternalOpenings
+sdir:ExternalOpenings rdf:type owl:Class ;
+                      rdfs:subClassOf sdir:Construction ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty sdir:closedWeathertight ;
+                                        owl:hasValue "true"^^xsd:boolean
+                                      ] ;
+                      rdfs:comment "dører, luker, ventilatorer, lufterør, ventiler,"^^xsd:string ;
+                      rdfs:label "External openings"@en ,
+                                 "Utvendige åpninger"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ExtinguisherSpareCharge
+sdir:ExtinguisherSpareCharge rdf:type owl:Class ;
+                             rdfs:subClassOf sdir:Equipment ,
+                                             sdir:Fireproofing ,
+                                             sdir:SparePart ;
+                             rdfs:comment "ekstra ladning til brannslokningsapparat"^^xsd:string ;
+                             rdfs:label "Extinguisher spare charge"@en ,
+                                        "Reserveladning"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ExtinguishingGas
+sdir:ExtinguishingGas rdf:type owl:Class ;
+                      rdfs:subClassOf sdir:ExtinguishingMedium ;
+                      rdfs:label "Extinguishing gas"@en ,
+                                 "Slokningsgass"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ExtinguishingMedium
+sdir:ExtinguishingMedium rdf:type owl:Class ;
+                         rdfs:subClassOf sdir:Fireproofing ,
+                                         sdir:Substance ;
+                         rdfs:comment "gass, pulver, skum, inergen, c02, novec, aerosol"^^xsd:string ;
+                         rdfs:label "Extinguishing medium"@en ,
+                                    "Slokningsmiddel"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Faucet
+sdir:Faucet rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Valve ;
+            rdfs:label "Faucet"@en ,
+                       "Kran"@no ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "Tap"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FillingPipe
+sdir:FillingPipe rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Pipe ;
+                 rdfs:label "Filling pipe"@en ,
+                            "Påfyllingsrør"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FireDetectionAlarmSystem
+sdir:FireDetectionAlarmSystem rdf:type owl:Class ;
+                              rdfs:subClassOf sdir:Equipment ,
+                                              sdir:Fireproofing ;
+                              rdfs:label "Brannoppdagelses- og alarmanlegg"@no ,
+                                         "Fire detection and alarm system"@en ;
+                              <http://www.w3.org/2004/02/skos/core#altLabel> "Brannalarm"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FireExtinguisher
+sdir:FireExtinguisher rdf:type owl:Class ;
+                      rdfs:subClassOf sdir:Equipment ,
+                                      sdir:Fireproofing ;
+                      rdfs:label "Brannslokningsapparat"@no ,
+                                 "Fire extinguisher"@en ;
+                      <http://www.w3.org/2004/02/skos/core#altLabel> "Brannslokker"^^xsd:string .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FireExtinguishingSystem
+sdir:FireExtinguishingSystem rdf:type owl:Class ;
+                             rdfs:subClassOf sdir:Equipment ,
+                                             sdir:Fireproofing ;
+                             rdfs:comment "fastmontert slokkeanlegg"@no ;
+                             rdfs:label "Brannslokningsanlegg"@no ,
+                                        "Fire-extinguishing system"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FireInsulation
+sdir:FireInsulation rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Insulation ;
+                    rdfs:label "Brannisolasjon"@no ,
+                               "Fire insulation"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Fireplace
+sdir:Fireplace rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Equipment ;
+               rdfs:label "Fireplace"@en ,
+                          "Ildsted"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Fireproofing
+sdir:Fireproofing rdf:type owl:Class ;
+                  rdfs:subClassOf sdir:SafetyEquipment ;
+                  rdfs:label "Brannsikring"@no ,
+                             "Firesafety"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Fishing
+sdir:Fishing rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Scope ;
+             rdfs:label "Fishing"@en ,
+                        "Fiske og fangst"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FishingGear
+sdir:FishingGear rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Equipment ;
+                 rdfs:label "Fishing gear"@en ,
+                            "Fiskeutstyr"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FixedBench
+sdir:FixedBench rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Placement ;
+                rdfs:label "Fast benk"@no ,
+                           "Fixed bench"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FixedLight
+sdir:FixedLight rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Lights ;
+                rdfs:label "Fastmonternt lanterne"@no ,
+                           "Fixed light"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FlexiblePipeConnection
+sdir:FlexiblePipeConnection rdf:type owl:Class ;
+                            rdfs:subClassOf sdir:Pipe ;
+                            rdfs:label "Fleksible rørforbindelser"@no ,
+                                       "Flexible pipe connection"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FloatValve
+sdir:FloatValve rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Valve ;
+                rdfs:label "Float valve"@en ,
+                           "Flottørventil"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Floor
+sdir:Floor rdf:type owl:Class ;
+           rdfs:subClassOf sdir:Deck ;
+           rdfs:label "Dørk"@no ,
+                      "Floor"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ForeignPort
+sdir:ForeignPort rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:GeographicalLocation ;
+                 rdfs:label "Foreign port"@en ,
+                            "Utenlandsk havn"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Freeboard
+sdir:Freeboard rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Stability ;
+               rdfs:label "Freeboard"@en ,
+                          "Fribord"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FreeingPort
+sdir:FreeingPort rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Construction ,
+                                 sdir:FreeingPortArea ;
+                 rdfs:label "Freeing port"@en ,
+                            "Lenseportåpning"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FreeingPortArea
+sdir:FreeingPortArea rdf:type owl:Class ;
+                     rdfs:subClassOf sdir:FreeingPort ,
+                                     sdir:Stability ;
+                     rdfs:label "Freeing port area"@en ,
+                                "Lenseportareal"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FreshWaterTank
+sdir:FreshWaterTank rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Tank ;
+                    rdfs:label "Ferskvannstank"@no ,
+                               "Fresh water tank"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FrontWindow
+sdir:FrontWindow rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Window ;
+                 rdfs:label "Front window"@en ,
+                            "Frontvindu"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Fuel
+sdir:Fuel rdf:type owl:Class ;
+          rdfs:subClassOf sdir:PowerSource ;
+          rdfs:label "Drivstoff"@no ,
+                     "Fuel"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FuelOilTank
+sdir:FuelOilTank rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Tank ;
+                 rdfs:label "Brenseloljetank"@no ,
+                            "Fuel oil tank"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#GMDSSIdentity
+sdir:GMDSSIdentity rdf:type owl:Class ;
+                   rdfs:subClassOf sdir:Identification ;
+                   rdfs:label "GMDSS identity"@en ,
+                              "GMDSS-identitet"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#GalvanizedSteel
+sdir:GalvanizedSteel rdf:type owl:Class ;
+                     rdfs:subClassOf sdir:NonCombustibleMaterial ;
+                     rdfs:label "Galvanisert stål"@no ,
+                                "Galvanized steel"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Gangways
+sdir:Gangways rdf:type owl:Class ;
+              rdfs:subClassOf sdir:Deck ,
+                              sdir:Equipment ;
+              rdfs:comment "Dette er en del av dekk"@no ;
+              rdfs:label "Gangbro"@no ,
+                         "Gangways"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Gas
+sdir:Gas rdf:type owl:Class ;
+         rdfs:subClassOf sdir:PowerSource ,
+                         sdir:Substance ;
+         rdfs:label "Gas"@en ,
+                    "Gass"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#GasfiredInstallation
+sdir:GasfiredInstallation rdf:type owl:Class ;
+                          rdfs:subClassOf sdir:Equipment ;
+                          rdfs:label "Gasfired installation"@en ,
+                                     "Gassfyrte anlegg"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Gasket
+sdir:Gasket rdf:type owl:Class ;
+            rdfs:subClassOf sdir:SparePart ;
+            rdfs:label "Gasket"@en ,
+                       "Pakning"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Generator
+sdir:Generator rdf:type owl:Class ;
+               rdfs:subClassOf sdir:PowerSource ;
+               rdfs:label "Generator"@en ,
+                          "Generator"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#GeographicalLocation
+sdir:GeographicalLocation rdf:type owl:Class ;
+                          rdfs:label "Geografisk lokasjon"@no ,
+                                     "Geographical location"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Greenland
+sdir:Greenland rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Country ;
+               rdfs:label "Greenland"@en ,
+                          "Grønland"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#HandFlare
+sdir:HandFlare rdf:type owl:Class ;
+               rdfs:subClassOf sdir:DistressSignalEquipment ;
+               rdfs:label "Hand flare"@en ,
+                          "Håndbluss"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#HandRail
+sdir:HandRail rdf:type owl:Class ;
+              rdfs:subClassOf sdir:Railing ;
+              rdfs:label "Hand rail"@en ,
+                         "Håndrekker"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Hatch
+sdir:Hatch rdf:type owl:Class ;
+           rdfs:subClassOf sdir:MeansOfClosure ;
+           rdfs:label "Hatch"@en ,
+                      "Luke"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#HeatDetector
+sdir:HeatDetector rdf:type owl:Class ;
+                  rdfs:subClassOf sdir:Equipment ,
+                                  sdir:Fireproofing ;
+                  rdfs:label "Heat detector"@en ,
+                             "Varmedetektor"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Helsman
+sdir:Helsman rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Role ;
+             rdfs:label "Helsman"@en ,
+                        "Rormann"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Hull
+sdir:Hull rdf:type owl:Class ;
+          rdfs:subClassOf sdir:Construction ,
+                          sdir:Placement ;
+          rdfs:comment "The body of a vessel exclusive of masts, yards, sails, rigging, machinery and equipment."@en ;
+          rdfs:label "Hull"@en ,
+                     "Skrog"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Iceland
+sdir:Iceland rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Country ;
+             rdfs:label "Iceland"@en ,
+                        "Island"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Identification
+sdir:Identification rdf:type owl:Class ;
+                    rdfs:label "Identification"@en ,
+                               "Indentifikasjon"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#IlluminationArrangement
+sdir:IlluminationArrangement rdf:type owl:Class ;
+                             rdfs:subClassOf sdir:Equipment ;
+                             rdfs:label "Illumination arrangement"@en ,
+                                        "Lysarrangement"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ImmersionSuits
+sdir:ImmersionSuits rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:LifeSavingAppliances ;
+                    rdfs:label "Immersion suits"@en ,
+                               "Regningsdrakter"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#InShore
+sdir:InShore rdf:type owl:Class ;
+             rdfs:subClassOf sdir:TradeArea ;
+             rdfs:label "In-shore"@en ,
+                        "Kystfiske"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Information
+sdir:Information rdf:type owl:Class ;
+                 rdfs:label "Informasjon"@no ,
+                            "Information"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#InstallationAttestationForElectricalInstallations
+sdir:InstallationAttestationForElectricalInstallations rdf:type owl:Class ;
+                                                       rdfs:subClassOf sdir:Information ;
+                                                       rdfs:label "Installasjonsbevis for elektriske anlegg"@no ,
+                                                                  "Installation attestation for electrical installations"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#InstallationInstruction
+sdir:InstallationInstruction rdf:type owl:Class ;
+                             rdfs:subClassOf sdir:Information ;
+                             rdfs:label "Installasjonsbeskrivelse"@no ,
+                                        "Installation instruction"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#InstructionForUseAndMaintenance
+sdir:InstructionForUseAndMaintenance rdf:type owl:Class ;
+                                     rdfs:subClassOf sdir:Information ;
+                                     rdfs:label "Bruks- og vedlikeholdsanvisninger"@no ,
+                                                "Instruction for use and maintenance"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Instrument
+sdir:Instrument rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Equipment ;
+                rdfs:label "Instrument"@en ,
+                           "Instrument"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Insulation
+sdir:Insulation rdf:type owl:Class ;
+                rdfs:label "Insulation"@en ,
+                           "Isolasjon"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Klaxon
+sdir:Klaxon rdf:type owl:Class ;
+            rdfs:subClassOf sdir:SoundSignalApparatuses ;
+            rdfs:label "Horn"@no ,
+                       "Klaxon"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Ladder
+sdir:Ladder rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Construction ,
+                            sdir:Equipment ,
+                            sdir:SafetyMeasures ;
+            rdfs:label "Ladder"@en ,
+                       "Leider"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#LetterConcerningInspectionOfStabilityCalculations
+sdir:LetterConcerningInspectionOfStabilityCalculations rdf:type owl:Class ;
+                                                       rdfs:subClassOf sdir:StabilityDocumentation ;
+                                                       rdfs:label "Brev vedrørende kontroll av stabilitetsberegninger"@no ,
+                                                                  "Letter concerning inspection of stability calculations"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#LifeSavingAppliances
+sdir:LifeSavingAppliances rdf:type owl:Class ;
+                          rdfs:subClassOf sdir:Equipment ;
+                          rdfs:label "Life saving appliances"@en ,
+                                     "Redningsmidler"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Lifebuoys
+sdir:Lifebuoys rdf:type owl:Class ;
+               rdfs:subClassOf sdir:LifeSavingAppliances ;
+               rdfs:label "Lifebuoys"@en ,
+                          "Livbøyer"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Lifejackets
+sdir:Lifejackets rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:LifeSavingAppliances ;
+                 rdfs:label "Lifejackets"@en ,
+                            "Redningsvester"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Liferaft
+sdir:Liferaft rdf:type owl:Class ;
+              rdfs:subClassOf sdir:SurvivalCraft ;
+              rdfs:label "Liferaft"@en ,
+                         "Redningsflåte"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#LiftingEquipment
+sdir:LiftingEquipment rdf:type owl:Class ;
+                      rdfs:subClassOf sdir:CargoHandlingAppliances ;
+                      rdfs:label "Lifting equipment"@en ,
+                                 "Løfteutstyr"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Lights
+sdir:Lights rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Equipment ;
+            rdfs:label "Lanterne"@no ,
+                       "Lights"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#LiquifiedHydrocarbonGases
+sdir:LiquifiedHydrocarbonGases rdf:type owl:Class ;
+                               rdfs:subClassOf sdir:Fuel ;
+                               rdfs:label "Kullvannstoffer"@no ,
+                                          "Liquified hydrocarbon gases"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ListOfLights
+sdir:ListOfLights rdf:type owl:Class ;
+                  rdfs:subClassOf sdir:Information ;
+                  rdfs:label "Fyrlister"@no ,
+                             "List of lights"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#LoadedWaterline
+sdir:LoadedWaterline rdf:type owl:Class ;
+                     rdfs:subClassOf sdir:Placement ;
+                     rdfs:label "Lastet vannlinje"@no ,
+                                "Loaded waterline"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#LooseBulkhead
+sdir:LooseBulkhead rdf:type owl:Class ;
+                   rdfs:subClassOf sdir:Bulkhead ,
+                                   sdir:Stability ;
+                   rdfs:label "Loose bulkhead"@en ,
+                              "Løsskott"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#LooseLadder
+sdir:LooseLadder rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Ladder ;
+                 rdfs:label "Loose ladder"@en ,
+                            "Løs leider"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#LooseLight
+sdir:LooseLight rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Lights ;
+                rdfs:label "Loose light"@en ,
+                           "Løs lanterne"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#MMSI
+sdir:MMSI rdf:type owl:Class ;
+          rdfs:subClassOf sdir:Identification ;
+          rdfs:label "MMSI"@en ,
+                     "MMSI-nummer"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Machinery
+sdir:Machinery rdf:type owl:Class ;
+               rdfs:comment "Systemer ombord (rørsystemer, lensevannsystem, hovedmotor, kjølevann, drivstoff)"^^xsd:string ;
+               rdfs:label "Machinery"@en ,
+                          "Maskineri"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#MagneticCompass
+sdir:MagneticCompass rdf:type owl:Class ;
+                     rdfs:subClassOf sdir:Compass ;
+                     rdfs:label "Magnetic compass"@en ,
+                                "Magnetkompass"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Manhole
+sdir:Manhole rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Construction ;
+             rdfs:label "Manhole"@en ,
+                        "Mannhull"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ManholeCover
+sdir:ManholeCover rdf:type owl:Class ;
+                  rdfs:subClassOf sdir:MeansOfClosure ;
+                  rdfs:label "Manhole cover"@en ,
+                             "Mannlokk"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Manual
+sdir:Manual rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Information ;
+            rdfs:label "Bruksanvisning"@no ,
+                       "Manual"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Master
+sdir:Master rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Role ;
+            rdfs:label "Master"@en ,
+                       "Skipsfører"@no ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "Sea captain"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Material
+sdir:Material rdf:type owl:Class ;
+              rdfs:label "Material"@en ,
+                         "Material"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#MeansForRemovingIce
+sdir:MeansForRemovingIce rdf:type owl:Class ;
+                         rdfs:subClassOf sdir:Equipment ;
+                         rdfs:label "Means for removing ice"@en ,
+                                    "Midler for å fjerne is"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#MeansOfClosure
+sdir:MeansOfClosure rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:ExternalOpenings ;
+                    rdfs:label "Lukningsmidler"@no ,
+                               "Means of closure"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#MeansOfEscape
+sdir:MeansOfEscape rdf:type owl:Class ;
+                   rdfs:subClassOf sdir:Placement ;
+                   rdfs:label "Means of escape"@en ,
+                              "Nødutgang"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Monitor
+sdir:Monitor rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Equipment ;
+             rdfs:label "Monitor"@en ,
+                        "Monitor"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#MusterList
+sdir:MusterList rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Information ;
+                rdfs:label "Alarminstruks"@no ,
+                           "Muster list"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#NautricalPublication
+sdir:NautricalPublication rdf:type owl:Class ;
+                          rdfs:subClassOf sdir:Information ;
+                          rdfs:label "Nautiske publikasjoner"@no ,
+                                     "Nautrical publication"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#NavigationEquipment
+sdir:NavigationEquipment rdf:type owl:Class ;
+                         rdfs:subClassOf sdir:Equipment ;
+                         rdfs:label "Navigasjonsutrustning"@no ,
+                                    "Navigation equipment"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Navigator
+sdir:Navigator rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Role ;
+               rdfs:label "Navigator"@en ,
+                          "Navigatør"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Nitrocellulose
+sdir:Nitrocellulose rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Material ;
+                    rdfs:label "Nitrocellulose"@en ,
+                               "Nitrocellulose"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#NonCombustibleMaterial
+sdir:NonCombustibleMaterial rdf:type owl:Class ;
+                            rdfs:subClassOf sdir:ConstructionMaterial ;
+                            rdfs:label "Ikke-brennbart materiale"@no ,
+                                       "Non-combustible material"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Norway
+sdir:Norway rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Country ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty sdir:subregion ;
+                              owl:someValuesFrom sdir:Scandinavia
+                            ] ;
+            rdfs:label "Noreg"@nb ,
+                       "Norge"@no ,
+                       "Norway"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#NorwegianEconomicZone
+sdir:NorwegianEconomicZone rdf:type owl:Class ;
+                           rdfs:subClassOf sdir:GeographicalLocation ;
+                           rdfs:label "Norges økonomiske sone"@no ,
+                                      "Norwegian economic zone"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#NorwegianMerchantFlag
+sdir:NorwegianMerchantFlag rdf:type owl:Class ;
+                           rdfs:subClassOf sdir:SignalFlag ;
+                           rdfs:label "Norsk handelsflagg"@no ,
+                                      "Norwegian merchant flag"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Notice
+sdir:Notice rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Information ;
+            rdfs:label "Notice"@en ,
+                       "Oppslag"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#NoticesToMariners
+sdir:NoticesToMariners rdf:type owl:Class ;
+                       rdfs:subClassOf sdir:Information ;
+                       rdfs:label "Meddelelser til sjøfarende"@no ,
+                                  "Notices to mariners"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Oil
+sdir:Oil rdf:type owl:Class ;
+         rdfs:subClassOf sdir:PowerSource ;
+         rdfs:label "Oil"@en ,
+                    "Olje"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#OilFuel
+sdir:OilFuel rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Fuel ;
+             rdfs:label "Brennolje"@no ,
+                        "Oil fuel"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#OilGaugeGlass
+sdir:OilGaugeGlass rdf:type owl:Class ;
+                   rdfs:subClassOf sdir:Instrument ;
+                   rdfs:label "Oil gauge glass"@en ,
+                              "Oljestandglass"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#OilPipe
+sdir:OilPipe rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Pipe ;
+             rdfs:label "Oil pipe"@en ,
+                        "Oljerør"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#OilPressureReductionValve
+sdir:OilPressureReductionValve rdf:type owl:Class ;
+                               rdfs:subClassOf sdir:Valve ;
+                               rdfs:label "Oil pressure reduction valve"@en ,
+                                          "Oljetrykksreduksjonsventil"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#OverflowSystem
+sdir:OverflowSystem rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Equipment ;
+                    rdfs:label "Overflomssystem"@no ,
+                               "Overflow system"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Packaging
+sdir:Packaging rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Equipment ;
+               rdfs:label "Emballasje"@no ,
+                          "Packaging"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Paint
+sdir:Paint rdf:type owl:Class ;
+           rdfs:subClassOf sdir:Material ;
+           rdfs:label "Maling"@no ,
+                      "Paint"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ParachuteFlare
+sdir:ParachuteFlare rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:DistressSignalEquipment ;
+                    rdfs:label "Fallskjermlys"@no ,
+                               "Parachute flare"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Pipe
+sdir:Pipe rdf:type owl:Class ;
+          rdfs:subClassOf sdir:Machinery ;
+          rdfs:label "Pipe"@en ,
+                     "Rør"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Placement
+sdir:Placement rdf:type owl:Class ;
+               rdfs:comment "A placement or location aboard a ship."@en ,
+                            "En plassering eller lokasjon ombord på et skip."@no ;
+               rdfs:label "Placement"@en ,
+                          "Plassering"@no ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "Location"@en ,
+                                                              "Lokasjon"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Poster
+sdir:Poster rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Information ;
+            rdfs:label "Plakat"@no ,
+                       "Poster"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#PowerSource
+sdir:PowerSource rdf:type owl:Class ;
+                 rdfs:label "Kraftkilde"@no ,
+                            "Power source"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#PrismaticBinocular
+sdir:PrismaticBinocular rdf:type owl:Class ;
+                        rdfs:subClassOf sdir:Binocular ;
+                        rdfs:label "Prismatic binocular"@en ,
+                                   "Prismekikkert"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ProductionDeck
+sdir:ProductionDeck rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Deck ;
+                    rdfs:label "Production deck"@en ,
+                               "Produksjonsdekk"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ProhibitionSign
+sdir:ProhibitionSign rdf:type owl:Class ;
+                     rdfs:subClassOf sdir:Sign ;
+                     rdfs:label "Forbudsskilt"@no ,
+                                "Prohibition sign"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Propane
+sdir:Propane rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Fuel ;
+             rdfs:label "Propan"@no ,
+                        "Propane"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#PyrotechnicalEquipment
+sdir:PyrotechnicalEquipment rdf:type owl:Class ;
+                            rdfs:subClassOf sdir:Equipment ;
+                            rdfs:label "Pyrotechnical equipment"@en ,
+                                       "Pyroteknisk utstyr"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Radar
+sdir:Radar rdf:type owl:Class ;
+           rdfs:subClassOf sdir:Equipment ;
+           rdfs:comment "A set of concepts describing radar."@en ;
+           rdfs:label "Radar"@en ,
+                      "Radar"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadarAntenna
+sdir:RadarAntenna rdf:type owl:Class ;
+                  rdfs:subClassOf sdir:Radar ;
+                  rdfs:label "Radar antenna"@en ,
+                             "Radarantenne"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadarApparatus
+sdir:RadarApparatus rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Radar ;
+                    rdfs:label "Radar apparatus"@en ,
+                               "Radaranlegg"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadarDisplay
+sdir:RadarDisplay rdf:type owl:Class ;
+                  rdfs:subClassOf sdir:Radar ;
+                  rdfs:label "Radar display"@en ,
+                             "Radarskjerm"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadarDisplayUnitIndicator
+sdir:RadarDisplayUnitIndicator rdf:type owl:Class ;
+                               rdfs:subClassOf sdir:Radar ;
+                               rdfs:label "Radar display unit indicator"@en ,
+                                          "Radarindikator"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadarMast
+sdir:RadarMast rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Equipment ;
+               rdfs:label "Radar mast"@en ,
+                          "Radarmast"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadarReflector
+sdir:RadarReflector rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Radar ;
+                    rdfs:label "Radar reflector"@en ,
+                               "Radarreflektor"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadarTransponder
+sdir:RadarTransponder rdf:type owl:Class ;
+                      rdfs:subClassOf sdir:Radar ;
+                      rdfs:label "Radar transponder"@en ,
+                                 "Radartransponder"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Radio
+sdir:Radio rdf:type owl:Class ;
+           rdfs:subClassOf sdir:Equipment ;
+           rdfs:comment "A set of concepts describing radio."@en ;
+           rdfs:label "Radio"@en ,
+                      "Radio"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadioChannel
+sdir:RadioChannel rdf:type owl:Class ;
+                  rdfs:subClassOf sdir:Radio ;
+                  rdfs:label "Radio channel"@en ,
+                             "Radiokanal"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadioEquipment
+sdir:RadioEquipment rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Radio ;
+                    rdfs:label "Radio equipment"@en ,
+                               "Radioutstyr"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadioInspectionCompany
+sdir:RadioInspectionCompany rdf:type owl:Class ;
+                            rdfs:subClassOf sdir:Company ;
+                            rdfs:label "Radio inspection company"@en ,
+                                       "Radioinspeksjonsforetak"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadioInstallation
+sdir:RadioInstallation rdf:type owl:Class ;
+                       rdfs:subClassOf sdir:Radio ;
+                       rdfs:label "Radio installation"@en ,
+                                  "Radioinstallasjon"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadioSystem
+sdir:RadioSystem rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Radio ;
+                 rdfs:label "Radio system"@en ,
+                            "Radiosystem"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadioWatch
+sdir:RadioWatch rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Role ;
+                rdfs:label "Radio watch"@en ,
+                           "Radiovakt"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Radiotelephony
+sdir:Radiotelephony rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:RadioEquipment ;
+                    rdfs:label "Radiotelefon"@no ,
+                               "Radiotelephony"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Railing
+sdir:Railing rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Construction ,
+                             sdir:SafetyMeasures ;
+             rdfs:label "Railing"@en ,
+                        "Rekkverk"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Reciever
+sdir:Reciever rdf:type owl:Class ;
+              rdfs:subClassOf sdir:RadioEquipment ;
+              rdfs:comment "Mottaker"@no ;
+              rdfs:label "Reciever"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Record
+sdir:Record rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Information ;
+            rdfs:label "Dagbok"@no ,
+                       "Record"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RecordBookForCargoHandlingAppliances
+sdir:RecordBookForCargoHandlingAppliances rdf:type owl:Class ;
+                                          rdfs:subClassOf sdir:Information ;
+                                          rdfs:label "Kontrollbok for laste- og losseinnretninger"@no ,
+                                                     "Record book for cargo-handling appliances"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RecreationalCraft
+sdir:RecreationalCraft rdf:type owl:Class ;
+                       rdfs:subClassOf sdir:Ship ;
+                       rdfs:label "Fritidsbåter"@no ,
+                                  "Recreational craft"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RegulationValve
+sdir:RegulationValve rdf:type owl:Class ;
+                     rdfs:subClassOf sdir:Valve ;
+                     rdfs:label "Regulation valve"@en ,
+                                "Stillkran"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ReleaseEquipment
+sdir:ReleaseEquipment rdf:type owl:Class ;
+                      rdfs:subClassOf sdir:Equipment ,
+                                      sdir:Fireproofing ;
+                      rdfs:comment "manuell utløser for fastmontertslokkeanlegg"@no ;
+                      rdfs:label "Release equipment"@en ,
+                                 "Utløserutstyr"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ReportFormForElectricalInstallations
+sdir:ReportFormForElectricalInstallations rdf:type owl:Class ;
+                                          rdfs:subClassOf sdir:Information ;
+                                          rdfs:label "Kontrollskjema for elektriske anlegg"@no ,
+                                                     "Report form for electrical installations"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RetroReflexMeans
+sdir:RetroReflexMeans rdf:type owl:Class ;
+                      rdfs:subClassOf sdir:Equipment ;
+                      rdfs:label "Refleksmiddel"@no ,
+                                 "Retro-reflex means"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Rockwool
+sdir:Rockwool rdf:type owl:Class ;
+              rdfs:subClassOf sdir:NonCombustibleMaterial ;
+              rdfs:label "Rockwool"@en ,
+                         "Stenull"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Role
+sdir:Role rdf:type owl:Class ;
+          rdfs:label "Role"@en ,
+                     "Rolle"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RotatingPropulsionAndSteeringPropellerSystem
+sdir:RotatingPropulsionAndSteeringPropellerSystem rdf:type owl:Class ;
+                                                  rdfs:subClassOf sdir:Steering ;
+                                                  rdfs:label "Dreibart fremdrifts- og styrepropellsystem"@no ,
+                                                             "Rotating propulsion and steering propeller system"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Rudder
+sdir:Rudder rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Steering ;
+            rdfs:label "Ror"@no ,
+                       "Rudder"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SART
+sdir:SART rdf:type owl:Class ;
+          rdfs:subClassOf sdir:Equipment ;
+          rdfs:label "SART"@en ,
+                     "SART"@no ;
+          <http://www.w3.org/2004/02/skos/core#altLabel> "Search and rescue transponder"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SafetyEquipment
+sdir:SafetyEquipment rdf:type owl:Class ;
+                     rdfs:comment "Samlebegrep for redningsutstyr og brannsikringsutstyr"^^xsd:string ;
+                     rdfs:label "Safety equipment"@en ,
+                                "Sikkerhets utstyr"@no ;
+                     <http://www.w3.org/2004/02/skos/core#altLabel> "Sikkerhets utrustning"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SafetyMeasures
+sdir:SafetyMeasures rdf:type owl:Class ;
+                    rdfs:label "Safety measures"@en ,
+                               "Sikkerhetstiltak"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SafetyMessages
+sdir:SafetyMessages rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Information ;
+                    rdfs:label "Safety messages"@en ,
+                               "Sikkerhetsmeldinger"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SafetyPrecaution
+sdir:SafetyPrecaution rdf:type owl:Class ;
+                      rdfs:subClassOf sdir:SafetyMeasures ;
+                      rdfs:label "Safety precaution"@en ,
+                                 "Sikringstiltak"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SafetyRadioCertificate
+sdir:SafetyRadioCertificate rdf:type owl:Class ;
+                            rdfs:subClassOf sdir:VesselCertificate ;
+                            rdfs:label "Safety radio certificate"@en ,
+                                       "Sikkerhetssertifikat for radio"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SailingDirections
+sdir:SailingDirections rdf:type owl:Class ;
+                       rdfs:subClassOf sdir:Information ;
+                       rdfs:label "Farvannsbeskrivelser"@no ,
+                                  "Sailing directions"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SanitaryDischarge
+sdir:SanitaryDischarge rdf:type owl:Class ;
+                       rdfs:subClassOf sdir:Pipe ;
+                       rdfs:label "Sanitary discharge"@en ,
+                                  "Sanitære avløp"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Saucer
+sdir:Saucer rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Equipment ;
+            rdfs:label "Saucer"@en ,
+                       "Skål"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Scandinavia
+sdir:Scandinavia rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Subregion ;
+                 rdfs:label "Scandinavia"@en ,
+                            "Skandinavia"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Scope
+sdir:Scope rdf:type owl:Class ;
+           rdfs:label "Scope"@en ,
+                      "Virkeområde"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Scupper
+sdir:Scupper rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Construction ;
+             rdfs:comment "åpning i relingen med deksel i overkant"^^xsd:string ;
+             rdfs:label "Scupper"@en ,
+                        "Spygatt"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SeaArea
+sdir:SeaArea rdf:type owl:Class ;
+             rdfs:subClassOf sdir:GeographicalLocation ;
+             rdfs:label "Sea area"@en ,
+                        "Sjøområde"@no ;
+             <http://www.w3.org/2004/02/skos/core#altLabel> "Radiodekningsområde"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Searchlight
+sdir:Searchlight rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Lights ;
+                 rdfs:label "Lyskaster"@no ,
+                            "Searchlight"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SeawaterPipe
+sdir:SeawaterPipe rdf:type owl:Class ;
+                  rdfs:subClassOf sdir:Pipe ;
+                  rdfs:label "Seawater pipe"@en ,
+                             "Sjøvannsledning"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#ServiceStation
+sdir:ServiceStation rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Company ;
+                    rdfs:label "Service station"@en ,
+                               "Servicestasjon"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SetOfShapes
+sdir:SetOfShapes rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:SignalingEquipment ;
+                 rdfs:label "Set of shapes"@en ,
+                            "Signalfigurer"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Sheet
+sdir:Sheet rdf:type owl:Class ;
+           rdfs:subClassOf sdir:Construction ;
+           rdfs:label "Plate"@en ,
+                      "Plate"@no ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "sheet"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Ship
+sdir:Ship rdf:type owl:Class ;
+          rdfs:label "Ship"@en ,
+                     "Skip"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SideHatch
+sdir:SideHatch rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Hatch ;
+               rdfs:label "Side hatch"@en ,
+                          "Sideluke"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Sign
+sdir:Sign rdf:type owl:Class ;
+          rdfs:subClassOf sdir:Information ;
+          rdfs:label "Sign"@en ,
+                     "Skilt"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SignalFlag
+sdir:SignalFlag rdf:type owl:Class ;
+                rdfs:subClassOf sdir:SignalingEquipment ;
+                rdfs:label "Signal flag"@en ,
+                           "Signalflagg"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SignalWhistle
+sdir:SignalWhistle rdf:type owl:Class ;
+                   rdfs:subClassOf sdir:LifeSavingAppliances ;
+                   rdfs:label "Signal whistle"@en ,
+                              "Signalfløyte"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SignalingEquipment
+sdir:SignalingEquipment rdf:type owl:Class ;
+                        rdfs:subClassOf sdir:Equipment ;
+                        rdfs:label "Signaleringsutstyr"@no ,
+                                   "Signaling equipment"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SignallingLamp
+sdir:SignallingLamp rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Lights ,
+                                    sdir:SignalingEquipment ;
+                    rdfs:label "Signallampe"@no ,
+                               "Signalling lamp"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SmokeAlarm
+sdir:SmokeAlarm rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Equipment ,
+                                sdir:Fireproofing ;
+                rdfs:label "Røykvarslingsanlegg"@no ,
+                           "Smoke alarm"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SmokeDetector
+sdir:SmokeDetector rdf:type owl:Class ;
+                   rdfs:subClassOf sdir:Equipment ,
+                                   sdir:Fireproofing ;
+                   rdfs:label "Røykdetektor"@no ,
+                              "Smoke detector"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SmokeGas
+sdir:SmokeGas rdf:type owl:Class ;
+              rdfs:label "Røykgass"@no ,
+                         "Smoke gas"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SmokeSignal
+sdir:SmokeSignal rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:DistressSignalEquipment ;
+                 rdfs:label "Røyksignal"@no ,
+                            "Smoke signal"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SoundSignalApparatuses
+sdir:SoundSignalApparatuses rdf:type owl:Class ;
+                            rdfs:subClassOf sdir:SignalingEquipment ;
+                            rdfs:label "Lydsignalapparater"@no ,
+                                       "Sound signal apparatuses"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SparePart
+sdir:SparePart rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Equipment ;
+               rdfs:label "Reservedel"@no ,
+                          "Spare part"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SpeedMeasuringDevice
+sdir:SpeedMeasuringDevice rdf:type owl:Class ;
+                          rdfs:subClassOf sdir:Equipment ;
+                          rdfs:label "Fartmåler"@no ,
+                                     "Speed measuring device"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Stability
+sdir:Stability rdf:type owl:Class ;
+               rdfs:label "Stabilitet"@no ,
+                          "Stability"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#StabilityDocumentation
+sdir:StabilityDocumentation rdf:type owl:Class ;
+                            rdfs:subClassOf sdir:Information ;
+                            rdfs:label "Stabilitetsdokumentasjon"@no ,
+                                       "Stability documentation"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#StabilityPoster
+sdir:StabilityPoster rdf:type owl:Class ;
+                     rdfs:subClassOf sdir:Poster ,
+                                     sdir:StabilityDocumentation ;
+                     rdfs:label "Stabilitetsplakat"@no ,
+                                "Stability poster"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Stairway
+sdir:Stairway rdf:type owl:Class ;
+              rdfs:subClassOf sdir:Placement ;
+              rdfs:label "Stairway"@en ,
+                         "Trapp"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Steel
+sdir:Steel rdf:type owl:Class ;
+           rdfs:subClassOf sdir:NonCombustibleMaterial ;
+           rdfs:label "Steel"@en ,
+                      "Stål"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Steering
+sdir:Steering rdf:type owl:Class ;
+              rdfs:label "Steering"@en ,
+                         "Styring"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SteeringAid
+sdir:SteeringAid rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Steering ;
+                 rdfs:label "Steering aid"@en ,
+                            "Styrehjelp"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Stern
+sdir:Stern rdf:type owl:Class ;
+           rdfs:subClassOf sdir:Placement ;
+           rdfs:label "Akterut"@no ,
+                      "Stern"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Storage
+sdir:Storage rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Equipment ;
+             rdfs:label "Oppbevaring"@no ,
+                        "Storage"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Stove
+sdir:Stove rdf:type owl:Class ;
+           rdfs:subClassOf sdir:Equipment ;
+           rdfs:label "Ovn"@no ,
+                      "Stove"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Subdivision
+sdir:Subdivision rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Construction ;
+                 rdfs:label "Subdivision"@en ,
+                            "Vanntett Inndeling"@no ;
+                 <http://www.w3.org/2004/02/skos/core#altLabel> "watertight integrety"^^xsd:string .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Subregion
+sdir:Subregion rdf:type owl:Class ;
+               rdfs:subClassOf sdir:GeographicalLocation ;
+               rdfs:label "Subregion"@en ,
+                          "Subregion"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Substance
+sdir:Substance rdf:type owl:Class ;
+               rdfs:label "Substance"@en ,
+                          "Substans"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Superstructure
+sdir:Superstructure rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Construction ;
+                    rdfs:label "Overbygning"@no ,
+                               "Superstructure"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Surface
+sdir:Surface rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Placement ;
+             rdfs:label "Surface"@en ,
+                        "Underside"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#SurvivalCraft
+sdir:SurvivalCraft rdf:type owl:Class ;
+                   rdfs:subClassOf sdir:LifeSavingAppliances ;
+                   rdfs:label "Redningsfarkost"@no ,
+                              "Survival craft"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Sweden
+sdir:Sweden rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Country ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty sdir:subregion ;
+                              owl:someValuesFrom sdir:Scandinavia
+                            ] ;
+            rdfs:label "Sverige"@no ,
+                       "Sweden"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Switchboard
+sdir:Switchboard rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Equipment ;
+                 rdfs:label "Switchboard"@en ,
+                            "Tavle"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Tank
+sdir:Tank rdf:type owl:Class ;
+          rdfs:subClassOf sdir:Placement ;
+          rdfs:label "Tank"@en ,
+                     "Tank"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#TestFaucet
+sdir:TestFaucet rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Faucet ;
+                rdfs:label "Prøvekran"@no ,
+                           "Test faucet"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Thermometer
+sdir:Thermometer rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Equipment ;
+                 rdfs:label "Termometer"@no ,
+                            "Thermometer"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#TideTabel
+sdir:TideTabel rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Information ;
+               rdfs:label "Tide tabel"@en ,
+                          "Tidevannstabell"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Tool
+sdir:Tool rdf:type owl:Class ;
+          rdfs:label "Tool"@en ,
+                     "Verktøy"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#TradeArea
+sdir:TradeArea rdf:type owl:Class ;
+               rdfs:label "Fartsområde"@no ,
+                          "Trade area"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#TradeInIce
+sdir:TradeInIce rdf:type owl:Class ;
+                rdfs:subClassOf sdir:TradeArea ;
+                rdfs:label "Fartsområde i is"@no ,
+                           "Trade in ice"@en ;
+                <http://www.w3.org/2004/02/skos/core#altLabel> "Ice"@en ,
+                                                               "Is"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#TransportableSignallingLamp
+sdir:TransportableSignallingLamp rdf:type owl:Class ;
+                                 rdfs:subClassOf sdir:SignallingLamp ;
+                                 rdfs:label "Transportabel signallampe"@no ,
+                                            "Transportable signalling lamp"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Trunk
+sdir:Trunk rdf:type owl:Class ;
+           rdfs:subClassOf sdir:Storage ;
+           rdfs:label "Kiste"@no ,
+                      "Trunk"@en ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "Trunk"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Tunnel
+sdir:Tunnel rdf:type owl:Class ;
+            rdfs:subClassOf sdir:Placement ;
+            rdfs:label "Tunnel"@en ,
+                       "Tunnel"@no ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "Tunnell"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#UptakePipe
+sdir:UptakePipe rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Pipe ;
+                rdfs:label "Røropptak"@no ,
+                           "Uptake pipe"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Valve
+sdir:Valve rdf:type owl:Class ;
+           rdfs:subClassOf sdir:Machinery ;
+           rdfs:label "Valve"@en ,
+                      "Ventil"@no ;
+           <http://www.w3.org/2004/02/skos/core#altLabel> "Kran"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Varnish
+sdir:Varnish rdf:type owl:Class ;
+             rdfs:subClassOf sdir:Material ;
+             rdfs:label "Lakk"@no ,
+                        "Varnish"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Ventilation
+sdir:Ventilation rdf:type owl:Class ;
+                 rdfs:label "Ventilasjon"@no ,
+                            "Ventilation"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#VentilationOpening
+sdir:VentilationOpening rdf:type owl:Class ;
+                        rdfs:subClassOf sdir:ExternalOpenings ;
+                        rdfs:label "Ventilasjonsåpning"^^xsd:string ,
+                                   "VentilationOpening"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#VentilationSystem
+sdir:VentilationSystem rdf:type owl:Class ;
+                       rdfs:subClassOf sdir:Ventilation ;
+                       rdfs:label "Ventilasjonssystem"@no ,
+                                  "Ventilation system"@en ;
+                       <http://www.w3.org/2004/02/skos/core#altLabel> "Air supply"@en ,
+                                                                      "Lufttilførsel"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Ventilator
+sdir:Ventilator rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Ventilation ;
+                rdfs:label "Ventilator"@en ,
+                           "Ventilator"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#VesselCertificate
+sdir:VesselCertificate rdf:type owl:Class ;
+                       rdfs:subClassOf sdir:Certificate ;
+                       rdfs:label "Fartøyssertifikat"@no ,
+                                  "Vessel certificate"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#WarningSign
+sdir:WarningSign rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Sign ;
+                 rdfs:label "Varselskilt"@no ,
+                            "Warning sign"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#WaterBallastTank
+sdir:WaterBallastTank rdf:type owl:Class ;
+                      rdfs:subClassOf sdir:Tank ;
+                      rdfs:label "Vannballasttank"@no ,
+                                 "Water ballast tank"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#WaterSeparator
+sdir:WaterSeparator rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Machinery ;
+                    rdfs:label "Vannutskiller"@no ,
+                               "Water separator"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Waterline
+sdir:Waterline rdf:type owl:Class ;
+               rdfs:subClassOf sdir:Placement ;
+               rdfs:label "Vannlinje"@no ,
+                          "Waterline"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#WeatherDeck
+sdir:WeatherDeck rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Deck ;
+                 rdfs:label "Værdekk"@no ,
+                            "Weather deck"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#WeatherForcast
+sdir:WeatherForcast rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:Information ;
+                    rdfs:label "Værvarsel"@no ,
+                               "Weather forcast"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Wheelhouse
+sdir:Wheelhouse rdf:type owl:Class ;
+                rdfs:subClassOf sdir:Placement ;
+                rdfs:label "Styrehus"@no ,
+                           "Wheelhouse"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Whistle
+sdir:Whistle rdf:type owl:Class ;
+             rdfs:subClassOf sdir:SoundSignalApparatuses ;
+             rdfs:label "Fløyte"@no ,
+                        "Whistle"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Window
+sdir:Window rdf:type owl:Class ;
+            rdfs:subClassOf sdir:ExternalOpenings ;
+            rdfs:label "Vindu"@no ,
+                       "Window"@en ;
+            <http://www.w3.org/2004/02/skos/core#altLabel> "ventil"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Wood
+sdir:Wood rdf:type owl:Class ;
+          rdfs:subClassOf sdir:CombustibleMaterial ;
+          rdfs:label "Trevirke"@no ,
+                     "Wood"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#WorkingDeck
+sdir:WorkingDeck rdf:type owl:Class ;
+                 rdfs:subClassOf sdir:Deck ;
+                 rdfs:label "Arbeidsdekk"@no ,
+                            "Working deck"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://www.sdir.no/SDIR_Simulator#CO2
+sdir:CO2 rdf:type owl:NamedIndividual ,
+                  sdir:Gas ;
+         rdfs:label "Carbon dioxide"@en ,
+                    "Karbondioksid"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Ice
+sdir:Ice rdf:type owl:NamedIndividual ,
+                  sdir:Substance ;
+         rdfs:label "Ice"@en ,
+                    "Is"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Salt
+sdir:Salt rdf:type owl:NamedIndividual ,
+                   sdir:Substance ;
+          rdfs:label "Salt"@en ,
+                     "Salt"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Seawater
+sdir:Seawater rdf:type owl:NamedIndividual ,
+                       sdir:Substance ;
+              rdfs:label "Seawater"@en ,
+                         "Sjøvann"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#Soot
+sdir:Soot rdf:type owl:NamedIndividual ,
+                   sdir:Substance ;
+          rdfs:label "Soot"@en ,
+                     "Sot"@no .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+sdir:Radiotransponder rdfs:label "Radio transponder"@en .
+
+
+###  Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi

@@ -1,0 +1,45 @@
+# D2 deck officer class 2
+
+@prefix : <https://www.sdir.no/SDIR_Simulator/shapes#> .
+@prefix sdir: <https://www.sdir.no/SDIR_Simulator#> .
+@prefix cert: <https://www.sdir.no/SDIR_Simulator/shapes/certificate#> .
+@prefix course: <https://www.sdir.no/SDIR_Simulator/shapes/course#> .
+@prefix sgs: <https://www.sdir.no/SDIR_Simulator/shapes/sgs#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+
+:NS_D2B0
+    a sh:NodeShape ;
+    sh:targetClass sdir:D2B0 ;
+    sh:description "Shape describing requirements for D2B0 certificate."@en ;
+    sh:description "Shape som beskriver krav knyttet til sertifikatet D2B0."@no ;
+    sh:property :PS_Age_minIncl_20, :PS_VD2_Education, course:PS_MedicalCourse ;
+    sh:or (course:PS_VSK course:PS_VSKR course:PS_OGD) ;
+    sh:or (cert:PS_D3B0 cert:PS_D3A0 cert:PS_D3B0 cert:PS_D4F0) ;
+    sh:property [
+        sh:path sdir:hasSeagoingServiceRequirement ;
+        sh:hasValue sdir:SGS_500_L_3_360_M_V_DO ;
+    ] .
+
+:PS_Age_minIncl_20
+    a sh:PropertyShape ;
+    sh:description "Value of age must be at least 20."@en ;
+    sh:description "Verdien av age må være minst 20."@no ;
+    sh:path sdir:age ;
+    sh:minInclusive 20 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype unit:YR .
+
+:PS_VD2_Education
+    a sh:PropertyShape ;
+    sh:description "Requires VD2 education."@en ;
+    sh:description "Krever VD2-utdanning."@no ;
+    sh:path sdir:requiresEducation ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:hasValue sdir:VD2 .
