@@ -18,6 +18,14 @@
 <http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
 
 
+###  https://www.sdir.no/SDIR_Simulator#theme
+sdir:theme rdf:type owl:AnnotationProperty ;
+           rdfs:label "tema"@no ,
+                      "theme"@en ;
+           rdfs:range rdf:langString ;
+           rdfs:domain sdir:Requirement .
+
+
 #################################################################
 #    Datatypes
 #################################################################
@@ -179,6 +187,15 @@ sdir:supplyOfFuel rdf:type owl:ObjectProperty ;
 #################################################################
 #    Data properties
 #################################################################
+
+###  https://www.sdir.no/SDIR_Simulator#alternativeReference
+sdir:alternativeReference rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdfs:domain sdir:Requirement ;
+                          rdfs:range xsd:anyURI ;
+                          rdfs:label "alternativ referanse"@no ,
+                                     "alternative reference"@en .
+
 
 ###  https://www.sdir.no/SDIR_Simulator#angleOfHeel
 sdir:angleOfHeel rdf:type owl:DatatypeProperty ;
@@ -479,6 +496,16 @@ sdir:radioFrequency rdf:type owl:DatatypeProperty ;
                                "radiofrekvens"@no .
 
 
+###  https://www.sdir.no/SDIR_Simulator#regulationReference
+sdir:regulationReference rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain sdir:Requirement ;
+                         rdfs:range xsd:anyURI ;
+                         rdfs:label "referanse til forskrift"@no ,
+                                    "regulation reference"@en .
+
+
 ###  https://www.sdir.no/SDIR_Simulator#rightningLever
 sdir:rightningLever rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf owl:topDataProperty ;
@@ -578,6 +605,10 @@ sdir:voltage rdf:type owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.w3.org/2001/XMLSchema#anyURI
+xsd:anyURI rdf:type owl:Class .
+
 
 ###  https://www.sdir.no/SDIR_Simulator#AccomodationArea
 sdir:AccomodationArea rdf:type owl:Class ;
@@ -2084,6 +2115,12 @@ sdir:ReportFormForElectricalInstallations rdf:type owl:Class ;
                                                      "Report form for electrical installations"@en .
 
 
+###  https://www.sdir.no/SDIR_Simulator#Requirement
+sdir:Requirement rdf:type owl:Class ;
+                 rdfs:label "Krav"@no ,
+                            "Requirement"@en .
+
+
 ###  https://www.sdir.no/SDIR_Simulator#RetroReflexMeans
 sdir:RetroReflexMeans rdf:type owl:Class ;
                       rdfs:subClassOf sdir:Equipment ;
@@ -2725,6 +2762,9 @@ sdir:Soot rdf:type owl:NamedIndividual ,
 #################################################################
 #    Annotations
 #################################################################
+
+xsd:anyURI rdfs:label "anyURI"@en .
+
 
 sdir:Radiotransponder rdfs:label "Radio transponder"@en .
 
