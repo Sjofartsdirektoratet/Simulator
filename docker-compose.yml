@@ -1,0 +1,22 @@
+version: '3.5'
+networks:
+  sdir:
+    external: true
+
+services:
+  fuseki:
+    image: stain/jena-fuseki:3.14.0
+    networks:
+      sdir:
+    volumes:
+      - ./scripts:/scripts
+      - ./APS/Dataset:/aps-dataset
+      - ./ET/Dataset:/et-dataset
+    ports:
+      - 3030:3030
+    environment:
+      - TZ=Europe/Oslo
+      - ADMIN_PASSWORD=secretpassword
+      - FUSEKI_DATASET_1=APS
+      - FUSEKI_DATASET_2=ET
+    entrypoint: /bin/bash /scripts/custom_docker_entrypoint.sh

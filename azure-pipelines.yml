@@ -1,0 +1,16 @@
+name: sdir-simulator_$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+  - master
+
+pr:
+  - master
+
+jobs:
+  - job: upload_K8S_manifest
+    pool:
+      vmImage: ubuntu-latest
+
+    steps:
+      - publish: "$(System.DefaultWorkingDirectory)/kubernetes"
+        artifact: "release_$(Build.BuildId)"

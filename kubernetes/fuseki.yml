@@ -1,0 +1,123 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: fuseki-service
+  labels:
+    app: fuseki
+spec:
+  type: ClusterIP
+  selector:
+    app: fuseki
+  ports:
+  - port: 80
+    targetPort: 3030
+    protocol: TCP
+---
+
+apiVersion: secrets-store.csi.x-k8s.io/v1alpha1
+kind: SecretProviderClass
+metadata:
+  name: fuseki
+spec:
+  provider: azure
+  secretObjects:
+  - secretName: fuseki-secrets
+    type: Opaque
+    data:
+    - key: adminpassword
+      objectName: $FUSEKI_PASSWORD_SECRET_NAME
+  parameters:
+    usePodIdentity: "false"
+    userAssignedIdentityId: $COREK8S_CLIENT_ID
+    keyvaultName: $AZ_KEYVAULT_NAME
+    objects: |
+      array:
+      - |
+        objectName: $FUSEKI_PASSWORD_SECRET_NAME
+        objectType: secret
+    resourceGroup: $AZ_RESOURCE_GROUP
+    subscriptionId: $ARM_SUBSCRIPTION_ID
+    tenantId: $ARM_TENANT_ID
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fuseki
+  labels:
+    app: fuseki
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fuseki
+
+  template:
+    metadata:
+      labels:
+        app: fuseki
+
+    spec:
+      containers:
+      - name: fuseki
+        image: stain/jena-fuseki:3.14.0
+        workingDir: /mnt/datasets/Simulator
+        command: ['/bin/bash', './scripts/custom_docker_entrypoint.sh']
+        ports:
+        - containerPort: 3030
+        env:
+        - name: TZ
+          value: Europe/Oslo
+        - name: FUSEKI_DATASET_1
+          value: APS
+        - name: FUSEKI_DATASET_2
+          value: ET
+        - name: LOAD_DATASETS_SCRIPT_PATH
+          value: ./scripts/load_datasets.sh
+        - name: APS_DATASET_PATH
+          value: ./APS/Dataset
+        - name: ET_DATASET_PATH
+          value: ./ET/Dataset
+        - name: ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: fuseki-secrets
+              key: adminpassword
+        volumeMounts:
+        - name: datasets
+          mountPath: /mnt/datasets
+        - name: secret-store-inline
+          mountPath: /mnt/secret-store
+          readOnly: true
+      initContainers:
+      - name: mount-datasets
+        image: alpine/git
+        workingDir: /mnt/datasets
+        command: ['/bin/sh', '-c']
+        args:
+        - |
+          if [[ ! -d ./Simulator ]]; then
+            printf 'Cloning repository with datasets...\n'
+            git clone https://github.com/Sjofartsdirektoratet/Simulator
+          fi
+
+          printf 'Fetching updates including merges for PR-builds...\n'
+          cd ./Simulator && git fetch && git fetch origin refs/pull/*/merge:refs/heads/pr*
+
+          printf 'Switching to %s\n' "$BUILD_SOURCEVERSION"
+          git switch -d "$BUILD_SOURCEVERSION"
+
+        volumeMounts:
+        - name: datasets
+          mountPath: /mnt/datasets
+      volumes:
+      - name: datasets
+        emptyDir: {}
+      - name: secret-store-inline
+        csi:
+          driver: secrets-store.csi.k8s.io
+          readOnly: true
+          volumeAttributes:
+            secretProviderClass: fuseki
+          nodePublishSecretRef:
+            name: secrets-store-creds
