@@ -1,0 +1,37 @@
+PREFIX : <https://www.sdir.no/SDIR_Simulator#> 
+PREFIX scope: <https://www.sdir.no/SDIR_Simulator/shapes/scope#> 
+PREFIX unit: <http://qudt.org/vocab/unit/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+# Get all requirements with sub-requriements
+
+SELECT DISTINCT ?requirement ?requirementLabel ?scopeDescription ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementScopeDescription ?subRequirementRegulationReference ?subRequirementTheme
+WHERE {
+  ?requirement a :Requirement ;
+               :subRequirement ?subRequirement .
+  
+  ?requirement rdfs:label ?requirementLabel .
+  FILTER(LANG(?requirementLabel) = 'no') # Insert language tag for label ('no' or 'en')
+  
+  ?requirement sh:property ?scope .
+  ?scope sh:description ?scopeDescription .
+  
+  ?requirement :regulationReference ?regulationReference .
+  
+  ?requirement :theme ?theme .
+  FILTER(LANG(?theme) = 'no') # Insert language tag for label ('no' or 'en')
+    
+  ### SUB REQUIREMENT
+  ?subRequirement rdfs:label ?subRequirementLabel .
+  FILTER(LANG(?subRequirementLabel) = 'no') # Insert language tag for label ('no' or 'en')
+  
+  ?subRequirement sh:property ?subRequirementScope .
+  ?subRequirementScope sh:description ?subRequirementScopeDescription .
+  
+  ?subRequirement :regulationReference ?subRequirementRegulationReference .
+  
+  ?subRequirement :theme ?subRequirementTheme .
+  FILTER(LANG(?subRequirementTheme) = 'no') # Insert language tag for label ('no' or 'en')
+}

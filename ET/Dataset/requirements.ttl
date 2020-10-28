@@ -10,13 +10,21 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 
+:FOR1404P2
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Definisjoner"@no, "Definitions"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§2"^^xsd:anyURI ;
+        :theme "Geral provisions"@en, "Generelle bestemmelser"@no .
+
 :FOR1404P36
         a sh:NodeShape, :Requirement ;
         # sh:targetClass :? ;
         rdfs:label "Redningsvester"@no, "Lifejackets"@en ;
         sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§36"^^xsd:anyURI ;
-        :altReference "https://lovdata.no/forskrift/2013-11-22-1404/§2"^^xsd:anyURI ;
+        :subRequirement :FOR1404P2 ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
 
 :FOR1404P85
@@ -25,7 +33,7 @@
         rdfs:label "Charts and nautical publications"@en, "Kart og nautiske publikasjoner"@no ;
         sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_maxLOA_10 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§85"^^xsd:anyURI ;
-        :altReference "https://www.sdir.no/sjofart/regelverk/rundskriv/sjokart-om-bord-pa-fiske--og-fangstfartoy/"^^xsd:anyURI ;
+        :alternativeReference "https://www.sdir.no/sjofart/regelverk/rundskriv/sjokart-om-bord-pa-fiske--og-fangstfartoy/"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no .
 
 :FOR1404P75
@@ -35,6 +43,13 @@
         sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§75"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no .  
+
+:FOR1404P65
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Dokumentasjon som skal finnes om bord"@no, "Documentation which shall be available on board"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§65"^^xsd:anyURI ;
+        :theme "Radio"@en, "Radio"@no .
 
 :FOR1404P66
         a sh:NodeShape, :Requirement ;
@@ -46,15 +61,64 @@
                 [ sh:and (scope:PS_Duration_30MO scope:PS_TradeArea_BankfishingII) ]
         ) ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§66"^^xsd:anyURI ;
-        :altReference "https://lovdata.no/forskrift/2013-11-22-1404/§65"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§67"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§68"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§69"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§70"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§71"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§72"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§73"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§74"^^xsd:anyURI ;
+        :subRequirement  :FOR1404P65, :FOR1404P67, :FOR1404P68, :FOR1404P69, 
+                       :FOR1404P70, :FOR1404P71, :FOR1404P72, :FOR1404P73, :FOR1404P74 ;
+        :theme "Radio"@en, "Radio"@no .
+
+:FOR1404P67
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Krav til godkjenning"@no, "Requirements for approval"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§67"^^xsd:anyURI ;
+        :theme "Radio"@en, "Radio"@no .
+
+:FOR1404P68
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Funksjons- og utstyrskrav"@no, "Functional requirements and equipment requirements"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_RadioArea_A1, scope:PS_RadioArea_A2 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§68"^^xsd:anyURI ;
+        :theme "Radio"@en, "Radio"@no .
+
+:FOR1404P69
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Installasjon og plassering av utstyr"@no, "Installation and placement of equipment"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§69"^^xsd:anyURI ;
+        :theme "Radio"@en, "Radio"@no .
+
+:FOR1404P70
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Elektriske kraftkilder"@no, "Sources of electrical power"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§70"^^xsd:anyURI ;
+        :theme "Radio"@en, "Radio"@no .
+
+:FOR1404P71
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Radiovakt"@no, "Radio watch"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§71"^^xsd:anyURI ;
+        :theme "Radio"@en, "Radio"@no .
+
+:FOR1404P72
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Vedlikehold"@no, "Maintenance"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§72"^^xsd:anyURI ;
+        :theme "Radio"@en, "Radio"@no .
+
+:FOR1404P73
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Radioopptegnelser"@no, "Radio records"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§73"^^xsd:anyURI ;
+        :theme "Radio"@en, "Radio"@no .
+
+:FOR1404P74
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Posisjonsoppdatering"@no, "Position-updating"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§74"^^xsd:anyURI ;
         :theme "Radio"@en, "Radio"@no .
 
 :FOR1404P76
@@ -71,7 +135,7 @@
         rdfs:label "Bridge navigational watch alarm system"@en, "Brovaktalarm"@no ;
         sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_10 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§77"^^xsd:anyURI ;
-        :altReference "https://lovdata.no/forskrift/2013-11-22-1404/§76"^^xsd:anyURI ;
+        :subRequirement :FOR1404P76 ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
 :FOR1404P26
@@ -80,14 +144,69 @@
         rdfs:label "Stability calculations"@en, "Stabilitetsberegninger"@no ;
         sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§26"^^xsd:anyURI ;
-        :altReference "https://lovdata.no/forskrift/2013-11-22-1404/§27"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§28"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§29"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§30"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§31"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§32"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§33"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§34"^^xsd:anyURI ,
-                          "https://lovdata.no/forskrift/2013-11-22-1404/§35"^^xsd:anyURI ,
-                          "https://www.sdir.no/globalassets/sjekklister/ks-0532-b-tegningsliste-for-fiske--og-fangstfartoy-under-15m.pdf"^^xsd:anyURI ;
+        :subRequirement :FOR1404P27, :FOR1404P28, :FOR1404P29, :FOR1404P30, :FOR1404P31, :FOR1404P32, :FOR1404P33, :FOR1404P34, :FOR1404P35 ;
+        :alternativeReference "https://www.sdir.no/globalassets/sjekklister/ks-0532-b-tegningsliste-for-fiske--og-fangstfartoy-under-15m.pdf"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no .
+
+:FOR1404P27
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Stability documentation and inclining test"@en, "Stabilitetsdokumentasjon og krengeprøve"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§27"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P28
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Stabilitet for lukkede fartøyer"@en, "Stability for closed vessels"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§28"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P29
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Stability documentation and inclining test"@en, "Stabilitetskriterier"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§29"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P30
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Bow height"@en, "Baughøyde"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§30"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P31
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Stability and freeboard for open vessels"@en, "Stabilitet og fribord for åpne fartøy"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§31"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P32
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Water on decks and in open spaces"@en, "Vann på dekk og i åpne rom"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§32"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P33
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Icing allowance"@en, "Overisingstillegg"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101, scope:PS_TradeArea_GreaterInShore ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§33"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P34
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Stabilitetsopplysninger"@en, "Stability information"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§34"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P35
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Stabilitetsopplysninger"@en, "Stability information"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§35"^^xsd:anyURI ;
         :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 

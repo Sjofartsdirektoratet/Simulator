@@ -27,7 +27,7 @@ WHERE {
   ?paragraph :regulationReference ?regulationReference .
   
   # If present, count number of alternative regulation reference(s)
-  OPTIONAL { ?paragraph :altReference ?altRef . }
+  OPTIONAL { ?paragraph :subRequirement ?altRef . }
   
   # Get tag in given language
   ?paragraph :theme ?theme .

@@ -5,9 +5,14 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 
-# Get all alternative references for every requirement (paragraph).
+# Get all scopes for radioArea
 
-SELECT ?paragraph ?altReference
+SELECT DISTINCT *
 WHERE {
-  ?paragraph :subRequirement ?altReference .
+  ?scope a :Scope ;
+     sh:path :radioArea ;
+     sh:hasValue ?radioArea .
+  
+  ?radioArea rdfs:label ?radioAreaLabel .
+  FILTER(LANG(?radioAreaLabel) = 'no') # Insert language tag for label ('no' or 'en')
 }

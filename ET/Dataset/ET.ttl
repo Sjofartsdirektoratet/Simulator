@@ -156,6 +156,14 @@ sdir:powerSupply rdf:type owl:ObjectProperty ;
                             "power supply"@en .
 
 
+###  https://www.sdir.no/SDIR_Simulator#radioArea
+sdir:radioArea rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:range sdir:RadioCoverageArea ;
+               rdfs:label "radio area"@en ,
+                          "radioområde"@no .
+
+
 ###  https://www.sdir.no/SDIR_Simulator#scope
 sdir:scope rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf owl:topObjectProperty ;
@@ -163,6 +171,13 @@ sdir:scope rdf:type owl:ObjectProperty ;
            rdfs:range sdir:Scope ;
            rdfs:label "scope"@en ,
                       "virkeområde"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#subRequirement
+sdir:subRequirement rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:label "delkrav"@no ,
+                               "sub-requirement"@en .
 
 
 ###  https://www.sdir.no/SDIR_Simulator#subregion
@@ -184,6 +199,23 @@ sdir:supplyOfFuel rdf:type owl:ObjectProperty ;
                              "supply of fuel"@en .
 
 
+###  https://www.sdir.no/SDIR_Simulator#tradeArea
+sdir:tradeArea rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain sdir:Ship ;
+               rdfs:range sdir:TradeArea ;
+               rdfs:label "fartsområde"@no ,
+                          "trade area"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#vesselType
+sdir:vesselType rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:range sdir:Ship ;
+                rdfs:label "farttøytype"@no ,
+                           "vessel type"@en .
+
+
 #################################################################
 #    Data properties
 #################################################################
@@ -193,6 +225,8 @@ sdir:alternativeReference rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf owl:topDataProperty ;
                           rdfs:domain sdir:Requirement ;
                           rdfs:range xsd:anyURI ;
+                          rdfs:comment "Lenke til alt som ikke er lovtekst."@no ,
+                                       "Link to all information that is not regulation descriptions."@en ;
                           rdfs:label "alternativ referanse"@no ,
                                      "alternative reference"@en .
 
@@ -708,6 +742,20 @@ sdir:BankFishing rdf:type owl:Class ;
                  rdfs:subClassOf sdir:TradeArea ;
                  rdfs:label "Bank fishing"@en ,
                             "Bankfiske"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#BankFishingI
+sdir:BankFishingI rdf:type owl:Class ;
+                  rdfs:subClassOf sdir:BankFishing ;
+                  rdfs:label "Bank fishing I"@en ,
+                             "Bankfiske I"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#BankFishingII
+sdir:BankFishingII rdf:type owl:Class ;
+                   rdfs:subClassOf sdir:BankFishing ;
+                   rdfs:label "Bank fishing II"@en ,
+                              "Bankfiske II"@no .
 
 
 ###  https://www.sdir.no/SDIR_Simulator#Barriers
@@ -1263,6 +1311,13 @@ sdir:FishingGear rdf:type owl:Class ;
                             "Fiskeutstyr"@no .
 
 
+###  https://www.sdir.no/SDIR_Simulator#FishingVessel
+sdir:FishingVessel rdf:type owl:Class ;
+                   rdfs:subClassOf sdir:Ship ;
+                   rdfs:label "Fishing Vessel"@en ,
+                              "Fiskefartøy"@no .
+
+
 ###  https://www.sdir.no/SDIR_Simulator#FixedBench
 sdir:FixedBench rdf:type owl:Class ;
                 rdfs:subClassOf sdir:Placement ;
@@ -1275,6 +1330,13 @@ sdir:FixedLight rdf:type owl:Class ;
                 rdfs:subClassOf sdir:Lights ;
                 rdfs:label "Fastmonternt lanterne"@no ,
                            "Fixed light"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#FjordFishing
+sdir:FjordFishing rdf:type owl:Class ;
+                  rdfs:subClassOf sdir:TradeArea ;
+                  rdfs:label "Fjord fishing"@en ,
+                             "Fjordfiske"@no .
 
 
 ###  https://www.sdir.no/SDIR_Simulator#FlexiblePipeConnection
@@ -1412,6 +1474,13 @@ sdir:Generator rdf:type owl:Class ;
 sdir:GeographicalLocation rdf:type owl:Class ;
                           rdfs:label "Geografisk lokasjon"@no ,
                                      "Geographical location"@en .
+
+
+###  https://www.sdir.no/SDIR_Simulator#GreaterInShore
+sdir:GreaterInShore rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:TradeArea ;
+                    rdfs:label "Greater than in-shore"@en ,
+                               "Større enn kystfiske"@no .
 
 
 ###  https://www.sdir.no/SDIR_Simulator#Greenland
@@ -2012,6 +2081,12 @@ sdir:RadioChannel rdf:type owl:Class ;
                   rdfs:subClassOf sdir:Radio ;
                   rdfs:label "Radio channel"@en ,
                              "Radiokanal"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#RadioCoverageArea
+sdir:RadioCoverageArea rdf:type owl:Class ;
+                       rdfs:label "Radio coverage area"@en ,
+                                  "Radiodekningsområde"@no .
 
 
 ###  https://www.sdir.no/SDIR_Simulator#RadioEquipment
@@ -2723,6 +2798,34 @@ sdir:WorkingDeck rdf:type owl:Class ;
 #################################################################
 #    Individuals
 #################################################################
+
+###  https://www.sdir.no/SDIR_Simulator#A1
+sdir:A1 rdf:type owl:NamedIndividual ,
+                 sdir:RadioCoverageArea ;
+        rdfs:label "A1"@en ,
+                   "A1"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#A2
+sdir:A2 rdf:type owl:NamedIndividual ,
+                 sdir:RadioCoverageArea ;
+        rdfs:label "A2"@en ,
+                   "A2"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#A3
+sdir:A3 rdf:type owl:NamedIndividual ,
+                 sdir:RadioCoverageArea ;
+        rdfs:label "A3"@en ,
+                   "A3"@no .
+
+
+###  https://www.sdir.no/SDIR_Simulator#A4
+sdir:A4 rdf:type owl:NamedIndividual ,
+                 sdir:RadioCoverageArea ;
+        rdfs:label "A4"@en ,
+                   "A4"@no .
+
 
 ###  https://www.sdir.no/SDIR_Simulator#CO2
 sdir:CO2 rdf:type owl:NamedIndividual ,

@@ -144,19 +144,40 @@
 
 ### Scopes on trade area
 
-:PS_TradeArea_BankfishingI
+:PS_TradeArea_BankFishingI
     a sh:PropertyShape, sdir:Scope ;
     sh:description "Virkeområde fartsområde Bankfiske I."@no, 
                    "Scope of trade area Bankfishing I."@en ;
     sh:path sdir:tradeArea ;
-    sh:hasValue sdir:BankfishingI .
+    sh:hasValue sdir:BankFishingI .
 
-:PS_TradeArea_BankfishingII
+:PS_TradeArea_BankFishingII
     a sh:PropertyShape, sdir:Scope ;
     sh:description "Virkeområde fartsområde Bankfiske II."@no, 
                    "Scope of trade area Bankfishing II."@en ;
     sh:path sdir:tradeArea ;
-    sh:hasValue sdir:BankfishingII .
+    sh:hasValue sdir:BankFishingII .
+
+:PS_TradeArea_FjordFishing
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde fartsområde fjordfiske."@no, 
+                   "Scope of trade area fjord fishing."@en ;
+    sh:path sdir:tradeArea ;
+    sh:hasValue sdir:FjordFishing .
+
+:PS_TradeArea_InShore
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde fartsområde kystfiske."@no, 
+                   "Scope of trade area in-shore fishing."@en ;
+    sh:path sdir:tradeArea ;
+    sh:hasValue sdir:InShore .
+
+:PS_TradeArea_GreaterInShore
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde fartsområde større enn kystfiske."@no, 
+                   "Scope of trade area greater than in-shore fishing."@en ;
+    sh:path sdir:tradeArea ;
+    sh:hasValue sdir:GreaterInShore .
 
 ### Scopes on duration
 
@@ -175,3 +196,33 @@
     sh:path sdir:duration ;
     sh:maxInclusive 30 ;
     sh:datatype unit:MO .
+
+### Scopes on radio coverage area
+
+:PS_RadioArea_A1
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde radiodekningsområde A1."@no,
+                   "Scope of radio coverage area A1."@en ;
+    sh:path sdir:radioArea ;
+    sh:hasValue sdir:A1 .
+
+:PS_RadioArea_A2
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde radiodekningsområde A2."@no,
+                   "Scope of radio coverage area A2."@en ;
+    sh:path sdir:radioArea ;
+    sh:hasValue sdir:A2 .
+    
+:PS_RadioArea_A3
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde radiodekningsområde A3."@no,
+                   "Scope of radio coverage area A3."@en ;
+    sh:path sdir:radioArea ;
+    sh:hasValue sdir:A3 .
+
+:PS_RadioArea_A4
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde radiodekningsområde A4."@no,
+                   "Scope of radio coverage area A4."@en ;
+    sh:path sdir:radioArea ;
+    sh:hasValue sdir:A4 .
