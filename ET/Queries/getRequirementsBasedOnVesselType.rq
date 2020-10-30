@@ -15,7 +15,7 @@ WHERE {
   
   # First, check for scope requirement.
   ?scope sh:path :vesselType ;
-               sh:hasValue ?vesselType .
+               sh:hasValue ?vesselType . # Change ?vesselType with any vessel type e.g. :FishingVessel
   
   ?vesselType rdfs:label ?vesselLabel .
   FILTER(LANG(?vesselLabel) = 'no') # Insert language tag for label ('no' or 'en')
