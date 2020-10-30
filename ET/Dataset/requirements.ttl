@@ -10,13 +10,80 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 
+:FOR1404P1
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Virkeområde"@no, "Scope"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§1"^^xsd:anyURI ;
+        :theme "General provisions"@en, "Generelle bestemmelser"@no .
+
 :FOR1404P2
         a sh:NodeShape, :Requirement ;
         # sh:targetClass
         rdfs:label "Definisjoner"@no, "Definitions"@en ;
         sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§2"^^xsd:anyURI ;
-        :theme "Geral provisions"@en, "Generelle bestemmelser"@no .
+        :theme "General provisions"@en, "Generelle bestemmelser"@no .
+
+:FOR1404P3
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Kapittelets anvendelsesområde"@no, "Scope of application of this chapter"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§3"^^xsd:anyURI ;
+        :theme "Construction"@en, "Konstruksjon"@no .
+
+:FOR1404P4
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Byggekrav"@no, "Construction requirements"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101, scope:PS_BuiltDate_b20070301 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§4"^^xsd:anyURI ;
+        :alternativeReference "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ;
+        :theme "Construction"@en, "Konstruksjon"@no .
+
+:FOR1404P5
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Krav til lasterom for føring av fisk i vann og i bulk"@no, "Requirements for cargo spaces for carriage of fish in water and in bulk"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§5"^^xsd:anyURI ;
+        :theme "Construction"@en, "Konstruksjon"@no .
+
+:FOR1404P6
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Skansekledninger, rekkverk og beskyttelsesanordninger"@no, "Bulwarks, rails and guards"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101, scope:PS_BuiltDate_a20140701 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§6"^^xsd:anyURI ;
+        :theme "Construction"@en, "Konstruksjon"@no .
+
+:FOR1404P7
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Kapittelets anvendelsesområde"@no, "Scope of application of this chapter"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19880102 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§7"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P8
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Brannsikring"@no, "Fire safety"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19920101, scope:PS_BuiltDate_b19920101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§8"^^xsd:anyURI ;
+        :alternativeReference "https://lovdata.no/dokument/SF/forskrift/1983-10-20-1580"^^xsd:anyURI ,
+                              "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P9
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Oljefyrt ovn"@no, "Oil-fired stoves"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19880102 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§9"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P36
         a sh:NodeShape, :Requirement ;
