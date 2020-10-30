@@ -5,20 +5,22 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 
-# Return information about a requirement based on specific vessel length overall. 
-# Alternative regulation references are only counted, see own query for information retrieval.
+# Return information about a requirement based on specific vessel type.
+# Including information about sub requirements.
 # See comments in query for changing magic strings/numbers to variables in some API-call or similar.
 
-SELECT ?paragraph ?label ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementRegulationReference ?subRequirementTheme
+SELECT ?paragraph ?label ?vesselLabel ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementRegulationReference ?subRequirementTheme
 WHERE {
   ?paragraph sh:property ?scope .
   
-  # First, find check for scope requirement
-  ?scope sh:path :vesselLengthOverall ;
-         ?length ?lengthValue .
-  FILTER (?lengthValue >= 12) # Insert actual vessel length overall as value (instead of magic number)
+  # First, check for scope requirement.
+  ?scope sh:path :vesselType ;
+               sh:hasValue ?vesselType . # Change ?vesselType with any vessel type e.g. :FishingVessel
   
-    # Get label in given language
+  ?vesselType rdfs:label ?vesselLabel .
+  FILTER(LANG(?vesselLabel) = 'no') # Insert language tag for label ('no' or 'en')
+  
+  # Get label in given language
   ?paragraph rdfs:label ?label .
   FILTER(LANG(?label) = 'no') # Insert language tag for label ('no' or 'en')
   

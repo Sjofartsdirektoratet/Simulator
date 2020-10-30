@@ -5,20 +5,37 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 
-# Return information about a requirement based on specific vessel length overall. 
-# Alternative regulation references are only counted, see own query for information retrieval.
+# Return information about a requirement based on specific trade area.
+# Including information about sub requirements.
 # See comments in query for changing magic strings/numbers to variables in some API-call or similar.
 
-SELECT ?paragraph ?label ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementRegulationReference ?subRequirementTheme
+SELECT ?paragraph ?label ?tradeAreaLabel ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementRegulationReference ?subRequirementTheme
 WHERE {
-  ?paragraph sh:property ?scope .
+  ?paragraph a :Requirement .
   
-  # First, find check for scope requirement
-  ?scope sh:path :vesselLengthOverall ;
-         ?length ?lengthValue .
-  FILTER (?lengthValue >= 12) # Insert actual vessel length overall as value (instead of magic number)
+  # If trade area scope are connected directly to subject
+  OPTIONAL {
+    ?paragraph sh:property ?scope .
+
+    ?scope sh:path :tradeArea ;
+                 sh:hasValue ?tradeArea . # Change ?tradeArea with any trade area e.g. :BankFishingI
+
+    ?tradeArea rdfs:label ?tradeAreaLabel .
+  }
   
-    # Get label in given language
+  # If trade area scope are in an alternative list
+  OPTIONAL {
+  	?paragraph sh:or/rdf:rest*/rdf:first ?orItem .
+    ?orItem sh:and/rdf:rest*/rdf:first ?scope .
+    
+    ?scope sh:path :tradeArea ;
+                 sh:hasValue ?tradeArea . # Change ?tradeArea with any trade area e.g. :BankFishingI
+
+    ?tradeArea rdfs:label ?tradeAreaLabel .
+  }
+  FILTER(LANG(?tradeAreaLabel) = 'no')
+  
+  # Get label in given language
   ?paragraph rdfs:label ?label .
   FILTER(LANG(?label) = 'no') # Insert language tag for label ('no' or 'en')
   
@@ -44,4 +61,5 @@ WHERE {
   # Get tag in given language
   ?paragraph :theme ?theme .
   FILTER(LANG(?theme) = 'no') # Insert language tag for label ('no' or 'en') 
+  
 }

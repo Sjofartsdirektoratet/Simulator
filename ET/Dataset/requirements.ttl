@@ -57,8 +57,8 @@
         rdfs:label "Safety radio certificate"@en, "Sikkerhetssertifikat for radio"@no ;
         sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         sh:or (
-                [ sh:and (scope:PS_Duration_60MO scope:PS_TradeArea_BankfishingI) ]
-                [ sh:and (scope:PS_Duration_30MO scope:PS_TradeArea_BankfishingII) ]
+                [ sh:and (scope:PS_Duration_60MO scope:PS_TradeArea_BankFishingI) ]
+                [ sh:and (scope:PS_Duration_30MO scope:PS_TradeArea_BankFishingII) ]
         ) ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§66"^^xsd:anyURI ;
         :subRequirement  :FOR1404P65, :FOR1404P67, :FOR1404P68, :FOR1404P69, 
