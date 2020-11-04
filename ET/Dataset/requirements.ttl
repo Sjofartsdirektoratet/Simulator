@@ -85,6 +85,79 @@
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§9"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
+:FOR1404P10
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Installasjon mv. av oljefyrt ovn"@no, "Installation, etc. of oilfired stove"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_8, scope:PS_BuiltDate_a19880102 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§10"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P11
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Isolasjon av ildsteder mv."@no, "Insulation of fireplaces, etc."@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19880102 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§11"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P12
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Røykopptak og eksosrør"@no, "Smoke uptake and exhaust pipes"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19880102 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§12"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P13
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Isolering med ubrennbart materiale"@no, "Insulation with non-combustible material"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19880102 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§13"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P14
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Isolasjon av maskinrom på trefartøy"@no, "Insulation of machinery spaces in wooden vessels"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19880102, scope:PS_WoodenVessel;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§14"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P15
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Brannslokningsanlegg i maskinrom"@no, "Fire-extinguishing systems in machinery spaces"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_10, scope:PS_BuiltDate_a19880102, scope:PS_BuiltDate_a19920101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§15"^^xsd:anyURI ;
+        :alternativeReference "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P16
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Brannoppdagelses- og alarmanlegg"@no, "Fire detection and alarm system"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_10, scope:PS_maxLOA_10, scope:PS_BuiltDate_a19880102 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§16"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P17
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Brannslokningsapparater"@no, "Fire extinguishers"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_10 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§17"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P18
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Ventilasjonssystemer"@no, "Ventilation systems"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19880102 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§18"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
 :FOR1404P36
         a sh:NodeShape, :Requirement ;
         # sh:targetClass :? ;

@@ -13,10 +13,18 @@
 
 :PS_FishingVessel 
     a sh:PropertyShape, sdir:Scope ;
-    sh:description "Virkeområde fiskefartøy"@no, 
-                   "Scope of fishing vessels"@en ;
+    sh:description "Virkeområde fiskefartøy."@no, 
+                   "Scope of fishing vessels."@en ;
     sh:path sdir:vesselType ;
     sh:hasValue sdir:FishingVessel .
+
+### Scopes on building material
+:PS_WoodenVessel
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde for fartøy bygd av treverk."@no ,
+                   "Scope of vessel built of wood."@en ;
+    sh:path sdir:hullMaterial ;
+    sh:hasValue sdir:Wood .
 
 ### Scopes on length overall (LOA)
 
@@ -36,6 +44,16 @@
                    "Scope of minimum length 6 meter."@en ;
     sh:path sdir:vesselLengthOverall ;
     sh:maxInclusive 6 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_minLOA_8
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde minste lengde 8 meter."@no,
+                   "Scope of minimum length 8 meter."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:maxInclusive 8 ;
     sh:datatype unit:M ;
     sh:minCount 1 ;
     sh:maxCount 1 .
