@@ -372,7 +372,135 @@
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§45"^^xsd:anyURI ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
 
-### 
+### TODO: P47
+
+:FOR1404P48
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Faste og flyttbare atkomstmidler om bord"@no, "Fixed and portable means of access on board"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§48"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P49
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Atkomstmiddel for sikker iland- og ombordstigning"@no, "Fixed and portable means of access on board"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§49"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P50
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Lukningsmidler – luker og dører"@no, "Means of closure - hatches and doors"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§50"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P51
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Luker til overbygget arbeidsdekk og produksjonsdekk"@no, "Hatches to covered working and production decks"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§51"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P52
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Drenering av overbygget arbeidsdekk"@no, "Drainage of covered working decks"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§52"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P53
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Føring av dekkslast"@no, "Carriage of deck cargo"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§53"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P54
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Nedlasting, drenering av åpent dekk"@no, "Loading, drainage of open deck"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§54"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P55
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Kontroll av gassfare mv."@no, "Inspection to ascertain gas hazard etc."@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§55"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P56
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Merking av tanker, rom m.m. og fareplan"@no, "Marking of tanks, spaces, etc. and warning signs"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§56"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P57
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Skilt og oppslag"@no, "Signs and notices"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§57"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P58
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Oppbevaring av brennstoff"@no, "Storage of fuel"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§58"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P59
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Varselskilt ved radarantenne"@no, "Warning sign at radar scanners"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§59"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P60
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Radarreflektor"@no, "Radar reflector"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§60"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P61
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Refleksmiddel"@no, "Retro-reflective means"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§61"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P62
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Sklisikring av dekk"@no, "Anti-skid surfaces on deck"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§62"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
+
+:FOR1404P63
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Leidere"@no, "Ladders"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_b19920101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§63"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P85
         a sh:NodeShape, :Requirement ;
