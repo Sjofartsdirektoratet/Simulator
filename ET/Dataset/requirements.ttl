@@ -158,6 +158,67 @@
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§18"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
+:FOR1404P19
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Materialer m.m."@no, "Materials, etc."@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19880102 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§19"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P20
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Oppbevaring av brennolje og andre brennbare væsker"@no, "Storage of oil fuel and other flammable liquids"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19880102 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§20"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P21
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Materialer i rørledninger mv."@no, "Materials in pipelines, etc."@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19880102 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§21"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P22
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Maskineri og rørsystemer"@no, "Machinery and piping systems"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19880102, scope:PS_BuiltDate_a19920101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§22"^^xsd:anyURI ;
+        :alternativeReference "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P23
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Elektriske anlegg"@no, ". Electrical installations"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19880102, scope:PS_BuiltDate_a19920101, scope:PS_BuiltDate_b20020101, scope::PS_BuiltDate_a20020101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§23"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P24
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Nødkraftkilde og nødlys, mv."@no, "Emergency source of power and emergency lighting, etc"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_10, scope:PS_BuiltDate_a19880102, scope:PS_BuiltDate_a19920101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§24"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+:FOR1404P25
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass
+        rdfs:label "Likeverdige løsninger"@no, "Equivalents"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19880102 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§25"^^xsd:anyURI ;
+        :subRequirement :FOR1404P18, :FOR1404P19, :FOR1404P20 ;
+        :alternativeReference "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ;
+        :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+
+###############
+
 :FOR1404P36
         a sh:NodeShape, :Requirement ;
         # sh:targetClass :? ;
