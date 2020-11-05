@@ -217,7 +217,79 @@
         :alternativeReference "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
-###############
+
+:FOR1404P26
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Stability calculations"@en, "Stabilitetsberegninger"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§26"^^xsd:anyURI ;
+        :subRequirement :FOR1404P27, :FOR1404P28, :FOR1404P29, :FOR1404P30, :FOR1404P31, :FOR1404P32, :FOR1404P33, :FOR1404P34, :FOR1404P35 ;
+        :alternativeReference "https://www.sdir.no/globalassets/sjekklister/ks-0532-b-tegningsliste-for-fiske--og-fangstfartoy-under-15m.pdf"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no .
+
+:FOR1404P27
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Stability documentation and inclining test"@en, "Stabilitetsdokumentasjon og krengeprøve"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§27"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P28
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Stabilitet for lukkede fartøyer"@en, "Stability for closed vessels"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§28"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P29
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Stability documentation and inclining test"@en, "Stabilitetskriterier"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§29"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P30
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Bow height"@en, "Baughøyde"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§30"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P31
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Stability and freeboard for open vessels"@en, "Stabilitet og fribord for åpne fartøy"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§31"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P32
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Water on decks and in open spaces"@en, "Vann på dekk og i åpne rom"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§32"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P33
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Icing allowance"@en, "Overisingstillegg"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101, scope:PS_TradeArea_GreaterInShore ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§33"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P34
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Stabilitetsopplysninger"@en, "Stability information"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§34"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
+
+:FOR1404P35
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Stabilitetsopplysninger"@en, "Stability information"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§35"^^xsd:anyURI ;
+        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
 
 :FOR1404P36
         a sh:NodeShape, :Requirement ;
@@ -227,6 +299,80 @@
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§36"^^xsd:anyURI ;
         :subRequirement :FOR1404P2 ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
+
+:FOR1404P37
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Redningsdrakter"@no, "Immersion suits"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§37"^^xsd:anyURI ;
+        :theme "Life saving appliances"@en, "Redningsmidler"@no .
+
+:FOR1404P38
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Redningsflåte"@no, "Liferaft"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_TradeArea_FjordFishing, scope:PS_TradeArea_InShore ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§38"^^xsd:anyURI ;
+        :theme "Life saving appliances"@en, "Redningsmidler"@no .
+
+:FOR1404P39
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Plassering av redningsmidler"@no, "Placement of life-saving appliances"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_TradeArea_FjordFishing, scope:PS_TradeArea_InShore ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§39"^^xsd:anyURI ;
+        :theme "Life saving appliances"@en, "Redningsmidler"@no .
+
+:FOR1404P40
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Utstyr for alarmering"@no, "Alarm equipment"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§40"^^xsd:anyURI ;
+        :theme "Life saving appliances"@en, "Redningsmidler"@no .
+
+:FOR1404P41
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Bording av redningsmidler"@no, "Boarding of life-saving appliances"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§41"^^xsd:anyURI ;
+        :theme "Life saving appliances"@en, "Redningsmidler"@no .
+
+:FOR1404P42
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Forholdsregler for å holde redningsmidler og annet redningsutstyr klart til bruk"@no, "Precautions for keeping life-saving appliances and other rescue equipment ready for use"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§42"^^xsd:anyURI ;
+        :theme "Life saving appliances"@en, "Redningsmidler"@no .
+
+:FOR1404P43
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Livbøyer"@no, "Lifebuoys"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_10 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§43"^^xsd:anyURI ;
+        :theme "Life saving appliances"@en, "Redningsmidler"@no .
+
+:FOR1404P44
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Nødsignalutstyr og pyroteknisk utstyr"@no, "Distress signal equipment and pyrotechnical equipment"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_TradeArea_BankFishingI, scope:PS_TradeArea_BankFishingII, scope:PS_TradeArea_FjordFishing, scope:PS_TradeArea_InShore ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§44"^^xsd:anyURI ;
+        :theme "Life saving appliances"@en, "Redningsmidler"@no .
+
+:FOR1404P45
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Alarmanlegg, alarminstruks og øvelser"@no, "Alarm system, muster list and drills"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§45"^^xsd:anyURI ;
+        :theme "Life saving appliances"@en, "Redningsmidler"@no .
+
+### 
 
 :FOR1404P85
         a sh:NodeShape, :Requirement ;
@@ -338,76 +484,3 @@
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§77"^^xsd:anyURI ;
         :subRequirement :FOR1404P76 ;
         :theme "Navigation"@en, "Navigasjon"@no . 
-
-:FOR1404P26
-        a sh:NodeShape, :Requirement ;
-        # sh:targetClass :? ;
-        rdfs:label "Stability calculations"@en, "Stabilitetsberegninger"@no ;
-        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
-        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§26"^^xsd:anyURI ;
-        :subRequirement :FOR1404P27, :FOR1404P28, :FOR1404P29, :FOR1404P30, :FOR1404P31, :FOR1404P32, :FOR1404P33, :FOR1404P34, :FOR1404P35 ;
-        :alternativeReference "https://www.sdir.no/globalassets/sjekklister/ks-0532-b-tegningsliste-for-fiske--og-fangstfartoy-under-15m.pdf"^^xsd:anyURI ;
-        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no .
-
-:FOR1404P27
-        a sh:NodeShape, :Requirement ;
-        rdfs:label "Stability documentation and inclining test"@en, "Stabilitetsdokumentasjon og krengeprøve"@no ;
-        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
-        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§27"^^xsd:anyURI ;
-        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
-
-:FOR1404P28
-        a sh:NodeShape, :Requirement ;
-        rdfs:label "Stabilitet for lukkede fartøyer"@en, "Stability for closed vessels"@no ;
-        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
-        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§28"^^xsd:anyURI ;
-        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
-
-:FOR1404P29
-        a sh:NodeShape, :Requirement ;
-        rdfs:label "Stability documentation and inclining test"@en, "Stabilitetskriterier"@no ;
-        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
-        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§29"^^xsd:anyURI ;
-        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
-
-:FOR1404P30
-        a sh:NodeShape, :Requirement ;
-        rdfs:label "Bow height"@en, "Baughøyde"@no ;
-        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101 ;
-        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§30"^^xsd:anyURI ;
-        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
-
-:FOR1404P31
-        a sh:NodeShape, :Requirement ;
-        rdfs:label "Stability and freeboard for open vessels"@en, "Stabilitet og fribord for åpne fartøy"@no ;
-        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
-        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§31"^^xsd:anyURI ;
-        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
-
-:FOR1404P32
-        a sh:NodeShape, :Requirement ;
-        rdfs:label "Water on decks and in open spaces"@en, "Vann på dekk og i åpne rom"@no ;
-        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101 ;
-        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§32"^^xsd:anyURI ;
-        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
-
-:FOR1404P33
-        a sh:NodeShape, :Requirement ;
-        rdfs:label "Icing allowance"@en, "Overisingstillegg"@no ;
-        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101, scope:PS_TradeArea_GreaterInShore ;
-        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§33"^^xsd:anyURI ;
-        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
-
-:FOR1404P34
-        a sh:NodeShape, :Requirement ;
-        rdfs:label "Stabilitetsopplysninger"@en, "Stability information"@no ;
-        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
-        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§34"^^xsd:anyURI ;
-        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
-
-:FOR1404P35
-        a sh:NodeShape, :Requirement ;
-        rdfs:label "Stabilitetsopplysninger"@en, "Stability information"@no ;
-        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6 ;
-        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§35"^^xsd:anyURI ;
-        :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
