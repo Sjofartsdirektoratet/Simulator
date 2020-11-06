@@ -68,6 +68,16 @@
     sh:minCount 1 ;
     sh:maxCount 1 .
 
+:PS_minLOA_12
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde minste lengde 12 meter."@no,
+                   "Scope of minimum length 12 meter."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:maxInclusive 12 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
 :PS_minLOA_10
     a sh:PropertyShape, sdir:Scope ;
     sh:description "Virkeområde minste lengde 10,67 meter."@no,

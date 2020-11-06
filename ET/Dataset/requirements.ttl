@@ -606,6 +606,63 @@
         :subRequirement :FOR1404P76 ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
+:FOR1404P78
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Speed and distance measuring device"@en, "Fart- og distansemåler"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19970701, scope:PS_TradeArea_BankFishingII ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§78"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no . 
+
+:FOR1404P79
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Radar installation"@en, "Radaranlegg"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_10 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§79"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no . 
+
+:FOR1404P80
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Electronic position-fixing equipment"@en, "Elektronisk utstyr for posisjonsbestemmelse"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_10, scope:PS_BuiltDate_a19970701 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§80"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no . 
+
+:FOR1404P81
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Depth-measuring equipment"@en, "Utstyr for å måle dybde"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_10, scope:PS_BuiltDate_a19970701 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§81"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no . 
+
+:FOR1404P82
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Steering gear, etc"@en, "Styreanordninger mv."@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_10, scope:PS_BuiltDate_a19970701 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§82"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no . 
+
+:FOR1404P83
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Ship's clock"@en, "Skipsur"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :subRequirement :FOR1404P24 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§83"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no . 
+
+:FOR1404P84
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Binoculars and thermometer"@en, "Kikkert og termometer"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§84"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no . 
+
 :FOR1404P85
         a sh:NodeShape, :Requirement ;
         # sh:targetClass :? ;
@@ -614,3 +671,47 @@
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§85"^^xsd:anyURI ;
         :alternativeReference "https://www.sdir.no/sjofart/regelverk/rundskriv/sjokart-om-bord-pa-fiske--og-fangstfartoy/"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no .
+
+:FOR1404P86
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Lights"@en, "Lanterner"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_BuiltDate_a19920101 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§86"^^xsd:anyURI ;
+        :alternativeReference "https://lovdata.no/dokument/SF/forskrift/1975-12-01-5"^^xsd:anyURI ,
+                              "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no .
+
+:FOR1404P87
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Signalling equipment"@en, "Signaleringsutstyr"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§87"^^xsd:anyURI ;
+        :alternativeReference "https://lovdata.no/dokument/SF/forskrift/1975-12-01-5"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no . 
+
+:FOR1404P88
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Sound signal apparatuses"@en, "Lydsignalapparater"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_12 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§88"^^xsd:anyURI ;
+        :alternativeReference "https://lovdata.no/dokument/SF/forskrift/1975-12-01-5"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no . 
+
+:FOR1404P89
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Searchlight"@en, "Lyskaster"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_12, scope:PS_BuiltDate_a19970701 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§89"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no . 
+
+:FOR1404P90
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Instructions for use, spare parts, etc"@en, "Bruksanvisninger, reservedeler mv."@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§90"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no . 
