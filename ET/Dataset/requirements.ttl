@@ -372,7 +372,13 @@
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§45"^^xsd:anyURI ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
 
-### TODO: P47
+:FOR1404P47
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Fartsområdebegrensninger"@no, "Trade area restrictions"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_TradeArea_FjordFishing, scope:PS_maxLOA_8, scope:PS_TradeArea_BankFishingI, scope:PS_minLOA_8, scope:PS_maxLOA_10, scope:PS_TradeArea_BankFishingII, scope:PS_minLOA_10 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§47"^^xsd:anyURI ;
+        :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P48
         a sh:NodeShape, :Requirement ;
@@ -502,7 +508,13 @@
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§63"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
-### TODO §64
+## TODO: se på scope for åpen og lukket båt
+:FOR1404P64
+        a sh:NodeShape, :Requirement ;
+        rdfs:label "Virkeområde"@no, "Scope"@en ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§64"^^xsd:anyURI ;
+        :theme "Radio"@en, "Radio"@no .
 
 :FOR1404P65
         a sh:NodeShape, :Requirement ;
@@ -831,4 +843,10 @@
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§104"^^xsd:anyURI ;
         :theme "Concluding provisions"@en, "Avsluttende bestemmelser"@no .
 
-### TODO §105
+:FOR1404P105
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Transitional provisions"@en, "Overgangsregler"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§105"^^xsd:anyURI ;
+        :theme "Concluding provisions"@en, "Avsluttende bestemmelser"@no .
