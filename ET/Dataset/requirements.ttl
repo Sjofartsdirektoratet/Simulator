@@ -502,22 +502,7 @@
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§63"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
-:FOR1404P85
-        a sh:NodeShape, :Requirement ;
-        # sh:targetClass :? ;
-        rdfs:label "Charts and nautical publications"@en, "Kart og nautiske publikasjoner"@no ;
-        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_maxLOA_10 ;
-        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§85"^^xsd:anyURI ;
-        :alternativeReference "https://www.sdir.no/sjofart/regelverk/rundskriv/sjokart-om-bord-pa-fiske--og-fangstfartoy/"^^xsd:anyURI ;
-        :theme "Navigation"@en, "Navigasjon"@no .
-
-:FOR1404P75
-        a sh:NodeShape, :Requirement ;
-        # sh:targetClass :? ;
-        rdfs:label "Compasses"@en, "Kompass"@no ;
-        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
-        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§75"^^xsd:anyURI ;
-        :theme "Navigation"@en, "Navigasjon"@no .  
+### TODO §64
 
 :FOR1404P65
         a sh:NodeShape, :Requirement ;
@@ -596,6 +581,14 @@
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§74"^^xsd:anyURI ;
         :theme "Radio"@en, "Radio"@no .
 
+:FOR1404P75
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Compasses"@en, "Kompass"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§75"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no .  
+
 :FOR1404P76
         a sh:NodeShape, :Requirement ;
         # sh:targetClass :? ;
@@ -612,3 +605,12 @@
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§77"^^xsd:anyURI ;
         :subRequirement :FOR1404P76 ;
         :theme "Navigation"@en, "Navigasjon"@no . 
+
+:FOR1404P85
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Charts and nautical publications"@en, "Kart og nautiske publikasjoner"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_maxLOA_10 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§85"^^xsd:anyURI ;
+        :alternativeReference "https://www.sdir.no/sjofart/regelverk/rundskriv/sjokart-om-bord-pa-fiske--og-fangstfartoy/"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no .
