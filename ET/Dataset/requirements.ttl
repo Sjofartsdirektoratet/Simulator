@@ -715,3 +715,101 @@
         sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§90"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
+
+:FOR1404P91
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Wheelhouse arrangement, view from the wheelhouse, etc."@en, "Styrehusarrangement, sikt fra styrehus mv."@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_10, scope:PS_minLOA_6, scope:PS_BuiltDate_a19790701, scope:PS_BuiltDate_b19920101, scope:PS_BuiltDate_b19970701, scope:PS_BuiltDate_a19970701 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§91"^^xsd:anyURI ;
+        :theme "Navigation"@en, "Navigasjon"@no . 
+
+:FOR1404P92
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Vessel instructions"@en, "Fartøyinstruks"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_8 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§92"^^xsd:anyURI ;
+        :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
+
+:FOR1404P93
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Coordination of inspections"@en, "Samordning av kontroll"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§93"^^xsd:anyURI ;
+        :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
+
+:FOR1404P94
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Inspection of vessels of less than 8 metres"@en, "Kontroll av fartøy under 8 meter"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_8 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§94"^^xsd:anyURI ;
+        :alternativeReference "https://lovdata.no/dokument/NL/lov/2007-02-16-9"^^xsd:anyURI ;
+        :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
+
+:FOR1404P95
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Inspections of vessels of 8 to 9 metres in overall length"@en, "Kontroll av fartøy med største lengde 8 til 9 meter"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_minLOA_8, scope:PS_maxLOA_9 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§95"^^xsd:anyURI ;
+        :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
+
+:FOR1404P96
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Inspections of vessels of 9 to 10.67 metres in overall length"@en, "Kontroll av fartøy med største lengde 9 til 10,67 meter"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_minLOA_9, scope:PS_maxLOA_10 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§96"^^xsd:anyURI ;
+        :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
+
+:FOR1404P97
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Inspections of vessels of 10.67 to 15 metres in overall length"@en, "Kontroll av fartøy med største lengde 10,67 til 15 meter"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_minLOA_10, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§97"^^xsd:anyURI ;
+        :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
+
+:FOR1404P98
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Reporting of inspections by approved company and company's control"@en, "Innrapportering av kontroll ved godkjent foretak og reders egenkontroll"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_minLOA_8, scope:PS_maxLOA_9, scope:PS_minLOA_9, scope:PS_maxLOA_10 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§98"^^xsd:anyURI ;
+        :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
+
+:FOR1404P99
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Inspection of vessel in connection with damage, conversion, etc"@en, "Kontroll av fartøy ved skade, ombygging m.m."@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_minLOA_8, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§99"^^xsd:anyURI ;
+        :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
+
+:FOR1404P100
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Inspection of the electrical installation by an accepted electrical enterprise"@en, "Kontroll av det elektriske anlegget ved akseptert elektroforetak"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§100"^^xsd:anyURI ;
+        :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
+
+:FOR1404P101
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Documentation for newbuildings and conversions"@en, "Dokumentasjon ved nybygg og ombygging"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§101"^^xsd:anyURI ;
+        :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
+
+:FOR1404P102
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Documentation on board the vessel"@en, "Dokumentasjon om bord på fartøyet"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_minLOA_6, scope:PS_maxLOA_8, scope:PS_minLOA_8, scope:PS_maxLOA_15, scope:PS_maxLOA_9, scope:PS_BuiltDate_a20070701 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§102"^^xsd:anyURI ;
+        :alternativeReference "https://lovdata.no/dokument/SF/forskrift/1978-01-17-4"^^xsd:anyURI ;
+        :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .

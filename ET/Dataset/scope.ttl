@@ -68,6 +68,36 @@
     sh:minCount 1 ;
     sh:maxCount 1 .
 
+:PS_maxLOA_8
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde minste lengde 8 meter."@no,
+                   "Scope of minimum length 8 meter."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:minExclusive 8 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_minLOA_9
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde minste lengde 9 meter."@no,
+                   "Scope of minimum length 9 meter."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:maxInclusive 9 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_maxLOA_9
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde minste lengde 9 meter."@no,
+                   "Scope of minimum length 9 meter."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:minExclusive 9 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
 :PS_minLOA_12
     a sh:PropertyShape, sdir:Scope ;
     sh:description "Virkeområde minste lengde 12 meter."@no,
@@ -121,7 +151,15 @@
     sh:description "Virkeområde byggeår etter 1. juli 1997."@no, 
                    "Scope of built date after July 1st 1997."@en ;
     sh:path sdir:builtDate ;
-    sh:maxInclusive "1997-07-01T00:00:00" ;
+    sh:maxInclusive "1997-07-01T23:59:59" ;
+    sh:datatype xsd:dateTime .
+
+:PS_BuiltDate_b19970701
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår før 1. juli 1997."@no, 
+                   "Scope of built date before July 1st 1997."@en ;
+    sh:path sdir:builtDate ;
+    sh:minExclusive "1997-07-01T00:00:00" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_a20070301
@@ -170,6 +208,14 @@
                    "Scope of built date after January 2nd 1988."@en ;
     sh:path sdir:builtDate ;
     sh:maxInclusive "1988-01-02T00:00:00" ;
+    sh:datatype xsd:dateTime .
+
+:PS_BuiltDate_a19790701
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår etter 1. juli 1979."@no, 
+                   "Scope of built date after July 1st 1979."@en ;
+    sh:path sdir:builtDate ;
+    sh:maxInclusive "1979-07-01T00:00:00" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_b20020101
