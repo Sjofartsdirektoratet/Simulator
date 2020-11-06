@@ -810,6 +810,25 @@
         # sh:targetClass :? ;
         rdfs:label "Documentation on board the vessel"@en, "Dokumentasjon om bord på fartøyet"@no ;
         sh:property scope:PS_FishingVessel, scope:PS_minLOA_6, scope:PS_maxLOA_8, scope:PS_minLOA_8, scope:PS_maxLOA_15, scope:PS_maxLOA_9, scope:PS_BuiltDate_a20070701 ;
+        :subRequirement :FOR1404P95, :FOR1404P96 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§102"^^xsd:anyURI ;
         :alternativeReference "https://lovdata.no/dokument/SF/forskrift/1978-01-17-4"^^xsd:anyURI ;
         :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
+
+:FOR1404P103
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Exemptions and equivalents"@en, "Dispensasjon og likeverdige løsninger"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§103"^^xsd:anyURI ;
+        :theme "Concluding provisions"@en, "Avsluttende bestemmelser"@no .
+
+:FOR1404P104
+        a sh:NodeShape, :Requirement ;
+        # sh:targetClass :? ;
+        rdfs:label "Entry into force"@en, "Ikrafttredelse"@no ;
+        sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
+        :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§104"^^xsd:anyURI ;
+        :theme "Concluding provisions"@en, "Avsluttende bestemmelser"@no .
+
+### TODO §105

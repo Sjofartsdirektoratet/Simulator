@@ -170,6 +170,14 @@
     sh:maxInclusive "2007-03-01T23:59:59" ;
     sh:datatype xsd:dateTime .
 
+:PS_BuiltDate_a20070701
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde byggeår etter 1. juli 2007."@no, 
+                   "Scope of built date after July 1st 2007."@en ;
+    sh:path sdir:builtDate ;
+    sh:maxInclusive "2007-07-01T23:59:59" ;
+    sh:datatype xsd:dateTime .
+
 :PS_BuiltDate_b20070301
     a sh:PropertyShape, sdir:Scope ;
     sh:description "Virkeområde byggeår før 1. mars 2007."@no, 
