@@ -26,7 +26,7 @@
 ## Docker
 
 The repository includes a docker-compose file, which can be used for running a Fuseki server locally using docker.
-It loads ttl datasets during startup.
+It loads datasets from the "Dataset" directories during startup.
 
 ### Instructions
 
@@ -46,3 +46,8 @@ The server should now be reachable on [http://localhost:3030](http://localhost:3
 on your host network, or on [http://fuseki:3030](http://fuseki:3030) inside the sdir docker
 network.
 The admin password for your _local_ server is specified in the docker-compose file.
+
+The easiest way to try out some queries is using the interactive UI on
+[http://localhost:3030](http://localhost:3030).
+Click the Query button on the dataset you want, and paste in a Sparql query from
+the "Queries" folder in this repository.
