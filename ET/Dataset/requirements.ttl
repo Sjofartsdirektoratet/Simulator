@@ -194,7 +194,7 @@
 :FOR1404P23
         a sh:NodeShape, :Requirement ;
         # sh:targetClass
-        rdfs:label "Elektriske anlegg"@no, ". Electrical installations"@en ;
+        rdfs:label "Elektriske anlegg"@no, "Electrical installations"@en ;
         sh:property scope:PS_FishingVessel, scope:PS_maxLOA_15, scope:PS_minLOA_6, scope:PS_BuiltDate_a19880102, scope:PS_BuiltDate_a19920101, scope:PS_BuiltDate_b20020101, scope::PS_BuiltDate_a20020101 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§23"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .

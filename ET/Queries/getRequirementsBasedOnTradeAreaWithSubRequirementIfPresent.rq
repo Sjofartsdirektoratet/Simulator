@@ -9,7 +9,7 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 # Including information about sub requirements.
 # See comments in query for changing magic strings/numbers to variables in some API-call or similar.
 
-SELECT ?paragraph ?label ?tradeAreaLabel ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementRegulationReference ?subRequirementTheme
+SELECT ?paragraph ?label ?scope ?tradeAreaLabel ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementScope ?subRequirementRegulationReference ?subRequirementTheme
 WHERE {
   ?paragraph a :Requirement .
   
@@ -45,6 +45,9 @@ WHERE {
   # If present, return information about sub-requirements
   OPTIONAL { 
     ?paragraph :subRequirement ?subRequirement . 
+
+    # Scope of subRequirement
+    ?subRequirement sh:property ?subRequirementScope .
     
     # Get label in given language
     ?subRequirement rdfs:label ?subRequirementLabel .
