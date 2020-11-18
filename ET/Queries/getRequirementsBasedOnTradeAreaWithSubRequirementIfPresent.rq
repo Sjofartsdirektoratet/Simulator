@@ -9,9 +9,16 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 # Including information about sub requirements.
 # See comments in query for changing magic strings/numbers to variables in some API-call or similar.
 
-SELECT ?paragraph ?label ?scope ?tradeAreaLabel ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementScope ?subRequirementRegulationReference ?subRequirementTheme
+SELECT DISTINCT ?paragraph ?label ?minExclusiveBuiltDate ?maxInclusiveBuiltDate ?tradeArea ?radioArea ?tradeAreaLabel ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementScope ?subRequirementRegulationReference ?subRequirementTheme
 WHERE {
   ?paragraph a :Requirement .
+
+  ?a sh:property ?b .
+  
+  OPTIONAL { ?b sh:path :builtDate . ?b sh:minExclusive ?minExclusiveBuiltDate . }
+  OPTIONAL { ?b sh:path :builtDate . ?b sh:maxInclusive ?maxInclusiveBuiltDate . }
+  OPTIONAL { ?b sh:path :tradeArea . ?b sh:hasValue ?tradeArea . }
+  OPTIONAL { ?b sh:path :radioArea . ?b sh:hasValue ?radioArea . }
   
   # If trade area scope are connected directly to subject
   OPTIONAL {

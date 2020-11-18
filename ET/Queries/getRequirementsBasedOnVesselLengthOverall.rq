@@ -9,14 +9,21 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 # Alternative regulation references are only counted, see own query for information retrieval.
 # See comments in query for changing magic strings/numbers to variables in some API-call or similar.
 
-SELECT ?paragraph ?label ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementRegulationReference ?subRequirementTheme
+SELECT DISTINCT ?paragraph ?label ?minExclusiveBuiltDate ?maxInclusiveBuiltDate ?tradeArea ?radioArea ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementRegulationReference ?subRequirementTheme
 WHERE {
   ?paragraph sh:property ?scope .
+
+    ?a sh:property ?b .
+  
+  OPTIONAL { ?b sh:path :builtDate . ?b sh:minExclusive ?minExclusiveBuiltDate . }
+  OPTIONAL { ?b sh:path :builtDate . ?b sh:maxInclusive ?maxInclusiveBuiltDate . }
+  OPTIONAL { ?b sh:path :tradeArea . ?b sh:hasValue ?tradeArea . }
+  OPTIONAL { ?b sh:path :radioArea . ?b sh:hasValue ?radioArea . }
   
   # First, find check for scope requirement
   ?scope sh:path :vesselLengthOverall ;
          ?length ?lengthValue .
-  FILTER (?lengthValue >= 12) # Insert actual vessel length overall as value (instead of magic number)
+  FILTER (?lengthValue >= 12) # Insert actual vessel length overall as value (instead of magic number), remember to shift <=, >= accordingly
   
     # Get label in given language
   ?paragraph rdfs:label ?label .
