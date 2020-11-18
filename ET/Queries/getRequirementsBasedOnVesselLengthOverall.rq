@@ -12,19 +12,20 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 SELECT DISTINCT ?paragraph ?label ?minExclusiveBuiltDate ?maxInclusiveBuiltDate ?tradeArea ?radioArea ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementRegulationReference ?subRequirementTheme
 WHERE {
   ?paragraph sh:property ?scope .
-
-    ?a sh:property ?b .
-  
-  OPTIONAL { ?b sh:path :builtDate . ?b sh:minExclusive ?minExclusiveBuiltDate . }
-  OPTIONAL { ?b sh:path :builtDate . ?b sh:maxInclusive ?maxInclusiveBuiltDate . }
-  OPTIONAL { ?b sh:path :tradeArea . ?b sh:hasValue ?tradeArea . }
-  OPTIONAL { ?b sh:path :radioArea . ?b sh:hasValue ?radioArea . }
   
   # First, find check for scope requirement
   ?scope sh:path :vesselLengthOverall ;
          ?length ?lengthValue .
   FILTER (?lengthValue >= 12) # Insert actual vessel length overall as value (instead of magic number), remember to shift <=, >= accordingly
   
+  # Return scopes if present, except from vesselType and min/maxLOA
+  ?paragraph sh:property ?b .
+  
+  OPTIONAL { ?b sh:path :builtDate . ?b sh:minExclusive ?minExclusiveBuiltDate . }
+  OPTIONAL { ?b sh:path :builtDate . ?b sh:maxInclusive ?maxInclusiveBuiltDate . }
+  OPTIONAL { ?b sh:path :tradeArea . ?b sh:hasValue ?tradeArea . }
+  OPTIONAL { ?b sh:path :radioArea . ?b sh:hasValue ?radioArea . }
+
     # Get label in given language
   ?paragraph rdfs:label ?label .
   FILTER(LANG(?label) = 'no') # Insert language tag for label ('no' or 'en')

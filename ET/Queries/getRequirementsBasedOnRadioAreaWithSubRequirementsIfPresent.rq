@@ -13,20 +13,20 @@ SELECT DISTINCT ?paragraph ?label ?minExclusiveBuiltDate ?maxInclusiveBuiltDate 
 WHERE {
   ?paragraph sh:property ?scope .
   
-  ?a sh:property ?b .
-  
-  OPTIONAL { ?b sh:path :builtDate . ?b sh:minExclusive ?minExclusiveBuiltDate . }
-  OPTIONAL { ?b sh:path :builtDate . ?b sh:maxInclusive ?maxInclusiveBuiltDate . }
-  OPTIONAL { ?b sh:path :tradeArea . ?b sh:hasValue ?tradeArea . }
-  OPTIONAL { ?b sh:path :radioArea . ?b sh:hasValue ?radioArea . }
-
-  
   # First, check for scope requirement.
   ?scope sh:path :radioArea ;
                sh:hasValue ?radioArea . # Change ?radioArea with any radio area e.g. :A1
   
   ?radioArea rdfs:label ?radioAreaLabel .
   FILTER(LANG(?radioAreaLabel) = 'no') # Insert language tag for label ('no' or 'en')
+
+  # Return scopes if present, except from vesselType and min/maxLOA
+  ?paragraph sh:property ?b .
+  
+  OPTIONAL { ?b sh:path :builtDate . ?b sh:minExclusive ?minExclusiveBuiltDate . }
+  OPTIONAL { ?b sh:path :builtDate . ?b sh:maxInclusive ?maxInclusiveBuiltDate . }
+  OPTIONAL { ?b sh:path :tradeArea . ?b sh:hasValue ?tradeArea . }
+  OPTIONAL { ?b sh:path :radioArea . ?b sh:hasValue ?radioArea . }
   
   # Get label in given language
   ?paragraph rdfs:label ?label .

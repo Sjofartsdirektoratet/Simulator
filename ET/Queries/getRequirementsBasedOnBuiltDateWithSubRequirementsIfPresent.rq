@@ -13,13 +13,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT DISTINCT ?paragraph ?label ?minExclusiveBuiltDate ?maxInclusiveBuiltDate ?tradeArea ?radioArea ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementScope ?subRequirementRegulationReference ?subRequirementTheme
 WHERE {
   ?paragraph sh:property ?scope .
-
-  ?a sh:property ?b .
-  
-  OPTIONAL { ?b sh:path :builtDate . ?b sh:minExclusive ?minExclusiveBuiltDate . }
-  OPTIONAL { ?b sh:path :builtDate . ?b sh:maxInclusive ?maxInclusiveBuiltDate . }
-  OPTIONAL { ?b sh:path :tradeArea . ?b sh:hasValue ?tradeArea . }
-  OPTIONAL { ?b sh:path :radioArea . ?b sh:hasValue ?radioArea . }
   
   # First, check for scope requirement.
   ?scope sh:path :builtDate ;
@@ -27,6 +20,14 @@ WHERE {
   
   FILTER (?dateValue <= "1998-05-02T00:00:00.000000") # Insert built date of vessel in question
   
+  # Return scopes if present, except from vesselType and min/maxLOA
+  ?paragraph sh:property ?b .
+  
+  OPTIONAL { ?b sh:path :builtDate . ?b sh:minExclusive ?minExclusiveBuiltDate . }
+  OPTIONAL { ?b sh:path :builtDate . ?b sh:maxInclusive ?maxInclusiveBuiltDate . }
+  OPTIONAL { ?b sh:path :tradeArea . ?b sh:hasValue ?tradeArea . }
+  OPTIONAL { ?b sh:path :radioArea . ?b sh:hasValue ?radioArea . }
+
   # Get label in given language
   ?paragraph rdfs:label ?label .
   FILTER(LANG(?label) = 'no') # Insert language tag for label ('no' or 'en')
