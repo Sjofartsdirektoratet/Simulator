@@ -9,14 +9,24 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 # Alternative regulation references are only counted, see own query for information retrieval.
 # See comments in query for changing magic strings/numbers to variables in some API-call or similar.
 
-SELECT DISTINCT ?paragraph ?label ?minExclusiveBuiltDate ?maxInclusiveBuiltDate ?tradeArea ?radioArea ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementRegulationReference ?subRequirementTheme
+SELECT DISTINCT ?paragraph ?scope ?label ?minExclusiveBuiltDate ?maxInclusiveBuiltDate ?tradeArea ?radioArea ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementRegulationReference ?subRequirementTheme
 WHERE {
-  ?paragraph sh:property ?scope .
+  { # find all requirements on all lengths less than input value
+    ?paragraph sh:property ?scope .
+    ?scope sh:path :vesselLengthOverall ;
+           sh:minInclusive ?lengthValue .
+
+    FILTER(?lengthValue <= 8)
+  }
+  UNION
+  { # find all requirements on max lengths larger than input value, not including min lengths larger than input value
+    ?paragraph sh:property ?scope .
+    ?scope sh:path :vesselLengthOverall ;
+       sh:maxExclusive ?lengthValue .
+    
+    FILTER(?lengthValue > 8)
+  }
   
-  # First, find check for scope requirement
-  ?scope sh:path :vesselLengthOverall ;
-         ?length ?lengthValue .
-  FILTER (?lengthValue >= 12) # Insert actual vessel length overall as value (instead of magic number), remember to shift <=, >= accordingly
   
   # Return scopes if present, except from vesselType and min/maxLOA
   ?paragraph sh:property ?b .
@@ -52,4 +62,5 @@ WHERE {
   # Get tag in given language
   ?paragraph :theme ?theme .
   FILTER(LANG(?theme) = 'no') # Insert language tag for label ('no' or 'en') 
+  
 }

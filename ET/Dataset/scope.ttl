@@ -33,7 +33,7 @@
     sh:description "Virkeområde største lengde 15 meter."@no, 
                    "Scope of length overall 15 meter."@en ;
     sh:path sdir:vesselLengthOverall ;
-    sh:minExclusive 15 ;
+    sh:maxExclusive 15 ;
     sh:datatype unit:M ;
     sh:minCount 1 ;
     sh:maxCount 1 .
@@ -43,17 +43,17 @@
     sh:description "Virkeområde minste lengde 6 meter."@no,
                    "Scope of minimum length 6 meter."@en ;
     sh:path sdir:vesselLengthOverall ;
-    sh:maxInclusive 6 ;
+    sh:minInclusive 6 ;
     sh:datatype unit:M ;
     sh:minCount 1 ;
     sh:maxCount 1 .
 
 :PS_maxLOA_6
     a sh:PropertyShape, sdir:Scope ;
-    sh:description "Virkeområde minste lengde 6 meter."@no,
-                   "Scope of minimum length 6 meter."@en ;
+    sh:description "Virkeområde største lengde 6 meter."@no,
+                   "Scope of length 6 meter."@en ;
     sh:path sdir:vesselLengthOverall ;
-    sh:minExclusive 6 ;
+    sh:maxExclusive 6 ;
     sh:datatype unit:M ;
     sh:minCount 1 ;
     sh:maxCount 1 .
@@ -63,7 +63,7 @@
     sh:description "Virkeområde minste lengde 8 meter."@no,
                    "Scope of minimum length 8 meter."@en ;
     sh:path sdir:vesselLengthOverall ;
-    sh:maxInclusive 8 ;
+    sh:minInclusive 8 ;
     sh:datatype unit:M ;
     sh:minCount 1 ;
     sh:maxCount 1 .
@@ -73,7 +73,7 @@
     sh:description "Virkeområde minste lengde 8 meter."@no,
                    "Scope of minimum length 8 meter."@en ;
     sh:path sdir:vesselLengthOverall ;
-    sh:minExclusive 8 ;
+    sh:maxExclusive 8 ;
     sh:datatype unit:M ;
     sh:minCount 1 ;
     sh:maxCount 1 .
@@ -83,7 +83,7 @@
     sh:description "Virkeområde minste lengde 9 meter."@no,
                    "Scope of minimum length 9 meter."@en ;
     sh:path sdir:vesselLengthOverall ;
-    sh:maxInclusive 9 ;
+    sh:minInclusive 9 ;
     sh:datatype unit:M ;
     sh:minCount 1 ;
     sh:maxCount 1 .
@@ -93,7 +93,7 @@
     sh:description "Virkeområde minste lengde 9 meter."@no,
                    "Scope of minimum length 9 meter."@en ;
     sh:path sdir:vesselLengthOverall ;
-    sh:minExclusive 9 ;
+    sh:maxExclusive 9 ;
     sh:datatype unit:M ;
     sh:minCount 1 ;
     sh:maxCount 1 .
@@ -103,7 +103,7 @@
     sh:description "Virkeområde minste lengde 12 meter."@no,
                    "Scope of minimum length 12 meter."@en ;
     sh:path sdir:vesselLengthOverall ;
-    sh:maxInclusive 12 ;
+    sh:minInclusive 12 ;
     sh:datatype unit:M ;
     sh:minCount 1 ;
     sh:maxCount 1 .
@@ -113,7 +113,7 @@
     sh:description "Virkeområde minste lengde 10,67 meter."@no,
                    "Scope of minimum length 10.67 meter."@en ;
     sh:path sdir:vesselLengthOverall ;
-    sh:maxInclusive 10.67 ;
+    sh:minInclusive 10.67 ;
     sh:datatype unit:M ;
     sh:minCount 1 ;
     sh:maxCount 1 .
@@ -123,7 +123,7 @@
     sh:description "Virkeområde største lengde 10,67 meter."@no,
                    "Scope of length overall 10.67 meter."@en ;
     sh:path sdir:vesselLengthOverall ;
-    sh:minExclusive 10.67 ;
+    sh:maxExclusive 10.67 ;
     sh:datatype unit:M ;
     sh:minCount 1 ;
     sh:maxCount 1 .
@@ -135,7 +135,7 @@
     sh:description "Virkeområde byggeår før 1. januar 1992."@no, 
                    "Scope of built date before Janury 1st 1992."@en ;
     sh:path sdir:builtDate ;
-    sh:minExclusive "1992-01-01T00:00:00" ;
+    sh:maxExclusive "1992-01-01T00:00:00" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_a19920101
@@ -143,7 +143,7 @@
     sh:description "Virkeområde byggeår etter 1. januar 1992."@no, 
                    "Scope of built date after Janury 1st 1992."@en ;
     sh:path sdir:builtDate ;
-    sh:maxInclusive "1992-01-01T00:00:00" ;
+    sh:minInclusive "1992-01-01T00:00:00" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_a19970701
@@ -151,7 +151,7 @@
     sh:description "Virkeområde byggeår etter 1. juli 1997."@no, 
                    "Scope of built date after July 1st 1997."@en ;
     sh:path sdir:builtDate ;
-    sh:maxInclusive "1997-07-01T23:59:59" ;
+    sh:minInclusive "1997-07-01T23:59:59" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_b19970701
@@ -159,7 +159,7 @@
     sh:description "Virkeområde byggeår før 1. juli 1997."@no, 
                    "Scope of built date before July 1st 1997."@en ;
     sh:path sdir:builtDate ;
-    sh:minExclusive "1997-07-01T00:00:00" ;
+    sh:maxExclusive "1997-07-01T00:00:00" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_a20070301
@@ -167,7 +167,7 @@
     sh:description "Virkeområde byggeår etter 1. mars 2007."@no, 
                    "Scope of built date after March 1st 2007."@en ;
     sh:path sdir:builtDate ;
-    sh:maxInclusive "2007-03-01T23:59:59" ;
+    sh:minInclusive "2007-03-01T23:59:59" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_a20070701
@@ -175,7 +175,7 @@
     sh:description "Virkeområde byggeår etter 1. juli 2007."@no, 
                    "Scope of built date after July 1st 2007."@en ;
     sh:path sdir:builtDate ;
-    sh:maxInclusive "2007-07-01T23:59:59" ;
+    sh:minInclusive "2007-07-01T23:59:59" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_b20070301
@@ -183,7 +183,7 @@
     sh:description "Virkeområde byggeår før 1. mars 2007."@no, 
                    "Scope of built date before March 1st 2007."@en ;
     sh:path sdir:builtDate ;
-    sh:minExclusive "2007-03-01T00:00:00" ;
+    sh:maxExclusive "2007-03-01T00:00:00" ;
     sh:datatype xsd:dateTime .
     
 :PS_BuiltDate_b20140601
@@ -191,7 +191,7 @@
     sh:description "Virkeområde byggeår før 1. juni 2014."@no, 
                    "Scope of built date before June 1st 2014."@en ;
     sh:path sdir:builtDate ;
-    sh:minExclusive "2014-06-01T00:00:00" ;
+    sh:maxExclusive "2014-06-01T00:00:00" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_a20140701
@@ -199,7 +199,7 @@
     sh:description "Virkeområde byggeår etter 1. juli 2014."@no, 
                    "Scope of built date after July 1st 2014."@en ;
     sh:path sdir:builtDate ;
-    sh:maxInclusive "2014-07-01T00:00:00" ;
+    sh:minInclusive "2014-07-01T00:00:00" ;
     sh:datatype xsd:dateTime .
     
 :PS_BuiltDate_b19880102
@@ -207,7 +207,7 @@
     sh:description "Virkeområde byggeår før 2. januar 1988."@no, 
                    "Scope of built date before January 2nd 1988."@en ;
     sh:path sdir:builtDate ;
-    sh:minExclusive "1988-01-02T00:00:00" ;
+    sh:maxExclusive "1988-01-02T00:00:00" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_a19880102
@@ -215,7 +215,7 @@
     sh:description "Virkeområde byggeår etter 2. januar 1988."@no, 
                    "Scope of built date after January 2nd 1988."@en ;
     sh:path sdir:builtDate ;
-    sh:maxInclusive "1988-01-02T00:00:00" ;
+    sh:minInclusive "1988-01-02T00:00:00" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_a19790701
@@ -223,7 +223,7 @@
     sh:description "Virkeområde byggeår etter 1. juli 1979."@no, 
                    "Scope of built date after July 1st 1979."@en ;
     sh:path sdir:builtDate ;
-    sh:maxInclusive "1979-07-01T00:00:00" ;
+    sh:minInclusive "1979-07-01T00:00:00" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_b20020101
@@ -231,7 +231,7 @@
     sh:description "Virkeområde byggeår før 1. januar 2002."@no, 
                    "Scope of built date before January 1st 2002."@en ;
     sh:path sdir:builtDate ;
-    sh:minExclusive "2002-01-01T00:00:00" ;
+    sh:maxExclusive "2002-01-01T00:00:00" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_a20020101
@@ -239,7 +239,7 @@
     sh:description "Virkeområde byggeår etter 1. januar 2002."@no, 
                    "Scope of built date after January 1st 2002."@en ;
     sh:path sdir:builtDate ;
-    sh:maxInclusive "2002-01-01T00:00:00" ;
+    sh:minInclusive "2002-01-01T00:00:00" ;
     sh:datatype xsd:dateTime .
 
 :PS_BuiltDate_b20141231
@@ -247,7 +247,7 @@
     sh:description "Virkeområde byggeår før 31. desember 2014."@no, 
                    "Scope of built date before December 31st 2014."@en ;
     sh:path sdir:builtDate ;
-    sh:minExclusive "2014-12-31T23:59:59" ;
+    sh:maxExclusive "2014-12-31T23:59:59" ;
     sh:datatype xsd:dateTime .
 
 ### Scopes on trade area
@@ -294,7 +294,7 @@
     sh:description "Virkeområde varighet 60 måneder."@no ,
                    "Scope of duration of 60 months."@en ;
     sh:path sdir:duration ;
-    sh:maxInclusive 60 ;
+    sh:minInclusive 60 ;
     sh:datatype unit:MO .
 
 :PS_Duration_30MO
@@ -302,7 +302,7 @@
     sh:description "Virkeområde varighet 30 måneder."@no ,
                    "Scope of duration of 30 months."@en ;
     sh:path sdir:duration ;
-    sh:maxInclusive 30 ;
+    sh:minInclusive 30 ;
     sh:datatype unit:MO .
 
 ### Scopes on radio coverage area
