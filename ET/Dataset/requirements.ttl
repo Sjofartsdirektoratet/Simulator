@@ -137,7 +137,7 @@
         a sh:NodeShape, :Requirement ;
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         rdfs:label "Brannoppdagelses- og alarmanlegg"@no, "Fire detection and alarm system"@en ;
-        sh:property scope:PS_minLOA_10, scope:PS_maxLOA_10, scope:PS_BuiltDate_a19880102 ;
+        sh:property scope:PS_minLOA_10, scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§16"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
