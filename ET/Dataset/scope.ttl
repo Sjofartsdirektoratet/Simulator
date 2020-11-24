@@ -128,6 +128,74 @@
     sh:minCount 1 ;
     sh:maxCount 1 .
 
+### Scopes on length range
+
+:PS_minLOA_6_maxLOA_15
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde lengde mellom 6 og 15 meter."@no,
+                   "Scope of length between 6 and 15 meters."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:minInclusive 6 ;
+    sh:maxExclusive 15 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+    
+:PS_minLOA_8_maxLOA_9
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde lengde mellom 8 og 9 meter."@no,
+                   "Scope of length between 8 and 9 meters."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:minInclusive 8 ;
+    sh:maxExclusive 9 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_minLOA_8_maxLOA_15
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde lengde mellom 8 og 15 meter."@no,
+                   "Scope of length between 8 and 15 meters."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:minInclusive 8 ;
+    sh:maxExclusive 15 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_minLOA_9_maxLOA_10
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde lengde mellom 9 og 10,67 meter."@no,
+                   "Scope of length between 9 and 10.67 meters."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:minInclusive 9 ;
+    sh:maxExclusive 10.67 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_minLOA_10_maxLOA_15
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde lengde mellom 10,67 og 15 meter."@no,
+                   "Scope of length between 10.67 and 15 meters."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:minInclusive 10.67 ;
+    sh:maxExclusive 15 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
+:PS_minLOA_12_maxLOA_15
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde lengde mellom 12 og 15 meter."@no,
+                   "Scope of length between 12 and 15 meters."@en ;
+    sh:path sdir:vesselLengthOverall ;
+    sh:minInclusive 12 ;
+    sh:maxExclusive 15 ;
+    sh:datatype unit:M ;
+    sh:minCount 1 ;
+    sh:maxCount 1 .
+
 ### Scopes on built date
 
 :PS_BuiltDate_b19920101
@@ -272,6 +340,13 @@
                    "Scope of trade area fjord fishing."@en ;
     sh:path sdir:tradeArea ;
     sh:hasValue sdir:FjordFishing .
+
+:PS_TradeArea_GreaterFjordFishing
+    a sh:PropertyShape, sdir:Scope ;
+    sh:description "Virkeområde fartsområde større enn fjordfiske."@no, 
+                   "Scope of trade area greater than fjord fishing."@en ;
+    sh:path sdir:tradeArea ;
+    sh:hasValue sdir:GreaterFjordFishing .
 
 :PS_TradeArea_InShore
     a sh:PropertyShape, sdir:Scope ;

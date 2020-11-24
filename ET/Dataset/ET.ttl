@@ -1476,6 +1476,12 @@ sdir:GeographicalLocation rdf:type owl:Class ;
                                      "Geographical location"@en .
 
 
+###  https://www.sdir.no/SDIR_Simulator#GreaterFjordFishing
+sdir:GreaterFjordFishing rdf:type owl:Class ;
+                    rdfs:subClassOf sdir:TradeArea ;
+                    rdfs:label "Greater than fjord fishing"@en ,
+                               "Større enn fjordfiske"@no .
+
 ###  https://www.sdir.no/SDIR_Simulator#GreaterInShore
 sdir:GreaterInShore rdf:type owl:Class ;
                     rdfs:subClassOf sdir:TradeArea ;
