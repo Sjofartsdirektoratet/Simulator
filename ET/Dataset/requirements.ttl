@@ -625,7 +625,7 @@
 
 :FOR1404P80
         a sh:NodeShape, :Requirement ;
-        sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
+        sh:property  scope:PS_FishingVessel ; 
         rdfs:label "Electronic position-fixing equipment"@en, "Elektronisk utstyr for posisjonsbestemmelse"@no ;
         sh:property scope:PS_minLOA_10_maxLOA_15, scope:PS_BuiltDate_a19970701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§80"^^xsd:anyURI ;
@@ -633,7 +633,7 @@
 
 :FOR1404P81
         a sh:NodeShape, :Requirement ;
-        sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
+        sh:property  scope:PS_FishingVessel ;
         rdfs:label "Depth-measuring equipment"@en, "Utstyr for å måle dybde"@no ;
         sh:property scope:PS_minLOA_10_maxLOA_15, scope:PS_BuiltDate_a19970701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§81"^^xsd:anyURI ;
@@ -641,7 +641,7 @@
 
 :FOR1404P82
         a sh:NodeShape, :Requirement ;
-        sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
+        sh:property  scope:PS_FishingVessel ; 
         rdfs:label "Steering gear, etc"@en, "Styreanordninger mv."@no ;
         sh:property scope:PS_minLOA_10_maxLOA_15, scope:PS_BuiltDate_a19970701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§82"^^xsd:anyURI ;
@@ -699,7 +699,7 @@
 
 :FOR1404P89
         a sh:NodeShape, :Requirement ;
-        sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
+        sh:property  scope:PS_FishingVessel ; 
         rdfs:label "Searchlight"@en, "Lyskaster"@no ;
         sh:property scope:PS_minLOA_12_maxLOA_15, scope:PS_BuiltDate_a19970701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§89"^^xsd:anyURI ;
@@ -722,7 +722,7 @@
 
 :FOR1404P92
         a sh:NodeShape, :Requirement ;
-        sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
+        sh:property  scope:PS_FishingVessel ;
         rdfs:label "Vessel instructions"@en, "Fartøyinstruks"@no ;
         sh:property scope:PS_minLOA_8_maxLOA_15 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§92"^^xsd:anyURI ;
@@ -774,7 +774,7 @@
 
 :FOR1404P99
         a sh:NodeShape, :Requirement ;
-        sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
+        sh:property  scope:PS_FishingVessel ; 
         rdfs:label "Inspection of vessel in connection with damage, conversion, etc"@en, "Kontroll av fartøy ved skade, ombygging m.m."@no ;
         sh:property scope:PS_FishingVessel, scope:PS_minLOA_8_maxLOA_15 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§99"^^xsd:anyURI ;
