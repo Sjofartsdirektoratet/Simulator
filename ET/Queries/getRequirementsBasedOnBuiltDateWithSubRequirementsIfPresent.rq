@@ -10,7 +10,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Including information about sub requirements.
 # See comments in query for changing magic strings/numbers to variables in some API-call or similar.
 
-SELECT DISTINCT ?paragraph ?label ?scope ?minExclusiveBuiltDate ?maxInclusiveBuiltDate ?tradeArea ?radioArea ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementScope ?subRequirementRegulationReference ?subRequirementTheme
+SELECT DISTINCT ?paragraph ?label ?scope ?scopeDescription 
+				?minExclusiveBuiltDate ?minExclusiveBuiltDateDescription 
+				?maxInclusiveBuiltDate ?maxInclusiveBuiltDateDescription 
+				?tradeArea ?tradeAreaDescription 
+				?radioArea ?radioAreaDescription 
+				?regulationReference ?alternativeReference ?theme 
+				?subRequirement ?subRequirementLabel ?subRequirementScope ?subRequirementScopeDescription 
+				?subRequirementRegulationReference ?subRequirementTheme
 WHERE {
   ?paragraph sh:property ?scope .
   
@@ -18,23 +25,42 @@ WHERE {
   ?scope sh:path :builtDate ;
                ?date ?dateValue . 
   
-  { 
-    ?scope sh:maxExclusive ?value .
-    FILTER(?value > "1970-01-03T00:00:00") # change date value to date value of choice 
-  } 
+  { ?scope sh:maxExclusive ?value .
+    FILTER(?value > "1970-01-03T00:00:00") }
   UNION
-  { 
-    ?scope sh:minInclusive ?value .
-    FILTER(?value <= "1970-01-03T00:00:00") # change date value to date value of choice 
-  }
+  { ?scope sh:minInclusive ?value .
+    FILTER(?value <= "1970-01-03T00:00:00") }
+  
+  ?scope sh:description ?scopeDescription .
+  FILTER(LANG(?scopeDescription) = 'no') 
   
   # Return scopes if present, except from vesselType and min/maxLOA
   ?paragraph sh:property ?b .
   
-  OPTIONAL { ?b sh:path :builtDate . ?b sh:minInclusive ?minInclusiveBuiltDate . }
-  OPTIONAL { ?b sh:path :builtDate . ?b sh:maxExclusive ?maxExclusiveBuiltDate . }
-  OPTIONAL { ?b sh:path :tradeArea . ?b sh:hasValue ?tradeArea . }
-  OPTIONAL { ?b sh:path :radioArea . ?b sh:hasValue ?radioArea . }
+  OPTIONAL { 
+    ?b sh:path :builtDate . 
+    ?b sh:minInclusive ?minExclusiveBuiltDate . 
+  	?b sh:description ?minExclusiveBuiltDateDescription .
+  	FILTER(LANG(?minExclusiveBuiltDateDescription) = 'no') 
+  }
+  OPTIONAL { 
+    ?b sh:path :builtDate . 
+    ?b sh:maxExclusive ?maxInclusiveBuiltDate . 
+    ?b sh:description ?maxInclusiveBuiltDateDescription .
+  	FILTER(LANG(?maxInclusiveBuiltDateDescription) = 'no') 
+  }
+  OPTIONAL { 
+    ?b sh:path :tradeArea . 
+    ?b sh:hasValue ?tradeArea . 
+    ?b sh:description ?tradeAreaDescription .
+  	FILTER(LANG(?tradeAreaDescription) = 'no')
+  }
+  OPTIONAL { 
+    ?b sh:path :radioArea . 
+    ?b sh:hasValue ?radioArea .
+    ?b sh:description ?radioAreaDescription .
+  	FILTER(LANG(?radioAreaDescription) = 'no')
+  }
 
   # Get label in given language
   ?paragraph rdfs:label ?label .
@@ -42,6 +68,9 @@ WHERE {
   
   # Regulation reference URL
   ?paragraph :regulationReference ?regulationReference .
+  
+  # Alternative reference URL
+  OPTIONAL { ?paragraph :alternativeReference ?alternativeReference . }
   
   # Get tag in given language
   ?paragraph :theme ?theme .
@@ -53,6 +82,8 @@ WHERE {
     
     # Scope of subRequirement
     ?subRequirement sh:property ?subRequirementScope .
+    ?subRequirementScope sh:description ?subRequirementScopeDescription .
+    FILTER(LANG(?subRequirementScopeDescription) = 'no')
     
     # Get label in given language
     ?subRequirement rdfs:label ?subRequirementLabel .
