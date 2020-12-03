@@ -69,13 +69,13 @@ WHERE {
   # Regulation reference URL
   ?paragraph :regulationReference ?regulationReference .
   
-  # Alternative reference URL
-  OPTIONAL { ?paragraph :alternativeReference ?alternativeReference . }
-  
   # Get tag in given language
   ?paragraph :theme ?theme .
   FILTER(LANG(?theme) = 'no') # Insert language tag for label ('no' or 'en') 
   
+  # Alternative reference URL
+  OPTIONAL { ?paragraph :alternativeReference ?alternativeReference . }
+
   # If present, return information about sub-requirements
   OPTIONAL { 
     ?paragraph :subRequirement ?subRequirement . 
