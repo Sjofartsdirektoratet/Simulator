@@ -10,7 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 # Including information about sub requirements.
 # See comments in query for changing magic strings/numbers to variables in some API-call or similar.
 
-SELECT DISTINCT ?paragraph ?label ?minExclusiveBuiltDate ?maxInclusiveBuiltDate ?tradeArea ?radioArea ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementScope ?subRequirementRegulationReference ?subRequirementTheme
+SELECT DISTINCT ?paragraph ?label ?scope ?minExclusiveBuiltDate ?maxInclusiveBuiltDate ?tradeArea ?radioArea ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementScope ?subRequirementRegulationReference ?subRequirementTheme
 WHERE {
   ?paragraph sh:property ?scope .
   
@@ -18,7 +18,15 @@ WHERE {
   ?scope sh:path :builtDate ;
                ?date ?dateValue . 
   
-  FILTER(?dateValue >= "1992-01-03T00:00:00")
+  { 
+    ?scope sh:maxExclusive ?value .
+    FILTER(?value > "1970-01-03T00:00:00") # change date value to date value of choice 
+  } 
+  UNION
+  { 
+    ?scope sh:minInclusive ?value .
+    FILTER(?value <= "1970-01-03T00:00:00") # change date value to date value of choice 
+  }
   
   # Return scopes if present, except from vesselType and min/maxLOA
   ?paragraph sh:property ?b .
