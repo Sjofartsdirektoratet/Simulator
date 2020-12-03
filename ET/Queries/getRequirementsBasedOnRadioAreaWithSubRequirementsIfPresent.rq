@@ -23,8 +23,8 @@ WHERE {
   # Return scopes if present, except from vesselType and min/maxLOA
   ?paragraph sh:property ?b .
   
-  OPTIONAL { ?b sh:path :builtDate . ?b sh:minExclusive ?minExclusiveBuiltDate . }
-  OPTIONAL { ?b sh:path :builtDate . ?b sh:maxInclusive ?maxInclusiveBuiltDate . }
+  OPTIONAL { ?b sh:path :builtDate . ?b sh:minInclusive ?minInclusiveBuiltDate . }
+  OPTIONAL { ?b sh:path :builtDate . ?b sh:maxExclusive ?maxExclusiveBuiltDate . }
   OPTIONAL { ?b sh:path :tradeArea . ?b sh:hasValue ?tradeArea . }
   OPTIONAL { ?b sh:path :radioArea . ?b sh:hasValue ?radioArea . }
   
