@@ -123,4 +123,4 @@ spec:
           volumeAttributes:
             secretProviderClass: fuseki
           nodePublishSecretRef:
-            name: secrets-store-creds
+            name: keyvault-credentials
