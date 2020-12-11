@@ -7,7 +7,7 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 
 # Get all requirements with sub-requriements iff present
 
-SELECT DISTINCT ?requirement ?requirementLabel ?scopeDescription ?regulationReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementScopeDescription ?subRequirementRegulationReference ?subRequirementTheme
+SELECT DISTINCT ?requirement ?requirementLabel ?scopeDescription ?regulationReference ?alternativeReference ?theme ?subRequirement ?subRequirementLabel ?subRequirementScopeDescription ?subRequirementRegulationReference ?subRequirementTheme
 WHERE {
   ?requirement a :Requirement .
   
@@ -16,11 +16,14 @@ WHERE {
   
   ?requirement sh:property ?scope .
   ?scope sh:description ?scopeDescription .
+  FILTER(LANG(?scopeDescription) = 'no') 
   
   ?requirement :regulationReference ?regulationReference .
   
   ?requirement :theme ?theme .
   FILTER(LANG(?theme) = 'no') # Insert language tag for label ('no' or 'en')
+
+  OPTIONAL { ?requirement :alternativeReference ?alternativeReference . }
     
   ### SUB REQUIREMENT IFF PRESENT
   OPTIONAL {
@@ -31,6 +34,7 @@ WHERE {
 
     ?subRequirement sh:property ?subRequirementScope .
     ?subRequirementScope sh:description ?subRequirementScopeDescription .
+    FILTER(LANG(?subRequirementScopeDescription) = 'no')
 
     ?subRequirement :regulationReference ?subRequirementRegulationReference .
 
