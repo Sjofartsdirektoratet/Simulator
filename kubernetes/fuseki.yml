@@ -50,7 +50,7 @@ metadata:
   labels:
     app: fuseki
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: fuseki
@@ -72,9 +72,6 @@ spec:
           requests:
             memory: 300Mi
             cpu: 100m
-          limits:
-            memory: 600Mi
-            cpu: 250m
         env:
         - name: TZ
           value: Europe/Oslo
