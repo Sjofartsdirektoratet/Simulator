@@ -50,7 +50,7 @@ metadata:
   labels:
     app: fuseki
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: fuseki
@@ -68,6 +68,13 @@ spec:
         command: ['/bin/bash', './scripts/custom_docker_entrypoint.sh']
         ports:
         - containerPort: 3030
+        resources:
+          requests:
+            memory: 300Mi
+            cpu: 100m
+          limits:
+            memory: 600Mi
+            cpu: 250m
         env:
         - name: TZ
           value: Europe/Oslo
