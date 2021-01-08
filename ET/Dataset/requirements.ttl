@@ -15,6 +15,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         rdfs:label "Virkeområde"@no, "Scope"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§1"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/1/sections/1"^^xsd:anyURI ;
         :theme "General provisions"@en, "Generelle bestemmelser"@no .
 
 :FOR1404P2
@@ -22,6 +23,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         rdfs:label "Definisjoner"@no, "Definitions"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§2"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/1/sections/2"^^xsd:anyURI ;
         :theme "General provisions"@en, "Generelle bestemmelser"@no .
 
 :FOR1404P3
@@ -30,6 +32,7 @@
         rdfs:label "Kapittelets anvendelsesområde"@no, "Scope of application of this chapter"@en ;
         sh:property scope:PS_minLOA_6_maxLOA_15, scope:PS_BuiltDate_a19920101, scope:PS_BuiltDate_b19920101 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§3"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/2/sections/3"^^xsd:anyURI ;
         :theme "Construction"@en, "Konstruksjon"@no .
 
 :FOR1404P4
@@ -38,6 +41,7 @@
         rdfs:label "Byggekrav"@no, "Construction requirements"@en ;
         sh:property scope:PS_minLOA_6_maxLOA_15, scope:PS_BuiltDate_a19920101, scope:PS_BuiltDate_b20070301 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§4"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/2/sections/4"^^xsd:anyURI ;
         :alternativeReference "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ,
                               "https://lovdata.no/dokument/SF/forskrift/1978-01-17-4"^^xsd:anyURI ;
         :theme "Construction"@en, "Konstruksjon"@no .
@@ -48,6 +52,7 @@
         rdfs:label "Krav til lasterom for føring av fisk i vann og i bulk"@no, "Requirements for cargo spaces for carriage of fish in water and in bulk"@en ;
         sh:property scope:PS_minLOA_6_maxLOA_15, scope:PS_BuiltDate_a19920101 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§5"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/2/sections/5"^^xsd:anyURI ;
         :theme "Construction"@en, "Konstruksjon"@no .
 
 :FOR1404P6
@@ -56,6 +61,7 @@
         rdfs:label "Skansekledninger, rekkverk og beskyttelsesanordninger"@no, "Bulwarks, rails and guards"@en ;
         sh:property scope:PS_minLOA_6_maxLOA_15, scope:PS_BuiltDate_a20140701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§6"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/2/sections/6"^^xsd:anyURI ;
         :theme "Construction"@en, "Konstruksjon"@no .
 
 :FOR1404P7
@@ -64,6 +70,7 @@
         rdfs:label "Kapittelets anvendelsesområde"@no, "Scope of application of this chapter"@en ;
         sh:property scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§7"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/7"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P8
@@ -72,6 +79,7 @@
         rdfs:label "Brannsikring"@no, "Fire safety"@en ;
         sh:property scope:PS_BuiltDate_a19920101, scope:PS_BuiltDate_b19920101 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§8"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/8"^^xsd:anyURI ;
         :alternativeReference "https://lovdata.no/dokument/SF/forskrift/1983-10-20-1580"^^xsd:anyURI ,
                               "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
@@ -82,6 +90,7 @@
         rdfs:label "Oljefyrt ovn"@no, "Oil-fired stoves"@en ;
         sh:property scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§9"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/9"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P10
@@ -90,6 +99,7 @@
         rdfs:label "Installasjon mv. av oljefyrt ovn"@no, "Installation, etc. of oilfired stove"@en ;
         sh:property scope:PS_minLOA_8, scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§10"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/10"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P11
@@ -98,6 +108,7 @@
         rdfs:label "Isolasjon av ildsteder mv."@no, "Insulation of fireplaces, etc."@en ;
         sh:property scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§11"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/11"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P12
@@ -106,6 +117,7 @@
         rdfs:label "Røykopptak og eksosrør"@no, "Smoke uptake and exhaust pipes"@en ;
         sh:property scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§12"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/12"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P13
@@ -114,6 +126,7 @@
         rdfs:label "Isolering med ubrennbart materiale"@no, "Insulation with non-combustible material"@en ;
         sh:property scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§13"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/13"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P14
@@ -122,6 +135,7 @@
         rdfs:label "Isolasjon av maskinrom på trefartøy"@no, "Insulation of machinery spaces in wooden vessels"@en ;
         sh:property scope:PS_BuiltDate_a19880102, scope:PS_WoodenVessel;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§14"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/14"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P15
@@ -130,6 +144,7 @@
         rdfs:label "Brannslokningsanlegg i maskinrom"@no, "Fire-extinguishing systems in machinery spaces"@en ;
         sh:property scope:PS_minLOA_10, scope:PS_BuiltDate_a19880102, scope:PS_BuiltDate_a19920101 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§15"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/15"^^xsd:anyURI ;
         :alternativeReference "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
@@ -139,6 +154,7 @@
         rdfs:label "Brannoppdagelses- og alarmanlegg"@no, "Fire detection and alarm system"@en ;
         sh:property scope:PS_minLOA_10, scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§16"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/16"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P17
@@ -147,6 +163,7 @@
         rdfs:label "Brannslokningsapparater"@no, "Fire extinguishers"@en ;
         sh:property scope:PS_minLOA_10 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§17"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/17"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P18
@@ -155,6 +172,7 @@
         rdfs:label "Ventilasjonssystemer"@no, "Ventilation systems"@en ;
         sh:property scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§18"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/18"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P19
@@ -163,6 +181,7 @@
         rdfs:label "Materialer m.m."@no, "Materials, etc."@en ;
         sh:property scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§19"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/19"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P20
@@ -171,6 +190,7 @@
         rdfs:label "Oppbevaring av brennolje og andre brennbare væsker"@no, "Storage of oil fuel and other flammable liquids"@en ;
         sh:property scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§20"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/20"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P21
@@ -179,6 +199,7 @@
         rdfs:label "Materialer i rørledninger mv."@no, "Materials in pipelines, etc."@en ;
         sh:property scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§21"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/21"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P22
@@ -187,6 +208,7 @@
         rdfs:label "Maskineri og rørsystemer"@no, "Machinery and piping systems"@en ;
         sh:property scope:PS_BuiltDate_a19880102, scope:PS_BuiltDate_a19920101 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§22"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/22"^^xsd:anyURI ;
         :alternativeReference "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
@@ -196,6 +218,7 @@
         rdfs:label "Elektriske anlegg"@no, "Electrical installations"@en ;
         sh:property scope:PS_minLOA_6_maxLOA_15, scope:PS_BuiltDate_a19880102, scope:PS_BuiltDate_a19920101, scope:PS_BuiltDate_b20020101, scope::PS_BuiltDate_a20020101 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§23"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/23"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P24
@@ -204,6 +227,7 @@
         rdfs:label "Nødkraftkilde og nødlys, mv."@no, "Emergency source of power and emergency lighting, etc"@en ;
         sh:property scope:PS_minLOA_10, scope:PS_BuiltDate_a19880102, scope:PS_BuiltDate_a19920101 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§24"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/24"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
 
 :FOR1404P25
@@ -212,9 +236,11 @@
         rdfs:label "Likeverdige løsninger"@no, "Equivalents"@en ;
         sh:property scope:PS_BuiltDate_a19880102 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§25"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/3/sections/25"^^xsd:anyURI ;
         :subRequirement :FOR1404P18, :FOR1404P19, :FOR1404P20 ;
         :alternativeReference "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ;
         :theme "Fire, machinery and electric installations"@en, "Brann, maskineri og elektro"@no .
+:activity
 
 
 :FOR1404P26
@@ -223,6 +249,7 @@
         rdfs:label "Stability calculations"@en, "Stabilitetsberegninger"@no ;
         sh:property scope:PS_minLOA_6 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§26"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/4/sections/26"^^xsd:anyURI ;
         :subRequirement :FOR1404P27, :FOR1404P28, :FOR1404P29, :FOR1404P30, :FOR1404P31, :FOR1404P32, :FOR1404P33, :FOR1404P34, :FOR1404P35 ;
         :alternativeReference "https://www.sdir.no/globalassets/sjekklister/ks-0532-b-tegningsliste-for-fiske--og-fangstfartoy-under-15m.pdf"^^xsd:anyURI ;
         :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no .
@@ -233,6 +260,7 @@
         rdfs:label "Stability documentation and inclining test"@en, "Stabilitetsdokumentasjon og krengeprøve"@no ;
         sh:property scope:PS_minLOA_6 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§27"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/4/sections/27"^^xsd:anyURI ;
         :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
 
 :FOR1404P28
@@ -240,6 +268,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         rdfs:label "Stabilitet for lukkede fartøyer"@en, "Stability for closed vessels"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§28"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/4/sections/28"^^xsd:anyURI ;
         :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
 
 :FOR1404P29
@@ -247,6 +276,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         rdfs:label "Stability documentation and inclining test"@en, "Stabilitetskriterier"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§29"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/4/sections/29"^^xsd:anyURI ;
         :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
 
 :FOR1404P30
@@ -255,6 +285,7 @@
         rdfs:label "Bow height"@en, "Baughøyde"@no ;
         sh:property scope:PS_BuiltDate_a19920101 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§30"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/4/sections/30"^^xsd:anyURI ;
         :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
 
 :FOR1404P31
@@ -262,6 +293,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         rdfs:label "Stability and freeboard for open vessels"@en, "Stabilitet og fribord for åpne fartøy"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§31"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/4/sections/31"^^xsd:anyURI ;
         :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
 
 :FOR1404P32
@@ -270,6 +302,7 @@
         rdfs:label "Water on decks and in open spaces"@en, "Vann på dekk og i åpne rom"@no ;
         sh:property scope:PS_minLOA_6_maxLOA_15, scope:PS_BuiltDate_a19920101 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§32"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/4/sections/32"^^xsd:anyURI ;
         :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
 
 :FOR1404P33
@@ -278,6 +311,7 @@
         rdfs:label "Icing allowance"@en, "Overisingstillegg"@no ;
         sh:property scope:PS_minLOA_6, scope:PS_BuiltDate_a19920101, scope:PS_TradeArea_GreaterInShore, scope:PS_TradeArea_InShore ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§33"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/4/sections/33"^^xsd:anyURI ;
         :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
 
 :FOR1404P34
@@ -285,6 +319,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         rdfs:label "Stabilitetsopplysninger"@en, "Stability information"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§34"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/4/sections/34"^^xsd:anyURI ;
         :subRequirement :FOR1404P27 ;
         :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
 
@@ -293,6 +328,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ;
         rdfs:label "Stabilitetsopplysninger"@en, "Stability information"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§35"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/4/sections/35"^^xsd:anyURI ;
         :theme "Stability and freeboard"@en, "Stabilitet og fribord"@no . 
 
 :FOR1404P36
@@ -300,6 +336,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Redningsvester"@no, "Lifejackets"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§36"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/5/sections/36"^^xsd:anyURI ;
         :subRequirement :FOR1404P2 ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
 
@@ -308,6 +345,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Redningsdrakter"@no, "Immersion suits"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§37"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/5/sections/37"^^xsd:anyURI ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
 
 :FOR1404P38
@@ -316,6 +354,7 @@
         rdfs:label "Redningsflåte"@no, "Liferaft"@en ;
         sh:property scope:PS_minLOA_6, scope:PS_TradeArea_FjordFishing, scope:PS_TradeArea_InShore ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§38"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/5/sections/38"^^xsd:anyURI ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
 
 :FOR1404P39
@@ -323,6 +362,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Plassering av redningsmidler"@no, "Placement of life-saving appliances"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§39"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/5/sections/39"^^xsd:anyURI ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
 
 :FOR1404P40
@@ -330,6 +370,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Utstyr for alarmering"@no, "Alarm equipment"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§40"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/5/sections/40"^^xsd:anyURI ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
 
 :FOR1404P41
@@ -337,6 +378,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Bording av redningsmidler"@no, "Boarding of life-saving appliances"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§41"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/5/sections/41"^^xsd:anyURI ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
 
 :FOR1404P42
@@ -344,6 +386,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Forholdsregler for å holde redningsmidler og annet redningsutstyr klart til bruk"@no, "Precautions for keeping life-saving appliances and other rescue equipment ready for use"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§42"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/5/sections/42"^^xsd:anyURI ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
 
 :FOR1404P43
@@ -352,6 +395,7 @@
         rdfs:label "Livbøyer"@no, "Lifebuoys"@en ;
         sh:property scope:PS_minLOA_10 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§43"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/5/sections/43"^^xsd:anyURI ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
 
 :FOR1404P44
@@ -360,6 +404,7 @@
         rdfs:label "Nødsignalutstyr og pyroteknisk utstyr"@no, "Distress signal equipment and pyrotechnical equipment"@en ;
         sh:property scope:PS_TradeArea_BankFishingI, scope:PS_TradeArea_BankFishingII, scope:PS_TradeArea_FjordFishing, scope:PS_TradeArea_InShore ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§44"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/5/sections/44"^^xsd:anyURI ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
 
 :FOR1404P45
@@ -367,8 +412,11 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Alarmanlegg, alarminstruks og øvelser"@no, "Alarm system, muster list and drills"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§45"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/5/sections/45"^^xsd:anyURI ;
         :subRequirement :FOR1404P16 ;
         :theme "Life saving appliances"@en, "Redningsmidler"@no .
+
+#§46 er litt luren  
 
 :FOR1404P47
         a sh:NodeShape, :Requirement ;
@@ -376,6 +424,7 @@
         rdfs:label "Fartsområdebegrensninger"@no, "Trade area restrictions"@en ;
         sh:property scope:PS_minLOA_6, scope:PS_TradeArea_FjordFishing, scope:PS_TradeArea_BankFishingI, scope:PS_TradeArea_BankFishingII ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§47"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/47"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P48
@@ -383,6 +432,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Faste og flyttbare atkomstmidler om bord"@no, "Fixed and portable means of access on board"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§48"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/48"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P49
@@ -390,6 +440,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Atkomstmiddel for sikker iland- og ombordstigning"@no, "Fixed and portable means of access on board"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§49"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/49"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P50
@@ -397,6 +448,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Lukningsmidler – luker og dører"@no, "Means of closure - hatches and doors"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§50"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/50"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P51
@@ -405,6 +457,7 @@
         rdfs:label "Luker til overbygget arbeidsdekk og produksjonsdekk"@no, "Hatches to covered working and production decks"@en ;
         :alternativeReference "https://lovdata.no/dokument/SF/forskrift/2000-06-13-660"^^xsd:anyURI ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§51"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/51"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P52
@@ -412,6 +465,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Drenering av overbygget arbeidsdekk"@no, "Drainage of covered working decks"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§52"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/52"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P53
@@ -419,6 +473,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Føring av dekkslast"@no, "Carriage of deck cargo"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§53"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/53"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P54
@@ -426,6 +481,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Nedlasting, drenering av åpent dekk"@no, "Loading, drainage of open deck"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§54"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/54"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P55
@@ -433,6 +489,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Kontroll av gassfare mv."@no, "Inspection to ascertain gas hazard etc."@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§55"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/55"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P56
@@ -440,6 +497,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Merking av tanker, rom m.m. og fareplan"@no, "Marking of tanks, spaces, etc. and warning signs"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§56"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/56"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P57
@@ -447,6 +505,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Skilt og oppslag"@no, "Signs and notices"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§57"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/57"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P58
@@ -454,6 +513,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Oppbevaring av brennstoff"@no, "Storage of fuel"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§58"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/58"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P59
@@ -461,6 +521,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Varselskilt ved radarantenne"@no, "Warning sign at radar scanners"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§59"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/59"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P60
@@ -468,6 +529,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Radarreflektor"@no, "Radar reflector"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§60"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/60"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P61
@@ -475,6 +537,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Refleksmiddel"@no, "Retro-reflective means"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§61"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/61"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P62
@@ -482,6 +545,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Sklisikring av dekk"@no, "Anti-skid surfaces on deck"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§62"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/62"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 :FOR1404P63
@@ -490,6 +554,7 @@
         rdfs:label "Leidere"@no, "Ladders"@en ;
         sh:property scope:PS_BuiltDate_b19920101 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§63"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/6/sections/63"^^xsd:anyURI ;
         :theme "Safety measures"@en, "Sikkerhetstiltak"@no .
 
 ## TODO: se på scope for åpen og lukket båt
@@ -498,6 +563,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Virkeområde"@no, "Scope"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§64"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/7/sections/64"^^xsd:anyURI ;
         :theme "Radio"@en, "Radio"@no .
 
 :FOR1404P65
@@ -506,6 +572,7 @@
         rdfs:label "Dokumentasjon som skal finnes om bord"@no, "Documentation which shall be available on board"@en ;
         sh:property scope:PS_TradeArea_FjordFishing, scope:PS_TradeArea_InShore, scope:PS_TradeArea_BankFishingI, scope:PS_TradeArea_BankFishingII ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§65"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/7/sections/65"^^xsd:anyURI ;
         :theme "Radio"@en, "Radio"@no .
 
 :FOR1404P66
@@ -514,6 +581,7 @@
         rdfs:label "Safety radio certificate"@en, "Sikkerhetssertifikat for radio"@no ;
         sh:property scope:PS_TradeArea_BankFishingI, scope:PS_TradeArea_BankFishingII ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§66"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/7/sections/66"^^xsd:anyURI ;
         :subRequirement  :FOR1404P65, :FOR1404P67, :FOR1404P68, :FOR1404P69, 
                        :FOR1404P70, :FOR1404P71, :FOR1404P72, :FOR1404P73, :FOR1404P74 ;
         :theme "Radio"@en, "Radio"@no .
@@ -526,6 +594,7 @@
                               "https://lovdata.no/dokument/SF/forskrift/2016-08-30-1042"^^xsd:anyURI ,
                               "https://lovdata.no/static/NLX3/32004l0071.pdf"^^xsd:anyURI ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§67"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/7/sections/67"^^xsd:anyURI ;
         :theme "Radio"@en, "Radio"@no .
 
 :FOR1404P68
@@ -534,6 +603,7 @@
         rdfs:label "Funksjons- og utstyrskrav"@no, "Functional requirements and equipment requirements"@en ;
         sh:property scope:PS_RadioArea_A1, scope:PS_RadioArea_A2, scope:PS_TradeArea_FjordFishing, scope:PS_TradeArea_GreaterInShore, scope:PS_TradeArea_InShore ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§68"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/7/sections/68"^^xsd:anyURI ;
         :theme "Radio"@en, "Radio"@no .
 
 :FOR1404P69
@@ -541,6 +611,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Installasjon og plassering av utstyr"@no, "Installation and placement of equipment"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§69"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/7/sections/69"^^xsd:anyURI ;
         :theme "Radio"@en, "Radio"@no .
 
 :FOR1404P70
@@ -548,6 +619,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Elektriske kraftkilder"@no, "Sources of electrical power"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§70"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/7/sections/70"^^xsd:anyURI ;
         :subRequirement :FOR1404P73 ;
         :theme "Radio"@en, "Radio"@no .
 
@@ -556,6 +628,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Radiovakt"@no, "Radio watch"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§71"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/7/sections/71"^^xsd:anyURI ;
         :theme "Radio"@en, "Radio"@no .
 
 :FOR1404P72
@@ -564,6 +637,7 @@
         rdfs:label "Vedlikehold"@no, "Maintenance"@en ;
         sh:property scope:PS_RadioArea_A1, scope:PS_RadioArea_A2 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§72"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/7/sections/72"^^xsd:anyURI ;
         :subRequirement :FOR1404P69 ;
         :theme "Radio"@en, "Radio"@no .
 
@@ -572,6 +646,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Radioopptegnelser"@no, "Radio records"@en ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§73"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/7/sections/73"^^xsd:anyURI ;
         :theme "Radio"@en, "Radio"@no .
 
 :FOR1404P74
@@ -580,6 +655,7 @@
         rdfs:label "Posisjonsoppdatering"@no, "Position-updating"@en ;
         sh:property scope:PS_TradeArea_GreaterFjordFishing ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§74"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/7/sections/74"^^xsd:anyURI ;
         :theme "Radio"@en, "Radio"@no .
 
 :FOR1404P75
@@ -588,6 +664,7 @@
         rdfs:label "Compasses"@en, "Kompass"@no ;
         sh:property scope:PS_BuiltDate_a19970701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§75"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/75"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no .  
 
 :FOR1404P76
@@ -596,6 +673,7 @@
         rdfs:label "Automatic pilot system and steering aids"@en, "Selvstyreranlegg og styrehjelp"@no ;
         sh:property scope:PS_minLOA_10, scope:PS_BuiltDate_a19970701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§76"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/76"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
 :FOR1404P77
@@ -604,6 +682,7 @@
         rdfs:label "Bridge navigational watch alarm system"@en, "Brovaktalarm"@no ;
         sh:property scope:PS_minLOA_10, scope:PS_TradeArea_GreaterFjordFishing ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§77"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/77"^^xsd:anyURI ;
         :subRequirement :FOR1404P76 ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
@@ -613,6 +692,7 @@
         rdfs:label "Speed and distance measuring device"@en, "Fart- og distansemåler"@no ;
         sh:property scope:PS_BuiltDate_a19970701, scope:PS_TradeArea_BankFishingII ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§78"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/78"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
 :FOR1404P79
@@ -621,6 +701,7 @@
         rdfs:label "Radar installation"@en, "Radaranlegg"@no ;
         sh:property scope:PS_minLOA_10, scope:PS_BuiltDate_a19970701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§79"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/79"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
 :FOR1404P80
@@ -629,6 +710,7 @@
         rdfs:label "Electronic position-fixing equipment"@en, "Elektronisk utstyr for posisjonsbestemmelse"@no ;
         sh:property scope:PS_minLOA_10_maxLOA_15, scope:PS_BuiltDate_a19970701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§80"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/80"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
 :FOR1404P81
@@ -637,6 +719,7 @@
         rdfs:label "Depth-measuring equipment"@en, "Utstyr for å måle dybde"@no ;
         sh:property scope:PS_minLOA_10_maxLOA_15, scope:PS_BuiltDate_a19970701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§81"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/81"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
 :FOR1404P82
@@ -645,6 +728,7 @@
         rdfs:label "Steering gear, etc"@en, "Styreanordninger mv."@no ;
         sh:property scope:PS_minLOA_10_maxLOA_15, scope:PS_BuiltDate_a19970701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§82"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/82"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
 :FOR1404P83
@@ -653,6 +737,7 @@
         rdfs:label "Ship's clock"@en, "Skipsur"@no ;
         :subRequirement :FOR1404P24 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§83"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/83"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
 :FOR1404P84
@@ -660,6 +745,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Binoculars and thermometer"@en, "Kikkert og termometer"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§84"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/84"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
 :FOR1404P85
@@ -667,6 +753,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Charts and nautical publications"@en, "Kart og nautiske publikasjoner"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§85"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/85"^^xsd:anyURI ;
         :alternativeReference "https://www.sdir.no/sjofart/regelverk/rundskriv/sjokart-om-bord-pa-fiske--og-fangstfartoy/"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no .
 
@@ -676,6 +763,7 @@
         rdfs:label "Lights"@en, "Lanterner"@no ;
         sh:property scope:PS_BuiltDate_a19920101 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§86"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/86"^^xsd:anyURI ;
         :alternativeReference "https://lovdata.no/dokument/SF/forskrift/1975-12-01-5"^^xsd:anyURI ,
                               "https://www.sdir.no/contentassets/a899b915694a451d9dedbac073a39237/nordisk-batstandard-for-yrkesbater-under-15-meter.pdf"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no .
@@ -685,6 +773,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Signalling equipment"@en, "Signaleringsutstyr"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§87"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/87"^^xsd:anyURI ;
         :alternativeReference "https://lovdata.no/dokument/SF/forskrift/1975-12-01-5"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
@@ -694,6 +783,7 @@
         rdfs:label "Sound signal apparatuses"@en, "Lydsignalapparater"@no ;
         sh:property scope:PS_minLOA_12 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§88"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/88"^^xsd:anyURI ;
         :alternativeReference "https://lovdata.no/dokument/SF/forskrift/1975-12-01-5"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
@@ -703,6 +793,7 @@
         rdfs:label "Searchlight"@en, "Lyskaster"@no ;
         sh:property scope:PS_minLOA_12_maxLOA_15, scope:PS_BuiltDate_a19970701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§89"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/89"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
 :FOR1404P90
@@ -710,6 +801,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Instructions for use, spare parts, etc"@en, "Bruksanvisninger, reservedeler mv."@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§90"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/90"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
 :FOR1404P91
@@ -718,6 +810,7 @@
         rdfs:label "Wheelhouse arrangement, view from the wheelhouse, etc."@en, "Styrehusarrangement, sikt fra styrehus mv."@no ;
         sh:property scope:PS_minLOA_6, scope:PS_BuiltDate_a19790701, scope:PS_BuiltDate_b19920101, scope:PS_BuiltDate_b19970701, scope:PS_BuiltDate_a19970701 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§91"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/8/sections/91"^^xsd:anyURI ;
         :theme "Navigation"@en, "Navigasjon"@no . 
 
 :FOR1404P92
@@ -726,6 +819,7 @@
         rdfs:label "Vessel instructions"@en, "Fartøyinstruks"@no ;
         sh:property scope:PS_minLOA_8_maxLOA_15 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§92"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/9/sections/92"^^xsd:anyURI ;
         :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
 
 :FOR1404P93
@@ -733,6 +827,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Coordination of inspections"@en, "Samordning av kontroll"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§93"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/9/sections/93"^^xsd:anyURI ;
         :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
 
 :FOR1404P94
@@ -740,6 +835,7 @@
         rdfs:label "Inspection of vessels of less than 8 metres"@en, "Kontroll av fartøy under 8 meter"@no ;
         sh:property scope:PS_FishingVessel, scope:PS_maxLOA_8 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§94"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/9/sections/94"^^xsd:anyURI ;
         :alternativeReference "https://lovdata.no/dokument/NL/lov/2007-02-16-9"^^xsd:anyURI ;
         :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
 
@@ -748,6 +844,7 @@
         rdfs:label "Inspections of vessels of 8 to 9 metres in overall length"@en, "Kontroll av fartøy med største lengde 8 til 9 meter"@no ;
         sh:property scope:PS_FishingVessel, scope:PS_minLOA_8_maxLOA_9 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§95"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/9/sections/95"^^xsd:anyURI ;
         :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
 
 :FOR1404P96
@@ -755,6 +852,7 @@
         rdfs:label "Inspections of vessels of 9 to 10.67 metres in overall length"@en, "Kontroll av fartøy med største lengde 9 til 10,67 meter"@no ;
         sh:property scope:PS_FishingVessel, scope:PS_minLOA_9_maxLOA_10 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§96"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/9/sections/96"^^xsd:anyURI ;
         :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
 
 :FOR1404P97
@@ -762,6 +860,7 @@
         rdfs:label "Inspections of vessels of 10.67 to 15 metres in overall length"@en, "Kontroll av fartøy med største lengde 10,67 til 15 meter"@no ;
         sh:property scope:PS_FishingVessel, scope:PS_minLOA_10_maxLOA_15 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§97"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/9/sections/97"^^xsd:anyURI ;
         :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
 
 :FOR1404P98
@@ -770,6 +869,7 @@
         rdfs:label "Reporting of inspections by approved company and company's control"@en, "Innrapportering av kontroll ved godkjent foretak og reders egenkontroll"@no ;
         sh:property scope:PS_minLOA_8 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§98"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/9/sections/98"^^xsd:anyURI ;
         :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
 
 :FOR1404P99
@@ -778,6 +878,7 @@
         rdfs:label "Inspection of vessel in connection with damage, conversion, etc"@en, "Kontroll av fartøy ved skade, ombygging m.m."@no ;
         sh:property scope:PS_FishingVessel, scope:PS_minLOA_8_maxLOA_15 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§99"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/9/sections/99"^^xsd:anyURI ;
         :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
 
 :FOR1404P100
@@ -785,6 +886,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Inspection of the electrical installation by an accepted electrical enterprise"@en, "Kontroll av det elektriske anlegget ved akseptert elektroforetak"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§100"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/9/sections/100"^^xsd:anyURI ;
         :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
 
 :FOR1404P101
@@ -792,6 +894,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Documentation for newbuildings and conversions"@en, "Dokumentasjon ved nybygg og ombygging"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§101"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/9/sections/101"^^xsd:anyURI ;
         :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
 
 :FOR1404P102
@@ -801,6 +904,7 @@
         sh:property scope:PS_minLOA_6, scope:PS_BuiltDate_a20070701 ;
         :subRequirement :FOR1404P95, :FOR1404P96 ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§102"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/9/sections/102"^^xsd:anyURI ;
         :alternativeReference "https://lovdata.no/dokument/SF/forskrift/1978-01-17-4"^^xsd:anyURI ;
         :theme "Inspections and documentation"@en, "Kontroll og dokumentasjon"@no .
 
@@ -809,6 +913,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Exemptions and equivalents"@en, "Dispensasjon og likeverdige løsninger"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§103"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/10/sections/103"^^xsd:anyURI ;
         :theme "Concluding provisions"@en, "Avsluttende bestemmelser"@no .
 
 :FOR1404P104
@@ -816,6 +921,7 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Entry into force"@en, "Ikrafttredelse"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§104"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/10/sections/104"^^xsd:anyURI ;
         :theme "Concluding provisions"@en, "Avsluttende bestemmelser"@no .
 
 :FOR1404P105
@@ -823,4 +929,5 @@
         sh:property  scope:PS_FishingVessel, scope:PS_maxLOA_15 ; 
         rdfs:label "Transitional provisions"@en, "Overgangsregler"@no ;
         :regulationReference "https://lovdata.no/forskrift/2013-11-22-1404/§105"^^xsd:anyURI ;
+        :eliref "/regulations/2013/11/22/1404/chapters/10/sections/105"^^xsd:anyURI ;
         :theme "Concluding provisions"@en, "Avsluttende bestemmelser"@no .
