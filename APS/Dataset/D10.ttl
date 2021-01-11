@@ -61,3 +61,11 @@
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:hasValue sdir:VD2 .
+
+
+
+### SCOPE (namespace: scope)
+
+### ONTOLOGY (namespace: sdir)
+
+### CERTIFICATE (namespace: cert)

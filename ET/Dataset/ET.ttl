@@ -356,6 +356,14 @@ sdir:diameter rdf:type owl:DatatypeProperty ;
                          "diameter"@no .
 
 
+###  https://www.sdir.no/SDIR_Simulator#eliReference
+sdir:eliReference rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf owl:topDataProperty ;
+                          rdfs:domain sdir:Requirement ;
+                          rdfs:range xsd:anyURI ;
+                          rdfs:label "ELI referanse"@no ,
+                                     "ELI reference"@en .
+
 ###  https://www.sdir.no/SDIR_Simulator#flashPoint
 sdir:flashPoint rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf owl:topDataProperty ;
@@ -634,6 +642,13 @@ sdir:voltage rdf:type owl:DatatypeProperty ;
              rdfs:domain sdir:ElectricPower ;
              rdfs:label "spenning"@no ,
                         "voltage"@en .
+
+###  https://www.sdir.no/SDIR_Simulator#vesselLengthOverall
+sdir:vesselLengthOverall rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:range unit:M ;
+             rdfs:label "lengde"@no ,
+                        "vessel length overall"@en .
 
 
 #################################################################

@@ -4276,8 +4276,6 @@ For fornying ser vi på samme som ovenfor ellers må vi vurdere alternative meto
               :DeckEducation ;
      :issuedBy :ForsvaretsHøyskole_sjøkrigsskolen ,
                :HøyskolenPåVestlandet ;
-     rdf:label "NAB"@no ,
-               "SKSK-OM"@no ;
      rdfs:comment "Dekksoffiser ledelsesnivå - Vitnemål STCW A-II/2"@no ;
      rdfs:label "Deck Officer management diploma (VD2)"@en ,
                 "Dekksoffiser ledelsesnivå Vitnemål (VD2)"@no .

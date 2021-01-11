@@ -37,7 +37,7 @@
     sh:description "Duration of at least 1080 days in any deck officer on vessel with gross tonnage at least 500 in trade area (general) at least 3."@en ,
                    "Fartstiden skal være minst 1080 dager i en dekkoffiserstilling på fartøy med bruttotonnasje minst 500 i fartsområde (generell) minst 3."@no ;
     sh:targetClass sdir:SGS_500_L_3_1080_M_V_DO ;
-    sh:property :PS_Vessel_500_GT, :PS_TradeArea_minInc_3, :PS_Duration_1080, :PS_Position_CO .
+    sh:property :PS_Vessel_500_GT, :PS_TradeArea_minInc_3, :PS_Duration_1080, :PS_Position_DO .
 
 :NS_500_L_1_360_M_V_DO 
     a sh:NodeShape ;

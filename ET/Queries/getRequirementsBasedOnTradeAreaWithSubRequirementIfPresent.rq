@@ -14,9 +14,9 @@ SELECT DISTINCT ?paragraph ?label ?scope ?scopeDescription ?tradeAreaLabel
 				?maxInclusiveBuiltDate ?maxInclusiveBuiltDateDescription 
 				?tradeArea ?tradeAreaDescription 
 				?radioArea ?radioAreaDescription 
-				?regulationReference ?alternativeReference ?theme 
+				?regulationReference ?alternativeReference ?eliReference ?theme 
 				?subRequirement ?subRequirementLabel ?subRequirementScope ?subRequirementScopeDescription 
-				?subRequirementRegulationReference ?subRequirementTheme
+				?subRequirementRegulationReference ?subEliReference ?subRequirementTheme
 WHERE {
   ?paragraph a :Requirement .
   
@@ -79,6 +79,9 @@ WHERE {
   
   # Regulation reference URL
   ?paragraph :regulationReference ?regulationReference .
+
+  # ELI reference
+  ?paragraph :eliReferenceerence ?eliReference .
   
   # Alternative reference URL
   OPTIONAL { ?paragraph :alternativeReference ?alternativeReference . }
@@ -98,6 +101,9 @@ WHERE {
 
     # Regulation reference URL
     ?subRequirement :regulationReference ?subRequirementRegulationReference .
+
+    # ELI reference
+    ?subRequirement :eliReferenceerence ?subEliReference .
 
     # Get tag in given language
     ?subRequirement :theme ?subRequirementTheme .
