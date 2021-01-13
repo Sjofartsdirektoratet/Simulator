@@ -547,15 +547,6 @@ sdir:regulationReference rdf:type owl:DatatypeProperty ;
                          rdfs:label "referanse til forskrift"@no ,
                                     "regulation reference"@en .
 
-  ###  https://www.sdir.no/SDIR_Simulator#eliref
-sdir:eliref rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf owl:topDataProperty ;
-                         rdf:type owl:FunctionalProperty ;
-                         rdfs:domain sdir:Requirement ;
-                         rdfs:range xsd:anyURI ;
-                         rdfs:label "eli referanse for å hente tekst"@no ,
-                                    "eli refernce to get text"@en .                                  
-
 
 ###  https://www.sdir.no/SDIR_Simulator#rightningLever
 sdir:rightningLever rdf:type owl:DatatypeProperty ;
