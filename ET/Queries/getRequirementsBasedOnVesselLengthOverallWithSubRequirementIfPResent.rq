@@ -76,7 +76,7 @@ WHERE {
   ?paragraph :regulationReference ?regulationReference .
 
   # ELI reference
-  ?paragraph :eliReferenceerence ?eliReference .
+  ?paragraph :eliReference ?eliReference .
   
   # Alternative reference URL
   OPTIONAL { ?paragraph :alternativeReference ?alternativeReference . }
@@ -98,7 +98,7 @@ WHERE {
     ?subRequirement :regulationReference ?subRequirementRegulationReference .
 
     # ELI reference
-    ?subRequirement :eliReferenceerence ?subEliReference .
+    ?subRequirement :eliReference ?subEliReference .
 
     # Get tag in given language
     ?subRequirement :theme ?subRequirementTheme .
