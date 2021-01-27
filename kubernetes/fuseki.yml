@@ -32,14 +32,12 @@ spec:
     usePodIdentity: "false"
     userAssignedIdentityId: $COREK8S_CLIENT_ID
     keyvaultName: $AZ_KEYVAULT_NAME
+    tenantId: $ARM_TENANT_ID
     objects: |
       array:
       - |
         objectName: $FUSEKI_PASSWORD_SECRET_NAME
         objectType: secret
-    resourceGroup: $AZ_RESOURCE_GROUP
-    subscriptionId: $ARM_SUBSCRIPTION_ID
-    tenantId: $ARM_TENANT_ID
 ---
 
 apiVersion: apps/v1
