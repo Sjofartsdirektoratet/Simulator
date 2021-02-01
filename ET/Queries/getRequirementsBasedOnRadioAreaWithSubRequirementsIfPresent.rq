@@ -10,6 +10,7 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 # See comments in query for changing magic strings/numbers to variables in some API-call or similar.
 
 SELECT DISTINCT ?paragraph ?label ?scope ?scopeDescription ?radioAreaLabel
+				?lengthDescription
 				?minExclusiveBuiltDate ?minExclusiveBuiltDateDescription 
 				?maxInclusiveBuiltDate ?maxInclusiveBuiltDateDescription 
 				?tradeArea ?tradeAreaDescription 
@@ -32,6 +33,12 @@ WHERE {
 
   # Return scopes if present, except from vesselType and min/maxLOA
   ?paragraph sh:property ?b .
+
+  OPTIONAL { 
+    ?b sh:path :vesselLengthOverall . 
+  	?b sh:description ?lengthDescription .
+  	FILTER(LANG(?lengthDescription) = 'no') 
+  }
   
   OPTIONAL { 
     ?b sh:path :builtDate . 
